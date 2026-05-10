@@ -1,48 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ships Official</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXMC462LH8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CXMC462LH8');
-  </script>
-  <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      text-align: center; 
-      padding: 50px; 
-      background: #0a0a0a; 
-      color: #fff; 
-      margin: 0;
-    }
-    h1 { 
-      color: #00ff88; 
-      font-size: 48px; 
-      margin-bottom: 20px;
-    }
-    p { font-size: 18px; color: #ccc; }
-    .badge { 
-      background: #00ff88; 
-      color: #000; 
-      padding: 10px 20px; 
-      border-radius: 5px; 
-      display: inline-block; 
-      margin-top: 20px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SHIPS Official - From Galley to Billions</title>
+    <meta name="description" content="Official website of $SHIPS - The seafarer token on Solana. Built by Filipino OFWs for OFWs. Remittance utility coming 2027.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>âš“</text></svg>">
+    <style>
+        :root {
+            --navy: #0A1A2F;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --dark: #061018;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+      .waves {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".15" fill="%23D4AF37"/></svg>') repeat-x;
+            animation: wave 12s linear infinite;
+            z-index: 1;
+        }
+        @keyframes wave { 0% {background-position-x: 0;} 100% {background-position-x: 1200px;} }
+      .container {max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;}
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212,175,55,0.2);
+            position: sticky;
+            top: 0;
+            background: rgba(10,26,47,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+      .nav {display: flex; justify-content: space-between; align-items: center;}
+      .logo {font-size: 1.8rem; font-weight: bold; color: var(--gold); display: flex; align-items: center; gap: 10px;}
+      .nav-links {display: flex; gap: 30px; list-style: none;}
+      .nav-links a {color: var(--white); text-decoration: none; transition: 0.3s;}
+      .nav-links a:hover {color: var(--gold);}
+      .hero {padding: 100px 0 60px; text-align: center;}
+      .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--gold), var(--white));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+      .hero p {font-size: 1.3rem; color: #b8c5d6; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;}
+      .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--gold);
+            color: var(--navy);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin: 8px;
+            border: 2px solid var(--gold);
+        }
+      .btn:hover {transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.4);}
+      .btn-outline {background: transparent; color: var(--gold);}
+      .btn-outline:hover {background: var(--gold); color: var(--navy);}
+      .ca-box {
+            background: var(--dark);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            margin: 40px auto;
+            max-width: 800px;
+        }
+      .ca-box strong {color: var(--gold); display: block; margin-bottom: 10px;}
+      .ca-box code {
+            color: var(--white);
+            font-size: 0.95rem;
+            word-break: break-all;
+            background: rgba(212,175,55,0.1);
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+      .section {padding: 80px 0;}
+      .section-dark {background: var(--dark);}
+      .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
+      .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px; font-size: 1.1rem;}
+      .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
+      .card {
+            background: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid rgba(212,175,55,0.2);
+            transition: 0.3s;
+        }
+      .card:hover {transform: translateY(-5px); border-color: var(--gold);}
+      .card h3 {color: var(--gold); margin-bottom: 20px; font-size: 1.6rem;}
+      .card ul {list-style: none;}
+      .card li {padding: 10px 0; color: #b8c5d6; border-bottom: 1px solid rgba(255,255,255,0.05);}
+      .chart-container {
+            background: var(--dark);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            margin: 40px 0;
+        }
+      .chart-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+      .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+      .stat-box {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
+      .stat-box h4 {color: var(--gold); font-size: 2rem; margin-bottom: 5px;}
+      .stat-box p {color: #b8c5d6; font-size: 0.9rem;}
+      .community-buttons {text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;}
+      .story-box {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--gold);
+            margin: 40px 0;
+            text-align: left;
+        }
+      .story-box p {margin-bottom: 20px; color: #b8c5d6; font-size: 1.1rem;}
+      .story-box strong {color: var(--gold);}
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(212,175,55,0.2);
+            color: #b8c5d6;
+        }
+      .loading {font-size: 1rem; opacity: 0.6;}
+        @media (max-width: 768px) {
+          .hero h1 {font-size: 2.5rem;}
+          .nav-links {display: none;}
+          .chart-container iframe {height: 400px;}
+          .btn {padding: 12px 20px; font-size: 0.9rem; margin: 5px;}
+          .story-box {padding: 25px;}
+        }
+    </style>
 </head>
 <body>
-  <h1>⚓ SHIPS OFFICIAL ⚓</h1>
-  <p>Website is LIVE</p>
-  <p>Google Analytics Tracking Active</p>
-  <div class="badge">G-CXMC462LH8</div>
-  <p style="margin-top: 40px;">Galley to Billions 🚀</p>
+    <div class="waves"></div>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">âš“ $SHIPS</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#chart">Chart</a></li>
+                    <li><a href="#story">Story</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>From Galley to Billions</h1>
+            <p>Built by 21-year Filipino seaman for 10M OFWs worldwide. Real LP. Renounced Contract. No Risk Found.</p>
+            <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn">ðŸš€ BUY $SHIPS</a>
+            <a href="#chart" class="btn btn-outline">ðŸ“Š LIVE CHART</a>
+
+            <div class="ca-box">
+                <strong>Contract Address:</strong>
+                <code>2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</code>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="chart">
+        <div class="container">
+            <h2>ðŸ“Š LIVE CHART</h2>
+            <div class="chart-container">
+                <iframe src="https://dexscreener.com/solana/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump?embed=1&theme=dark&trades=0&info=0"></iframe>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h4 id="mcap"><span class="loading">Loading...</span></h4>
+                    <p>Market Cap</p>
+                </div>
+                <div class="stat-box">
+                    <h4 id="liquidity"><span class="loading">Loading...</span></h4>
+                    <p>LP Locked ðŸ”’</p>
+                </div>
+                <div class="stat-box">
+                    <h4>15.1%</h4>
+                    <p>To Raydium</p>
+                </div>
+                <div class="stat-box">
+                    <h4>3+</h4>
+                    <p>Early Founding Crew</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="story">
+        <div class="container">
+            <h2>ðŸŒŠ How $SHIPS Was Built: A Seaman's Story</h2>
+            <div class="story-box">
+                <p>Iâ€™ve been a seaman since 2003. I first heard about Bitcoin years ago, but back then, crypto wasnâ€™t a big thing in the Philippines. We had no access. No knowledge. Just stories.</p>
+
+                <p>Fast forward to 2021. A fellow seaman introduced me to crypto. I was hooked instantly, even though I had no idea how to trade. I bought high, sold low. I lost money. Then I discovered presales.</p>
+
+                <p>They promised x1000. x500. Easy money. And like a fool, I believed them. Again and again. The result? Scam after scam. My hard-earned salary from the sea, gone.</p>
+
+                <p><strong>I was tired of being the victim.</strong></p>
+
+                <p>One day, I joked: â€œWhat if I just make my own token? At least I know it wonâ€™t be a scam.â€ The problem? Iâ€™m a seaman. I donâ€™t know how to code. Iâ€™ve never built a token. I donâ€™t even know where to start.</p>
+
+                <p>So I asked Meta AI. And it taught me. Step by step. How to write a smart contract. How to deploy on Solana. How to lock liquidity. How to renounce. No team, no dev, no budget. Just me, a laptop, and 21 years of pain from every scam I survived.</p>
+
+                <p><strong>And boom. $SHIPS was born.</strong></p>
+
+                <p>I thought: â€œWhy do I keep getting scammed? Why donâ€™t I build the token Satoshi would have built for people like me?â€</p>
+
+                <p>So I did. <strong>No airdrop. No presale. No team tokens. No bonus allocations. No hidden wallets.</strong> Because every free token is a future dump. Every presale is a future rug. I removed everything that could drag the price down.</p>
+
+                <p>$SHIPS isnâ€™t just a meme token. This is my heart. This is 21 years at sea. This is every dollar I lost to scams. This is every seaman who deserves a fair shot in crypto.</p>
+
+                <p><strong>We are 10M+ OFWs worldwide. We send $33 billion home every year. But in crypto, we have no voice. No token. No protection. Until now.</strong></p>
+
+                <p>I built $SHIPS with 100% of the liquidity locked and the contract renounced on day one. Not for hype. But because I know what it feels like to be rugged. I would never do that to my own people.</p>
+
+                <p><strong>This isnâ€™t a project. This is a promise.</strong> From one seaman to every seaman, every OFW, and every person whoâ€™s ever been scammed:</p>
+
+                <p><strong>You deserve better. You deserve $SHIPS.</strong></p>
+
+                <p>Welcome aboard. The voyage to billions starts here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark" id="about">
+        <div class="container">
+            <h2>âš“ $SHIPS Tokenomics</h2>
+            <p class="section-subtitle">100% Fair Launch. Community Owned. No Presale. No Team Tokens.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>ðŸ”’ Safety First</h3>
+                    <ul>
+                        <li>100% LP Burned Forever</li>
+                        <li>Contract Renounced - No Owner</li>
+                        <li>0% Buy Tax / 0% Sell Tax</li>
+                        <li>No Risk Found on DexScreener</li>
+                        <li>Verified on Solscan</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>ðŸ“Š Token Supply</h3>
+                    <ul>
+                        <li><strong>Total Supply:</strong> 1,000,000,000 $SHIPS</li>
+                        <li><strong>Circulating:</strong> 100% Fair Launch</li>
+                        <li><strong>Team Tokens:</strong> 0% - No Allocation</li>
+                        <li><strong>Presale:</strong> None - No Dump Risk</li>
+                        <li><strong>Airdrop:</strong> None - No Free Tokens</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>ðŸš€ Roadmap 2026-2027</h3>
+                    <ul>
+                        <li><strong>Q4 2026:</strong> CoinGecko Listing âœ…</li>
+                        <li><strong>Q1 2027:</strong> CoinMarketCap + 1000 Holders</li>
+                        <li><strong>Q2 2027:</strong> Remittance Beta for OFWs</li>
+                        <li><strong>Q4 2027:</strong> Full Remittance Tool Launch</li>
+                        <li><strong>Goal:</strong> 10M OFWs Onboarded</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="community">
+        <div class="container">
+            <h2>ðŸŒ Join The Crew</h2>
+            <p class="section-subtitle">Connect with 3+ Early Founding Members. Real community, real utility, real billions.</p>
+            <div class="community-buttons">
+                <a href="https://t.me/shipscoin_sol" class="btn">ðŸ“¢ Telegram Channel</a>
+                <a href="https://t.me/+R27uxkc1epI0MWZl" class="btn">ðŸ‘¥ Telegram Group</a>
+                <a href="https://x.com/ShipsOfficial26" class="btn">âœ–ï¸ X / Twitter</a>
+                <a href="https://discord.gg/5cxY7FD5Y8" class="btn">ðŸ’¬ Discord</a>
+                <a href="https://www.facebook.com/share/1EYWrcv2xL/" class="btn">ðŸ“˜ Facebook</a>
+                <a href="mailto:shipsofficial2026@gmail.com" class="btn">ðŸ“§ Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>âš“ $SHIPS Â© 2026 - From Galley to Billions ðŸ›³ï¸</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Built by seafarers, for seafarers. Walang iwanan.</p>
+        </div>
+    </footer>
+
+<script>
+const TOKEN_ADDRESS = "2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump";
+
+async function updateStats() {
+  try {
+    const response = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${TOKEN_ADDRESS}`);
+    const data = await response.json();
+
+    if(data.pairs && data.pairs[0]) {
+      const pair = data.pairs[0];
+
+      let mcap = pair.fdv || 0;
+      if(mcap >= 1000000) {
+        document.getElementById('mcap').innerText = '$' + (mcap/1000000).toFixed(2) + 'M';
+      } else if(mcap >= 1000) {
+        document.getElementById('mcap').innerText = '$' + (mcap/1000).toFixed(2) + 'K';
+      } else {
+        document.getElementById('mcap').innerText = '$' + mcap.toFixed(0);
+      }
+
+      let liq = pair.liquidity?.usd || 0;
+      if(liq >= 1000000) {
+        document.getElementById('liquidity').innerText = '$' + (liq/1000000).toFixed(2) + 'M';
+      } else if(liq >= 1000) {
+        document.getElementById('liquidity').innerText = '$' + (liq/1000).toFixed(2) + 'K';
+      } else {
+        document.getElementById('liquidity').innerText = '$' + liq.toFixed(0);
+      }
+    } else {
+      document.getElementById('mcap').innerText = '$3.32K';
+      document.getElementById('liquidity').innerText = '$709';
+    }
+  } catch (error) {
+    document.getElementById('mcap').innerText = '$3.32K';
+    document.getElementById('liquidity').innerText = '$709';
+  }
+}
+
+updateStats();
+setInterval(updateStats, 30000);
+</script>
+
 </body>
 </html>
