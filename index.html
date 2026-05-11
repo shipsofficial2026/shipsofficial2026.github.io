@@ -55,6 +55,7 @@
             --phantom: #AB9FF2;
             --trust: #3375BB;
             --solana: #9945FF;
+            --red: #FF6B6B;
         }
         * {margin: 0; padding: 0; box-sizing: border-box;}
         body {
@@ -63,8 +64,9 @@
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            padding-top: 110px;
         }
-    .waves {
+        .waves {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -75,7 +77,7 @@
             z-index: 1;
         }
         @keyframes wave { 0% {background-position-x: 0;} 100% {background-position-x: 1200px;} }
-    .ship-float {
+        .ship-float {
             position: fixed;
             bottom: 80px;
             left: -100px;
@@ -90,24 +92,24 @@
             75% { transform: rotate(5deg); }
             100% { left: 110%; transform: rotate(-5deg); }
         }
-    .ticker-wrap {
+        .ticker-wrap {
             position: fixed;
-            top: 90px;
+            top: 70px;
             left: 0;
             width: 100%;
             background: linear-gradient(90deg, var(--gold) 0%, var(--cg-green) 50%, var(--solana) 100%);
             color: var(--navy);
             padding: 8px 0;
-            z-index: 99;
+            z-index: 98;
             overflow: hidden;
             font-weight: bold;
         }
-    .ticker {
+        .ticker {
             display: flex;
             animation: scroll 25s linear infinite;
             white-space: nowrap;
         }
-    .ticker span {
+        .ticker span {
             padding: 0 50px;
             font-weight: bold;
             font-size: 0.9rem;
@@ -116,28 +118,30 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-    .container {max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;}
+        .container {max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;}
         header {
-            padding: 20px 0;
+            padding: 15px 0;
             border-bottom: 1px solid rgba(212,175,55,0.2);
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
             background: rgba(10,26,47,0.95);
             backdrop-filter: blur(10px);
-            z-index: 100;
+            z-index: 99;
+            height: 70px;
         }
-    .nav {display: flex; justify-content: space-between; align-items: center;}
-    .logo {display: flex; align-items: center; gap: 15px;}
-    .logo img {width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover;}
-    .logo-fallback {width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold); background: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;}
-    .logo-text {font-size: 1.8rem; font-weight: bold; color: var(--gold);}
-    .nav-links {display: flex; gap: 25px; list-style: none;}
-    .nav-links a {color: var(--white); text-decoration: none; transition: 0.3s; font-size: 0.95rem;}
-    .nav-links a:hover {color: var(--gold);}
-    .hero {padding: 120px 0 60px; text-align: center;}
-    .hero-logo {
-            width: 200px;
-            height: 200px;
+        .nav {display: flex; justify-content: space-between; align-items: center;}
+        .logo {display: flex; align-items: center; gap: 15px;}
+        .logo img {width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover;}
+        .logo-fallback {width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--gold); background: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;}
+        .logo-text {font-size: 1.5rem; font-weight: bold; color: var(--gold);}
+        .nav-links {display: flex; gap: 20px; list-style: none;}
+        .nav-links a {color: var(--white); text-decoration: none; transition: 0.3s; font-size: 0.9rem;}
+        .nav-links a:hover {color: var(--gold);}
+        .hero {padding: 40px 0 60px; text-align: center; background: linear-gradient(135deg, #001122 0%, #002244 100%);}
+        .hero-logo {
+            width: 180px;
+            height: 180px;
             margin: 0 auto 30px;
             animation: float 3s ease-in-out infinite;
             filter: drop-shadow(0 0 30px rgba(212,175,55,0.7));
@@ -147,8 +151,8 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-15px) rotate(5deg); }
         }
-    .hero h1 {
-            font-size: 3.5rem;
+        .hero h1 {
+            font-size: 3.2rem;
             margin-bottom: 20px;
             background: linear-gradient(45deg, var(--gold), var(--white), var(--cg-green), var(--solana));
             -webkit-background-clip: text;
@@ -160,8 +164,8 @@
             0%, 100% { filter: hue-rotate(0deg); }
             50% { filter: hue-rotate(15deg); }
         }
-    .hero p {font-size: 1.3rem; color: #b8c5d6; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;}
-    .btn {
+        .hero p {font-size: 1.2rem; color: #b8c5d6; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;}
+        .btn {
             display: inline-block;
             padding: 14px 30px;
             background: var(--gold);
@@ -174,13 +178,16 @@
             margin: 8px;
             border: 2px solid var(--gold);
         }
-    .btn:hover {transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.4);}
-    .btn-outline {background: transparent; color: var(--gold);}
-    .btn-outline:hover {background: var(--gold); color: var(--navy);}
-    .btn-cg {background: var(--cg-green); color: var(--white); border-color: var(--cg-green);}
-    .btn-cg:hover {background: #6fa834; box-shadow: 0 10px 25px rgba(141,198,71,0.4);}
-    .btn-phantom {background: var(--phantom); color: var(--white); border-color: var(--phantom);}
-    .btn-phantom:hover {background: #9889e8; box-shadow: 0 10px 25px rgba(171,159,242,0.4);}    .ca-box {
+        .btn:hover {transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.4);}
+        .btn-outline {background: transparent; color: var(--gold);}
+        .btn-outline:hover {background: var(--gold); color: var(--navy);}
+        .btn-cg {background: var(--cg-green); color: var(--white); border-color: var(--cg-green);}
+        .btn-cg:hover {background: #6fa834; box-shadow: 0 10px 25px rgba(141,198,71,0.4);}
+        .btn-phantom {background: var(--phantom); color: var(--white); border-color: var(--phantom);}
+        .btn-phantom:hover {background: #9889e8; box-shadow: 0 10px 25px rgba(171,159,242,0.4);}
+        .btn-solscan {background: #3B82F6; color: var(--white); border-color: #3B82F6;}
+        .btn-solscan:hover {background: #2563eb; box-shadow: 0 10px 25px rgba(59,130,246,0.4);}
+        .ca-box {
             background: var(--dark);
             padding: 25px;
             border-radius: 12px;
@@ -188,8 +195,8 @@
             margin: 40px auto;
             max-width: 800px;
         }
-    .ca-box strong {color: var(--gold); display: block; margin-bottom: 10px;}
-    .ca-box code {
+        .ca-box strong {color: var(--gold); display: block; margin-bottom: 10px;}
+        .ca-box code {
             color: var(--white);
             font-size: 0.95rem;
             word-break: break-all;
@@ -198,7 +205,7 @@
             border-radius: 5px;
             display: block;
         }
-    .cg-status {
+        .cg-status {
             background: linear-gradient(90deg, var(--cg-green) 0%, #6fa834 100%);
             color: white;
             padding: 18px;
@@ -213,10 +220,10 @@
             0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(141,198,71,0.4); }
             50% { transform: scale(1.01); box-shadow: 0 6px 25px rgba(141,198,71,0.6); }
         }
-    .cg-status img { vertical-align: middle; margin-right: 10px; }
-    .cg-status strong { font-size: 1.1rem; }
-    .cg-status small { opacity: 0.9; font-size: 0.9rem; }
-    .wallet-status {
+        .cg-status img { vertical-align: middle; margin-right: 10px; }
+        .cg-status strong { font-size: 1.1rem; }
+        .cg-status small { opacity: 0.9; font-size: 0.9rem; }
+        .wallet-status {
             background: linear-gradient(90deg, var(--phantom) 0%, var(--trust) 50%, var(--solana) 100%);
             color: white;
             padding: 15px;
@@ -226,14 +233,14 @@
             text-align: center;
             border: 2px solid var(--phantom);
         }
-    .security-badges {
+        .security-badges {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
             margin: 20px 0;
         }
-    .badge {
+        .badge {
             background: rgba(212,175,55,0.1);
             border: 1px solid var(--gold);
             padding: 8px 15px;
@@ -241,22 +248,22 @@
             font-size: 0.85rem;
             color: var(--gold);
         }
-    .badge-cg {
+        .badge-cg {
             background: rgba(141,198,71,0.2);
             border: 1px solid var(--cg-green);
             color: var(--cg-green);
         }
-    .badge-phantom {
+        .badge-phantom {
             background: rgba(171,159,242,0.2);
             border: 1px solid var(--phantom);
             color: var(--phantom);
         }
-    .badge-solana {
+        .badge-solana {
             background: rgba(153,69,255,0.2);
             border: 1px solid var(--solana);
             color: var(--solana);
         }
-    .countdown {
+        .countdown {
             background: rgba(212,175,55,0.1);
             border: 2px solid var(--gold);
             padding: 20px;
@@ -265,70 +272,60 @@
             max-width: 600px;
             text-align: center;
         }
-    .countdown h3 {color: var(--gold); margin-bottom: 15px;}
-    .countdown-grid {
+        .countdown h3 {color: var(--gold); margin-bottom: 15px;}
+        .countdown-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
         }
-    .countdown-item {
+        .countdown-item {
             background: var(--dark);
             padding: 15px;
             border-radius: 8px;
         }
-    .countdown-item span {
+        .countdown-item span {
             display: block;
             font-size: 2rem;
             font-weight: bold;
             color: var(--gold);
         }
-    .countdown-item small {color: #b8c5d6; font-size: 0.8rem;}
-    .section {padding: 80px 0;}
-    .section-dark {background: var(--dark);}
-    .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
-    .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px; font-size: 1.1rem;}
-    .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
-    .card {
+        .countdown-item small {color: #b8c5d6; font-size: 0.8rem;}
+        .section {padding: 80px 0;}
+        .section-dark {background: var(--dark);}
+        .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
+        .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px; font-size: 1.1rem;}
+        .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
+        .card {
             background: rgba(255,255,255,0.05);
             padding: 35px;
             border-radius: 12px;
             border: 1px solid rgba(212,175,55,0.2);
             transition: 0.3s;
         }
-    .card:hover {transform: translateY(-5px); border-color: var(--gold);}
-    .card h3 {color: var(--gold); margin-bottom: 20px; font-size: 1.6rem;}
-    .card ul {list-style: none;}
-    .card li {padding: 10px 0; color: #b8c5d6; border-bottom: 1px solid rgba(255,255,255,0.05);}
-    .phase-badge {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--navy);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-    .chart-container {
+        .card:hover {transform: translateY(-5px); border-color: var(--gold);}
+        .card h3 {color: var(--gold); margin-bottom: 20px; font-size: 1.6rem;}
+        .card ul {list-style: none;}
+        .card li {padding: 10px 0; color: #b8c5d6; border-bottom: 1px solid rgba(255,255,255,0.05);}
+        .chart-container {
             background: var(--dark);
             padding: 20px;
             border-radius: 12px;
             border: 1px solid var(--gold);
             margin: 40px 0;
         }
-    .chart-container iframe {
+        .chart-container iframe {
             width: 100%;
             height: 500px;
             border: none;
             border-radius: 8px;
         }
-    .stats-grid {
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin: 40px 0;
         }
-    .stat-box {
+        .stat-box {
             background: rgba(255,255,255,0.05);
             padding: 25px;
             border-radius: 12px;
@@ -336,13 +333,12 @@
             border: 1px solid rgba(212,175,55,0.2);
             transition: 0.3s;
         }
-    .stat-box:hover {border-color: var(--cg-green); transform: scale(1.05);}
-    .stat-box h4 {color: var(--gold); font-size: 2rem; margin-bottom: 5px;}
-    .stat-box p {color: #b8c5d6; font-size: 0.9rem;}
-    .stat-box a {color: var(--gold); text-decoration: none; font-size: 0.85rem;}
-    .stat-box a:hover {text-decoration: underline;}
-    .community-buttons {text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;}
-    .story-box {
+        .stat-box:hover {border-color: var(--cg-green); transform: scale(1.05);}
+        .stat-box h4 {color: var(--gold); font-size: 2rem; margin-bottom: 5px;}
+        .stat-box p {color: #b8c5d6; font-size: 0.9rem;}
+        .stat-box a {color: var(--gold); text-decoration: none; font-size: 0.85rem;}
+        .stat-box a:hover {text-decoration: underline;}
+        .story-box {
             background: rgba(255,255,255,0.05);
             padding: 40px;
             border-radius: 12px;
@@ -350,66 +346,24 @@
             margin: 40px 0;
             text-align: left;
         }
-    .story-box p {margin-bottom: 20px; color: #b8c5d6; font-size: 1.1rem;}
-    .story-box strong {color: var(--gold);}
-    .faq-item {
+        .story-box p {margin-bottom: 20px; color: #b8c5d6; font-size: 1.1rem; line-height: 1.8;}
+        .story-box strong {color: var(--gold);}
+        .faq-item {
             background: rgba(255,255,255,0.05);
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 15px;
             border: 1px solid rgba(212,175,55,0.2);
         }
-    .faq-item h4 {color: var(--gold); margin-bottom: 10px; font-size: 1.2rem;}
-    .faq-item p {color: #b8c5d6;}
-    .founder-box {
-            background: rgba(212,175,55,0.1);
-            padding: 40px;
-            border-radius: 12px;
-            border: 2px solid var(--gold);
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    .founder-box img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--gold);
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(212,175,55,0.2);
-            color: #b8c5d6;
-        }
-    .disclaimer {
-            background: rgba(255,0,0,0.05);
-            border: 1px solid rgba(255,0,0,0.3);
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            font-size: 0.85rem;
-            color: #b8c5d6;
-        }
-    .cg-widget {
-            background: rgba(141,198,71,0.1);
-            border: 2px solid var(--cg-green);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-        }
-    .cg-widget h3 {color: var(--cg-green); margin-bottom: 15px;}
-    .audit-grid {
+        .faq-item h4 {color: var(--gold); margin-bottom: 10px; font-size: 1.2rem;}
+        .faq-item p {color: #b8c5d6;}
+        .audit-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
-    .audit-box {
+        .audit-box {
             background: rgba(255,255,255,0.05);
             padding: 20px;
             border-radius: 12px;
@@ -417,11 +371,11 @@
             text-align: center;
             transition: 0.3s;
         }
-    .audit-box:hover {border-color: var(--gold); transform: translateY(-3px);}
-    .audit-box h4 {color: var(--cg-green); margin-bottom: 10px;}
-    .audit-box a {color: var(--gold); text-decoration: none; font-weight: bold;}
-    .audit-box a:hover {text-decoration: underline;}
-    .tokenomics-table {
+        .audit-box:hover {border-color: var(--gold); transform: translateY(-3px);}
+        .audit-box h4 {color: var(--cg-green); margin-bottom: 10px;}
+        .audit-box a {color: var(--gold); text-decoration: none; font-weight: bold;}
+        .audit-box a:hover {text-decoration: underline;}
+        .tokenomics-table {
             width: 100%;
             max-width: 800px;
             margin: 30px auto;
@@ -430,30 +384,58 @@
             border-radius: 12px;
             overflow: hidden;
         }
-    .tokenomics-table th, .tokenomics-table td {
+        .tokenomics-table th, .tokenomics-table td {
             padding: 15px;
             text-align: left;
             border-bottom: 1px solid rgba(212,175,55,0.2);
         }
-    .tokenomics-table th {
+        .tokenomics-table th {
             background: rgba(212,175,55,0.1);
             color: var(--gold);
             font-weight: bold;
         }
-    .tokenomics-table td {
+        .tokenomics-table td {
             color: #b8c5d6;
         }
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(212,175,55,0.2);
+            color: #b8c5d6;
+        }
+        .disclaimer {
+            background: rgba(255,0,0,0.05);
+            border: 1px solid rgba(255,0,0,0.3);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #b8c5d6;
+        }
+        .cg-widget {
+            background: rgba(141,198,71,0.1);
+            border: 2px solid var(--cg-green);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .cg-widget h3 {color: var(--cg-green); margin-bottom: 15px;}
         @media (max-width: 768px) {
-        .hero h1 {font-size: 2.5rem;}
-        .nav-links {display: none;}
-        .chart-container iframe {height: 400px;}
-        .btn {padding: 12px 20px; font-size: 0.9rem; margin: 5px;}
-        .story-box {padding: 25px;}
-        .hero-logo {width: 150px; height: 150px;}
-        .ticker-wrap {top: 70px;}
-        .hero {padding: 100px 0 60px;}
-        .countdown-grid {grid-template-columns: repeat(2, 1fr);}
-        .tokenomics-table {font-size: 0.9rem;}
+            .hero h1 {font-size: 2.3rem;}
+            .nav-links {display: none;}
+            .chart-container iframe {height: 400px;}
+            .btn {padding: 12px 20px; font-size: 0.9rem; margin: 5px;}
+            .story-box {padding: 25px;}
+            .hero-logo {width: 140px; height: 140px;}
+            .ticker-wrap {top: 70px;}
+            .hero {padding: 40px 0 60px;}
+            .countdown-grid {grid-template-columns: repeat(2, 1fr);}
+            .tokenomics-table {font-size: 0.9rem;}
+            header {height: 70px;}
+            .logo-text {font-size: 1.3rem;}
+            body {padding-top: 110px;}
         }
     </style>
 </head>
@@ -461,34 +443,7 @@
     <div class="waves"></div>
     <div class="ship-float">🛳️</div>
 
-
-<!-- SPACER PARA HINDI MATABUNAN NG HEADER -->
-    <div style="height:85px;"></div>
-  
-<!-- BUTTONS SECTION - $SHIPS -->
-    <div style="text-align:center; padding:20px; background:#001122;">
-      <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" style="background:#FFD700; color:#001122; padding:14px 35px; font-size:18px; font-weight:bold; border-radius:10px; text-decoration:none; display:inline-block; margin:6px; min-width:200px;">🚀 BUY PUMP.FUN</a>
-      <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" style="background:#1E1E1E; color:#FFFFFF; padding:14px 35px; font-size:18px; font-weight:bold; border-radius:10px; text-decoration:none; display:inline-block; margin:6px; min-width:200px; border:2px solid #FFD700;">⚡ BUY JUPITER</a>
-      <a href="https://www.coingecko.com/en/coins/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" style="background:#8DC647; color:#FFFFFF; padding:14px 35px; font-size:18px; font-weight:bold; border-radius:10px; text-decoration:none; display:inline-block; margin:6px; min-width:200px;">🦎 Track CG: CL1105260008</a>
-      <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" style="background:#9945FF; color:#FFFFFF; padding:14px 35px; font-size:18px; font-weight:bold; border-radius:10px; text-decoration:none; display:inline-block; margin:6px; min-width:200px;">📊 View on Solscan</a>
-      <a href="#" style="background:#AB9FF2; color:#FFFFFF; padding:14px 35px; font-size:18px; font-weight:bold; border-radius:10px; text-decoration:none; display:inline-block; margin:6px; min-width:200px; opacity:0.7; cursor:not-allowed;">📱 Verify on Phantom Soon</a>
-    </div>
-
-    <div class="ticker-wrap">
-        <div class="ticker">
-            <span>⚓ $SHIPS LIVE: 1B Supply</span>
-            <span>🔒 LP Burned: 100% Permanently</span>
-            <span>👥 Holders: Growing Daily</span>
-            <span>🦎 CG ID: CL1105260008 - Under Review</span>
-            <span>⚓ 0% Tax | Contract Renounced</span>
-            <span>⚓ $SHIPS LIVE: 1B Supply</span>
-            <span>🔒 LP Burned: 100% Permanently</span>
-            <span>👥 Holders: Growing Daily</span>
-            <span>🦎 CG ID: CL1105260008 - Under Review</span>
-            <span>⚓ 0% Tax | Contract Renounced</span>
-        </div>
-    </div>
-
+    <!-- HEADER NAVIGATION - FIXED AT TOP -->
     <header>
         <div class="container">
             <nav class="nav">
@@ -511,6 +466,42 @@
         </div>
     </header>
 
+    <!-- TICKER - FIXED BELOW HEADER, VISIBLE NA -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>⚓ $SHIPS LIVE: 1B Supply</span>
+            <span>🔒 LP Burned: 100% Permanently</span>
+            <span>👥 Holders: Growing Daily</span>
+            <span>🦎 CG ID: CL1105260008 - Under Review</span>
+            <span>⚓ 0% Tax | Contract Renounced</span>
+            <span>⚓ $SHIPS LIVE: 1B Supply</span>
+            <span>🔒 LP Burned: 100% Permanently</span>
+            <span>👥 Holders: Growing Daily</span>
+            <span>🦎 CG ID: CL1105260008 - Under Review</span>
+            <span>⚓ 0% Tax | Contract Renounced</span>
+        </div>
+    </div>
+
+    <!-- BUTTONS SECTION - $SHIPS - ISANG BESES LANG -->
+    <div style="text-align:center; padding:20px; background:#001122;">
+        <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn">
+            🚀 BUY PUMP.FUN
+        </a>
+        <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn btn-outline">
+            ⚡ BUY JUPITER
+        </a>
+        <a href="https://www.coingecko.com/en/coins/submit" target="_blank" class="btn btn-cg">
+            🦎 Track CG: CL1105260008
+        </a>
+        <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn btn-solscan">
+            📊 View on Solscan
+        </a>
+        <a href="#" class="btn btn-phantom">
+            📱 Verify on Phantom Soon
+        </a>
+    </div>
+
+    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="container">
             <img src="logo.png" alt="$SHIPS Compass Logo" class="hero-logo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>'">
@@ -576,8 +567,7 @@
                 <a href="https://www.coingecko.com/en/coins/submit" class="btn btn-cg">Track Application: CL1105260008</a>
             </div>
         </div>
-    </section>
-
+    </section>    <!-- CHART SECTION -->
     <section class="section section-dark" id="chart">
         <div class="container">
             <h2>📊 LIVE CHART + VERIFICATION</h2>
@@ -607,6 +597,7 @@
         </div>
     </section>
 
+    <!-- TOKENOMICS SECTION -->
     <section class="section" id="tokenomics">
         <div class="container">
             <h2>⚓ TOKENOMICS</h2>
@@ -679,9 +670,9 @@
                 </tr>
             </table>
         </div>
-    </section>        </div>
     </section>
 
+    <!-- AUDIT SECTION -->
     <section class="section section-dark" id="audit">
         <div class="container">
             <h2>🔍 Security Audit & Third-Party Verification</h2>
@@ -694,17 +685,17 @@
                     <a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Live Report →</a>
                 </div>
                 <div class="audit-box">
-                    <h4>✅ DexScreener Verified</h4>
-                    <p><strong>Green Check</strong><br>No Warnings</p>
+                    <h4>📊 DexScreener</h4>
+                    <p><strong>Live Chart + Trades</strong><br>Real-time Data</p>
                     <a href="https://dexscreener.com/solana/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Chart →</a>
                 </div>
                 <div class="audit-box">
-                    <h4>✅ Solscan Verified</h4>
-                    <p><strong>Metadata Complete</strong><br>CA Verified</p>
-                    <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Token →</a>
+                    <h4>🔍 Solscan</h4>
+                    <p><strong>On-Chain Proof</strong><br>LP Burned + Renounced</p>
+                    <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">Verify Contract →</a>
                 </div>
                 <div class="audit-box">
-                    <h4>🦎 CoinGecko Pending</h4>
+                    <h4>🦎 CoinGecko</h4>
                     <p><strong>CL1105260008</strong><br>Under Review</p>
                     <a href="https://www.coingecko.com/en/coins/submit" target="_blank">Track Application →</a>
                 </div>
@@ -712,196 +703,208 @@
         </div>
     </section>
 
-    <section class="section" id="story">
+    <!-- STORY SECTION - REAL CHIEF COOK STORY -->
+    <section id="story" class="section">
         <div class="container">
-            <h2>📖 Captain's Log: The Galley Story</h2>
-           <div class="story-box">
-    <p><strong>The Real Story Behind $SHIPS</strong></p>
-    
-    <p>I first boarded a ship in <strong>2003</strong>. 20+ years at sea.</p>
-    
-    <p>I heard about Bitcoin back in <strong>2010</strong> here in the Philippines. But internet was limited then. I couldn't get in.</p>
-    
-    <p><strong>Fast forward to 2021.</strong> A fellow seaman introduced me to crypto again. I liked it. I tried.</p>
-    
-    <p>I lost money many times. I joined presales because they promised x1000, x500. I got scammed over and over. My hard-earned money... gone.</p>
-    
-    <p>Making a token was just a joke at first. I didn't even know how to code.</p>
-    
-    <p>Then I talked to Meta AI. It taught me how to create a token. How to code a website. <strong>Boom. $SHIPS was born.</strong></p>
-    
-    <p>I told myself: <em>"I won't get scammed anymore. And no one else will get scammed by me. Because $SHIPS comes from my heart. A real person built this."</em></p>
-    
-    <p><strong>LP 100% burned. Contract renounced. 0% tax. No team tokens.</strong><br>
-    I can't rug you even if I wanted to. Verify it on-chain.</p>
-    
-    <p><strong>This is not a meme coin. This is a movement.</strong> When we get listed on CoinGecko, 
-</div>
-            <div class="founder-box">
-                <img src="logo.png" alt="Captain Cook" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🍳</text></svg>'">
-                <h3 style="color:var(--gold);margin-bottom:10px;">Captain Cook</h3>
-                <p style="color:#b8c5d6;margin-bottom:15px;">20-Year Veteran OFW Chief Cook</p>
-                <p style="color:#b8c5d6;">"I spent 20 years feeding crews. Now I feed the community. $SHIPS is my retirement plan for 10M OFWs. LP burned. Contract renounced. No rug. No scam. Just honor."</p>
+            <h2>⚓ The Real Story Behind $SHIPS</h2>
+            <p class="section-subtitle">20+ Years at Sea. Scammed Many Times. Now Building For Real.</p>
+            
+            <div class="story-box">
+                <p>
+                    <strong>I first boarded a ship in 2003. 20+ years at sea.</strong>
+                </p>
+                <p>
+                    I heard about Bitcoin back in 2010 here in the Philippines. But internet was limited then. I couldn't get in.
+                </p>
+                <p>
+                    Fast forward to 2021. A fellow seaman introduced me to crypto again. I liked it. I tried.
+                </p>
+                <p>
+                    <strong style="color:#FF6B6B;">I lost money many times.</strong> I joined presales because they promised x1000, x500. 
+                    I got scammed over and over. My hard-earned money... gone.
+                </p>
+                <p>
+                    Making a token was just a joke at first. I didn't even know how to code.
+                </p>
+                <p>
+                    <strong style="color:#D4AF37;">Then I talked to Meta AI.</strong> It taught me how to create a token. 
+                    How to code a website. <strong>Boom. $SHIPS was born.</strong>
+                </p>
+                <p>
+                    I told myself: <strong>"I won't get scammed anymore. And no one else will get scammed by me. 
+                    Because $SHIPS comes from my heart. A real person built this."</strong>
+                </p>
+                <p>
+                    <strong style="color:#8dc647;">LP 100% burned. Contract renounced. 0% tax. No team tokens.</strong><br>
+                    I can't rug you even if I wanted to. Verify it on-chain.
+                </p>
+                <p style="color:#D4AF37; font-weight:bold; text-align:center; font-size:1.4rem; margin-top:30px; line-height:1.4;">
+                    This is not a meme coin. This is a movement. <br>
+                    When we get listed on CoinGecko, we sail to every OFW worldwide.
+                </p>
+                <p style="text-align:center; margin-top:25px; font-style:italic; color:#b8c5d6;">
+                    - Chief Cook, Founder of $SHIPS <br>
+                    20-Year OFW Veteran | Scammed Before, Building For Real Now
+                </p>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank">
+                    🔍 Verify On-Chain: Can't Rug
+                </a>
+                <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn btn-outline" target="_blank">
+                    🚀 Join the Real Movement
+                </a>
             </div>
         </div>
-    </section>
-
-    <section class="section section-dark" id="roadmap">
+    </section>    <!-- ROADMAP SECTION -->
+    <section id="roadmap" class="section section-dark">
         <div class="container">
-            <h2>🗺️ Roadmap: From Galley to Moon</h2>
-            <p class="section-subtitle">Phase-by-phase plan to global OFW adoption</p>
+            <h2>🗺️ ROADMAP TO BRIDGE</h2>
+            <p class="section-subtitle">From Galley Cook to Captain. Step by Step.</p>
             
             <div class="grid">
                 <div class="card">
-                    <span class="phase-badge">PHASE 1 - COMPLETE ✅</span>
-                    <h3>Fair Launch & Trust</h3>
+                    <span class="phase-badge">PHASE 1 - DONE ✅</span>
+                    <h3>Launch & Foundation</h3>
                     <ul>
-                        <li>✅ Fair Launch on pump.fun - May 2026</li>
-                        <li>✅ LP 100% Burned Permanently</li>
-                        <li>✅ Contract Renounced</li>
-                        <li>✅ 0% Tax Buy/Sell</li>
-                        <li>✅ RugCheck Audit: No Risk Found</li>
-                        <li>✅ DexScreener Verified</li>
-                        <li>✅ Solscan Metadata Complete</li>
-                        <li>✅ CoinGecko Applied: CL1105260008</li>
+                        <li>Token Launch on pump.fun</li>
+                        <li>Website Live: shipsofficial.com</li>
+                        <li>LP 100% Burned Forever</li>
+                        <li>Contract Renounced</li>
+                        <li>Community Building: Telegram + Discord</li>
+                        <li>RugCheck Audit: No Risk Found</li>
                     </ul>
                 </div>
-
                 <div class="card">
-                    <span class="phase-badge">PHASE 2 - IN PROGRESS 🔄</span>
-                    <h3>Verification & Community</h3>
+                    <span class="phase-badge">PHASE 2 - NOW 🔥</span>
+                    <h3>Verification & Growth</h3>
                     <ul>
-                        <li>🔄 CoinGecko Listing Approval - June 8, 2026</li>
-                        <li>🔄 Phantom Wallet Verification - Auto after CG</li>
-                        <li>🔄 Trust Wallet Verification - Auto after CG</li>
-                        <li>🔄 1000+ Telegram Members</li>
-                        <li>🔄 500+ Discord Members</li>
-                        <li>🔄 100+ Holders</li>
-                        <li>🔄 OFW Influencer Partnerships</li>
-                        <li>🔄 Seaman Facebook Groups Outreach</li>
+                        <li><strong>CoinGecko Application: CL1105260008</strong></li>
+                        <li>Remove "Unverified" tag on Phantom</li>
+                        <li>3+ Holders → 100+ Holders</li>
+                        <li>DexScreener Trending</li>
+                        <li>First OFW Community AMA</li>
+                        <li>Twitter/X Marketing Push</li>
                     </ul>
                 </div>
-
                 <div class="card">
-                    <span class="phase-badge">PHASE 3 - Q3 2026</span>
-                    <h3>CEX Listings & Utility</h3>
-                    <ul>
-                        <li>⏳ MEXC Listing Application</li>
-                        <li>⏳ Gate.io Listing Application</li>
-                        <li>⏳ Bitget Listing Application</li>
-                        <li>⏳ KuCoin Listing Application</li>
-                        <li>⏳ OFW Remittance Partner Integration</li>
-                        <li>⏳ Seaman Salary Payment Pilot</li>
-                        <li>⏳ $SHIPS Debit Card for OFWs</li>
-                        <li>⏳ 10,000+ Holders Target</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <span class="phase-badge">PHASE 4 - Q4 2026</span>
+                    <span class="phase-badge">PHASE 3 - NEXT 🚀</span>
                     <h3>Global OFW Adoption</h3>
                     <ul>
-                        <li>⏳ Binance Listing Application</li>
-                        <li>⏳ Coinbase Listing Application</li>
-                        <li>⏳ OFW DAO Launch</li>
-                        <li>⏳ Seaman Scholarship Fund</li>
-                        <li>⏳ Maritime NFT Marketplace</li>
-                        <li>⏳ 100,000+ Holders Target</li>
-                        <li>⏳ 1M+ Community Members</li>
-                        <li>⏳ $SHIPS = Official OFW Token</li>
+                        <li>CoinGecko Listing Approved</li>
+                        <li>CoinMarketCap Application</li>
+                        <li>1,000+ Holders Target</li>
+                        <li>CEX Listings: MEXC, Gate.io</li>
+                        <li>OFW Remittance Use-Case</li>
+                        <li>$SHIPS Merch for Seafarers</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="faq">
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section">
         <div class="container">
-            <h2>❓ Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything OFWs need to know about $SHIPS</p>
+            <h2>❓ FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="section-subtitle">Real questions from real OFWs</p>
             
             <div class="faq-item">
-                <h4>1. What is $SHIPS?</h4>
-                <p>$SHIPS is the first OFW token on Solana, built by a 20-year veteran Filipino Chief Cook for 10 million OFWs worldwide. 100% fair launch, LP burned, contract renounced, 0% tax. No team tokens. No presale. Pure community.</p>
+                <h4>1. Scam ba to Chief? Na-scam na ako dati.</h4>
+                <p><strong>HINDI.</strong> LP burned 100% = hindi ko na makukuha pera sa liquidity. Contract renounced = hindi ko na ma-edit token. 0% tax = wala akong kita sa buy/sell mo. Verify mo lahat sa Solscan + RugCheck. Real builder ako, 20 years sa barko.</p>
             </div>
-
+            
             <div class="faq-item">
-                <h4>2. Why does Phantom/Trust Wallet show "Unverified"?</h4>
-                <p>This is normal for new tokens. CoinGecko listing automatically removes the warning and marks $SHIPS as verified. We applied May 11, 2026 with ID CL1105260008. Expected approval: June 8, 2026. After CG approval, Phantom + Trust Wallet will show green check.</p>
+                <h4>2. Bakit "Unverified" pa sa Phantom/Trust Wallet?</h4>
+                <p>Normal yan sa bagong token. <strong>Pag na-list tayo sa CoinGecko CL1105260008, automatic tanggal yan.</strong> Under review na tayo. Expected June 8, 2026. Wag matakot, legit tayo.</p>
             </div>
-
+            
             <div class="faq-item">
-                <h4>3. Is $SHIPS a scam or rug pull?</h4>
-                <p>No. Proof: 1) LP 100% burned permanently - dev can't remove liquidity. 2) Contract renounced - no mint function, no changes possible. 3) 0% tax - no honeypot. 4) RugCheck audit: No risk found. 5) No team tokens - dev bought like everyone else. 6) CoinGecko application submitted.</p>
+                <h4>3. May team tokens ba? Baka mag-dump kayo?</h4>
+                <p><strong>ZERO team tokens.</strong> 100% fair launch sa pump.fun. Lahat ng supply nasa public na. Wala akong hawak na free tokens. Pag bumili ako, same price tayo. Check mo sa Solscan.</p>
             </div>
-
+            
             <div class="faq-item">
-                <h4>4. How to buy $SHIPS?</h4>
-                <p>1) Download Phantom Wallet. 2) Buy SOL on Binance/GCash. 3) Send SOL to Phantom. 4) Go to pump.fun or Jupiter. 5) Paste CA: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump 6) Swap SOL for $SHIPS. 0% tax, instant.</p>
+                <h4>4. Ano plano mo sa $SHIPS Chief?</h4>
+                <p><strong>Movement para sa 10M OFWs.</strong> Una: CoinGecko listing para mawala "spam" tag. Sunod: CEX listings. Last: Gamitin natin $SHIPS pang-remittance para hindi na tayo talo sa fees. From galley to bridge talaga.</p>
             </div>
-
+            
             <div class="faq-item">
-                <h4>5. What's the utility of $SHIPS?</h4>
-                <p>Phase 1: Community token for OFWs. Phase 2: Verification + Trust. Phase 3: Remittance partner integration, seaman salary payments, $SHIPS debit card. Phase 4: OFW DAO, scholarship fund, maritime NFT marketplace. Goal: Make $SHIPS the official OFW token globally.</p>
-            </div>
-
-            <div class="faq-item">
-                <h4>6. When CoinGecko listing?</h4>
-                <p>Applied May 11, 2026. Request ID: CL1105260008. Status: Under Review. Expected approval: June 8, 2026. Track progress: https://www.coingecko.com/en/coins/submit</p>
+                <h4>5. Paano ako makakasali sa community?</h4>
+                <p>Join ka sa Telegram: t.me/SHIPSsolana at Discord: discord.gg/5cxY7FD5Y8. Dun tayo nag-uusap araw-araw. Real people, real OFWs.</p>
             </div>
         </div>
     </section>
 
-    <section class="section section-dark" id="community">
+    <!-- COMMUNITY SECTION -->
+    <section id="community" class="section section-dark">
         <div class="container">
-            <h2>🤝 Join The $SHIPS Crew</h2>
-            <p class="section-subtitle">10M OFWs worldwide. One token. One family. From galley to bridge, we sail together.</p>
+            <h2>🌊 JOIN THE CREW</h2>
+            <p class="section-subtitle">10M OFWs Worldwide. One Ship. One Mission.</p>
             
             <div class="community-buttons">
                 <a href="https://t.me/SHIPSsolana" class="btn" target="_blank">💬 Telegram</a>
-                <a href="https://discord.gg/5cxY7FD5Y8" class="btn" target="_blank">🎮 Discord</a>
-                <a href="https://x.com/ShipsOfficial26" class="btn" target="_blank">🐦 Twitter/X</a>
-                <a href="https://facebook.com/profile.php?id=1EYWrcv2xL" class="btn" target="_blank">📘 Facebook</a>
-                <a href="https://github.com/shipsofficial2026" class="btn" target="_blank">💻 GitHub</a>
+                <a href="https://discord.gg/5cxY7FD5Y8" class="btn btn-outline" target="_blank">🎮 Discord</a>
+                <a href="https://x.com/ShipsOfficial26" class="btn btn-cg" target="_blank">🐦 Twitter/X</a>
+                <a href="https://github.com/shipsofficial2026" class="btn btn-phantom" target="_blank">💻 GitHub</a>
+                <a href="https://facebook.com/profile.php?id=1EYWrcv2xL" class="btn btn-solscan" target="_blank">📘 Facebook</a>
+            </div>
+
+            <div class="founder-box" style="margin-top:60px;">
+                <img src="logo.png" alt="Captain Cook" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍🍳</text></svg>'">
+                <h3 style="color:var(--gold);">Captain Cook</h3>
+                <p style="color:#b8c5d6;">20-Year Veteran OFW Chief Cook</p>
+                <p style="margin-top:15px; font-style:italic;">
+                    "20 years akong nagluto para sa iba. Ngayon, magluluto na tayo para sa kinabukasan natin. 
+                    Hindi na tayo ma-scam. Hindi na tayo ma-rug. $SHIPS is by OFWs, for OFWs."
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>⚓ $SHIPS - From Galley to Bridge ⚓</p>
-            <p>Built by OFWs, for OFWs. 100% Fair Launch. LP Burned. Contract Renounced.</p>
-            <p>CoinGecko Application: CL1105260008 | Solana Contract: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</p>
-            <p>© 2026 $SHIPS. All rights reserved. Not financial advice. DYOR.</p>
+            <p>© 2026 $SHIPS Official. Built by OFWs, For OFWs.</p>
+            <p>Contract: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</p>
+            <p>CoinGecko Application: CL1105260008 | Not Financial Advice | DYOR</p>
             
             <div class="disclaimer">
-                <strong>⚠️ DISCLAIMER:</strong> $SHIPS is a community token created for OFWs and seafarers. Cryptocurrency investments are volatile and high-risk. Only invest what you can afford to lose. This is not financial advice. Always do your own research (DYOR). The founder is a 20-year veteran OFW Chief Cook, not a financial advisor. LP burned and contract renounced means the project cannot be changed, but also means no refunds. Trade responsibly.
+                <strong>DISCLAIMER:</strong> $SHIPS is a community token created for entertainment and community building. 
+                Cryptocurrency investments are volatile and high risk. Only invest what you can afford to lose. 
+                This is not financial advice. The founder is not a licensed financial advisor. 
+                Always Do Your Own Research (DYOR). LP is 100% burned and contract is renounced for transparency.
             </div>
         </div>
     </footer>
 
     <script>
-        // Countdown Timer to June 8, 2026
+        // Countdown Timer for CoinGecko
         const countDownDate = new Date("June 8, 2026 00:00:00").getTime();
-        const x = setInterval(function() {
+        
+        const countdown = setInterval(function() {
             const now = new Date().getTime();
             const distance = countDownDate - now;
+            
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
             document.getElementById("days").innerHTML = days;
             document.getElementById("hours").innerHTML = hours;
             document.getElementById("minutes").innerHTML = minutes;
             document.getElementById("seconds").innerHTML = seconds;
+            
             if (distance < 0) {
-                clearInterval(x);
+                clearInterval(countdown);
                 document.getElementById("days").innerHTML = "0";
                 document.getElementById("hours").innerHTML = "0";
                 document.getElementById("minutes").innerHTML = "0";
                 document.getElementById("seconds").innerHTML = "0";
             }
         }, 1000);
-    <</script>
-</bod</body>
-     </html>
+    </script>
+</body>
+</html>
