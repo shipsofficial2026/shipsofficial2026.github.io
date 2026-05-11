@@ -125,7 +125,8 @@
         }
     .nav {display: flex; justify-content: space-between; align-items: center;}
     .logo {display: flex; align-items: center; gap: 15px;}
-    .logo img {width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold);}
+    .logo img {width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold); object-fit: cover;}
+    .logo-fallback {width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold); background: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;}
     .logo-text {font-size: 1.8rem; font-weight: bold; color: var(--gold);}
     .nav-links {display: flex; gap: 25px; list-style: none;}
     .nav-links a {color: var(--white); text-decoration: none; transition: 0.3s; font-size: 0.95rem;}
@@ -137,6 +138,7 @@
             margin: 0 auto 30px;
             animation: float 3s ease-in-out infinite;
             filter: drop-shadow(0 0 30px rgba(212,175,55,0.7));
+            object-fit: contain;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -335,6 +337,8 @@
     .stat-box:hover {border-color: var(--cg-green); transform: scale(1.05);}
     .stat-box h4 {color: var(--gold); font-size: 2rem; margin-bottom: 5px;}
     .stat-box p {color: #b8c5d6; font-size: 0.9rem;}
+    .stat-box a {color: var(--gold); text-decoration: none; font-size: 0.85rem;}
+    .stat-box a:hover {text-decoration: underline;}
     .community-buttons {text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;}
     .story-box {
             background: rgba(255,255,255,0.05);
@@ -370,6 +374,7 @@
             border-radius: 50%;
             border: 3px solid var(--gold);
             margin-bottom: 20px;
+            object-fit: cover;
         }
         footer {
             padding: 40px 0;
@@ -435,12 +440,12 @@
         <div class="ticker">
             <span>⚓ $SHIPS LIVE: MC $3.4K</span>
             <span>🔒 LP Locked: $709 | 100% Burned Forever</span>
-            <span>👥 Holders: 130+ Growing Daily</span>
+            <span>👥 Holders: Growing Daily</span>
             <span>🦎 CG ID: CL1105260008 - Under Review</span>
             <span>📱 Phantom Verification: Pending CG Listing</span>
             <span>⚓ $SHIPS LIVE: MC $3.4K</span>
             <span>🔒 LP Locked: $709 | 100% Burned Forever</span>
-            <span>👥 Holders: 130+ Growing Daily</span>
+            <span>👥 Holders: Growing Daily</span>
             <span>🦎 CG ID: CL1105260008 - Under Review</span>
             <span>📱 Phantom Verification: Pending CG Listing</span>
         </div>
@@ -450,7 +455,8 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="logo.png" alt="$SHIPS Logo">
+                    <img src="logo.png" alt="$SHIPS Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-fallback" style="display:none;">⚓</div>
                     <span class="logo-text">$SHIPS</span>
                 </div>
                 <ul class="nav-links">
@@ -468,7 +474,7 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <img src="logo.png" alt="$SHIPS Compass Logo" class="hero-logo">
+            <img src="logo.png" alt="$SHIPS Compass Logo" class="hero-logo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>'">
             <h1>From Galley to Billions</h1>
             <p>Built by 21-year Filipino seaman for 10M OFWs worldwide. Real LP. Renounced Contract. No Risk Found. <strong>CoinGecko Application Submitted: CL1105260008</strong></p>
             <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn">🚀 BUY PUMP.FUN</a>
@@ -554,8 +560,9 @@
                     <p>Bonding to Raydium</p>
                 </div>
                 <div class="stat-box">
-                    <h4>130+</h4>
+                    <h4>50+</h4>
                     <p>Holders Growing Daily</p>
+                    <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#holders" target="_blank">View Live Count →</a>
                 </div>
             </div>
         </div>
@@ -618,31 +625,4 @@
 
                 <p>So I did. <strong>No airdrop. No presale. No team tokens. No bonus allocations. No hidden wallets.</strong> Because every free token is a future dump. Every presale is a future rug. I removed everything that could drag the price down.</p>
 
-                <p>$SHIPS isn't just a meme token. This is my heart. This is 21 years at sea. This is every dollar I lost to scams. This is every seaman who deserves a fair shot in crypto.</p>
-
-                <p><strong>We are 10M+ OFWs worldwide. We send $33 billion home every year. But in crypto, we have no voice. No token. No protection. Until now.</strong></p>
-
-                <p>I built $SHIPS with 100% of the liquidity locked and the contract renounced on day one. Not for hype. But because I know what it feels like to be rugged. I would never do that to my own people.</p>
-
-                <p><strong>This isn't a project. This is a promise.</strong> From one seaman to every seaman, every OFW, and every person who's ever been scammed:</p>
-
-                <p><strong>You deserve better. You deserve $SHIPS.</strong></p>
-
-                <p><strong>May 11, 2026:</strong> We submitted to CoinGecko. Request ID: CL1105260008. This is our path to legitimacy, global trust, removing spam warnings from wallets forever, and unlocking CEX listings.</p>
-
-                <p>Welcome aboard. The voyage to billions starts here.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="about">
-        <div class="container">
-            <h2>⚓ $SHIPS Tokenomics</h2>
-            <p class="section-subtitle">100% Fair Launch. Community Owned. No Presale. No Team Tokens. CoinGecko Ready.</p>
-            <div class="grid">
-                <div class="card">
-                    <h3>🔒 Safety First - CG Verified</h3>
-                    <ul>
-                        <li>100% LP Burned Forever - Verified on Solscan</li>
-                        <li>Contract Renounced - No Owner Forever</li>
-                        <li>0% Buy Tax / 
+                <p>$SHIPS isn't just a meme token. This is my heart. This is 21 years
