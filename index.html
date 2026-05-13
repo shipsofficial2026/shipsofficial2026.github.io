@@ -179,6 +179,25 @@
         }
         .stat-card p {color: #b8c5d6;}
         .stat-card a {color: var(--gold); text-decoration: none; font-size: 0.9rem;}
+     .music-player {
+  text-align: center;
+  margin: 20px 0;
+}
+#play-music {
+  background: #ffd700;
+  color: #0a0f1c;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+#play-music:hover {
+  background: #ffed4e;
+  transform: scale(1.05);
+}  
     </style>
 </head>
 <body>
@@ -186,7 +205,17 @@
     <div class="world-map"></div>
     <div class="sailing-ship">🛳️</div>
     <div class="waves"></div>
-
+189
+190    <!-- MUSIC PLAYER START -->
+191    <div class="music-player">
+192      <audio id="bg-music" loop preload="auto">
+193        <source src="https://vgmsite.com/soundtracks/one-piece-ost/we-are/eygkgjfh/01.%20We%20Are.mp3" type="audio/mpeg">
+194      </audio>
+195      <button id="play-music">🔊 Play One Piece Theme</button>
+196    </div>
+197    <!-- MUSIC PLAYER END -->
+198
+199    <header>
     <header>
         <div class="container">
             <nav class="nav">
@@ -491,5 +520,14 @@
         </div>
       </footer>
   </div>
+   <script>
+document.getElementById('play-music').addEventListener('click', function() {
+  const audio = document.getElementById('bg-music');
+  audio.play();
+  this.innerText = "🎵 Now Playing: We Are!";
+  this.disabled = true;
+  this.style.opacity = "0.8";
+});
+</script>
 </body>
 </html>
