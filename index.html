@@ -24,14 +24,24 @@
             --dark: #061018;
         }
         * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--navy);
-            color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
+       body {
+  background-image: url('https://static.wikia.nocookie.net/onepiece/images/9/90/Rurubu_One_Piece_World_Map.png/revision/latest');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #061018;
+  font-family: 'Segoe UI', Tahoma;
+  color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+} 
+  .content-wrapper {
+  background: rgba(6, 16, 24, 0.82);
+  backdrop-filter: blur(4px);
+  min-height: 100vh;
+  padding: 20px;
+}      
         /* One Piece World Map Background */
         .world-map {
             position: fixed;
@@ -172,6 +182,7 @@
     </style>
 </head>
 <body>
+  <div class="content-wrapper">
     <div class="world-map"></div>
     <div class="sailing-ship">🛳️</div>
     <div class="waves"></div>
@@ -478,6 +489,7 @@
             <p>Contract: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</p>
             <p>Not Financial Advice | DYOR</p>
         </div>
-    </footer>
+      </footer>
+  </div>
 </body>
 </html>
