@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXMC462LH8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +14,6 @@
   <title>$SHIPS Official - From Galley to Bridge | OFW Token</title>
   <meta name="description" content="Official website of $SHIPS - The seafarer token on Solana. Built by Filipino OFWs for OFWs. Contract Renounced. 1B Supply. 0% Tax.">
   
-  <!-- Social Preview -->
   <meta property="og:title" content="$SHIPS Official - From Galley to Bridge">
   <meta property="og:description" content="Built by 20-year OFW Chief Cook for 10M OFWs worldwide. 100% Fair Launch. 0% Tax.">
   <meta property="og:image" content="https://i.imgur.com/8KQwZbF.png">
@@ -50,69 +48,27 @@
     }
     
     @keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
+    .content-wrapper {background: rgba(6, 16, 24, 0.82); backdrop-filter: blur(4px); min-height: 100vh; padding: 20px;}
     
-    .content-wrapper {
-      background: rgba(6, 16, 24, 0.82);
-      backdrop-filter: blur(4px);
-      min-height: 100vh;
-      padding: 20px;
-    }
+    .world-map {position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.05; z-index: 0; filter: sepia(0.3) hue-rotate(15deg);}
+    .sailing-ship {position: fixed; bottom: 15%; left: -100px; font-size: 60px; z-index: 1; animation: sail 20s linear infinite; filter: drop-shadow(0 0 10px rgba(212,175,55,0.5));}
+    @keyframes sail {0% { left: -100px; transform: rotate(-5deg); } 50% { transform: rotate(5deg); } 100% { left: 110%; transform: rotate(-5deg); }}
     
-    .world-map {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      opacity: 0.05;
-      z-index: 0;
-      filter: sepia(0.3) hue-rotate(15deg);
-    }
-    
-    .sailing-ship {
-      position: fixed;
-      bottom: 15%; left: -100px;
-      font-size: 60px; z-index: 1;
-      animation: sail 20s linear infinite;
-      filter: drop-shadow(0 0 10px rgba(212,175,55,0.5));
-    }
-    @keyframes sail {
-      0% { left: -100px; transform: rotate(-5deg); }
-      50% { transform: rotate(5deg); }
-      100% { left: 110%; transform: rotate(-5deg); }
-    }
-    
-    .waves {
-      position: fixed;
-      bottom: 0; left: 0;
-      width: 100%; height: 120px;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".15" fill="%23D4AF37"/></svg>') repeat-x;
-      animation: wave 12s linear infinite;
-      z-index: 1;
-    }
+    .waves {position: fixed; bottom: 0; left: 0; width: 100%; height: 120px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".15" fill="%23D4AF37"/></svg>') repeat-x; animation: wave 12s linear infinite; z-index: 1;}
     @keyframes wave { 0% {background-position-x: 0;} 100% {background-position-x: 1200px;} }
     
     .container {max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;}
-    
-    header {
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(212,175,55,0.2);
-      position: sticky; top: 0;
-      background: rgba(10,26,47,0.95);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
+    header {padding: 20px 0; border-bottom: 1px solid rgba(212,175,55,0.2); position: sticky; top: 0; background: rgba(10,26,47,0.95); backdrop-filter: blur(10px); z-index: 100;}
     
     .nav {display: flex; justify-content: space-between; align-items: center;}
     .logo-text {font-size: 1.8rem; font-weight: bold; color: var(--gold);}
     .nav-links {display: flex; gap: 25px; list-style: none;}
     .nav-links a {color: var(--white); text-decoration: none; transition: 0.3s;}
     .nav-links a:hover {color: var(--gold);}
-    .menu-btn {display: none; background: none; border: 1px solid var(--gold); color: var(--gold); 
-      padding: 8px 12px; border-radius: 6px; font-size: 1.2rem; cursor: pointer;}
+    .menu-btn {display: none; background: none; border: 1px solid var(--gold); color: var(--gold); padding: 8px 12px; border-radius: 6px; font-size: 1.2rem; cursor: pointer;}
     
     @media (max-width: 768px) {
-      .nav-links {display: none; flex-direction: column; position: absolute; top: 70px; 
-        right: 20px; background: var(--navy); padding: 20px; border: 1px solid var(--gold); 
-        border-radius: 8px;}
+      .nav-links {display: none; flex-direction: column; position: absolute; top: 70px; right: 20px; background: var(--navy); padding: 20px; border: 1px solid var(--gold); border-radius: 8px;}
       .nav-links.show {display: flex;}
       .menu-btn {display: block;}
       .hero h1 {font-size: 2.5rem;}
@@ -120,174 +76,89 @@
     }
     
     .hero {padding: 120px 0 60px; text-align: center;}
-    .hero h1 {
-      font-size: 3.5rem; margin-bottom: 20px;
-      background: linear-gradient(45deg, var(--gold), var(--white));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    .hero h1 {font-size: 3.5rem; margin-bottom: 20px; background: linear-gradient(45deg, var(--gold), var(--white)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
     .hero p {font-size: 1.3rem; color: #b8c5d6; margin-bottom: 40px; max-width: 700px; margin: 0 auto 40px;}
     
-    .btn {
-      display: inline-block; padding: 14px 30px;
-      background: var(--gold); color: var(--navy);
-      text-decoration: none; border-radius: 8px;
-      font-weight: bold; margin: 8px;
-      border: 2px solid var(--gold); transition: 0.3s;
-    }
+    .btn {display: inline-block; padding: 14px 30px; background: var(--gold); color: var(--navy); text-decoration: none; border-radius: 8px; font-weight: bold; margin: 8px; border: 2px solid var(--gold); transition: 0.3s;}
     .btn:hover {transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212,175,55,0.4);}
     .btn-outline {background: transparent; color: var(--gold);}
     
-    .ca-box {
-      background: var(--dark); padding: 25px;
-      border-radius: 12px; border: 1px solid var(--gold);
-      margin: 40px auto; max-width: 800px;
-    }
-    .ca-box code {
-      color: var(--white); font-size: 0.95rem;
-      word-break: break-all; background: rgba(212,175,55,0.1);
-      padding: 10px; border-radius: 5px; display: block;
-    }
+    .ca-box {background: var(--dark); padding: 25px; border-radius: 12px; border: 1px solid var(--gold); margin: 40px auto; max-width: 800px;}
+    .ca-box code {color: var(--white); font-size: 0.95rem; word-break: break-all; background: rgba(212,175,55,0.1); padding: 10px; border-radius: 5px; display: block;}
     
-    .security-badges {
-      display: flex; justify-content: center;
-      gap: 15px; flex-wrap: wrap; margin: 20px 0;
-    }
-    .badge {
-      background: rgba(212,175,55,0.1); border: 1px solid var(--gold);
-      padding: 8px 15px; border-radius: 20px;
-      font-size: 0.85rem; color: var(--gold);
-    }
+    .security-badges {display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 20px 0;}
+    .badge {background: rgba(212,175,55,0.1); border: 1px solid var(--gold); padding: 8px 15px; border-radius: 20px; font-size: 0.85rem; color: var(--gold);}
     
     .section {padding: 80px 0;}
     .section-dark {background: var(--dark);}
     .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
     .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px;}
     
-    .stats-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px; margin: 40px 0;
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.05); padding: 30px 20px;
-      border-radius: 12px; border: 1px solid rgba(212,175,55,0.2);
-      text-align: center;
-    }
-    .stat-card .big {
-      font-size: 3rem; color: var(--gold);
-      font-weight: bold; margin-bottom: 10px;
-    }
+    .stats-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0;}
+    .stat-card {background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.2); text-align: center;}
+    .stat-card .big {font-size: 3rem; color: var(--gold); font-weight: bold; margin-bottom: 10px;}
     .stat-card p {color: #b8c5d6;}
     .stat-card a {color: var(--gold); text-decoration: none; font-size: 0.9rem;}
     
-    .chart-container {
-      background: var(--dark); padding: 20px;
-      border-radius: 12px; border: 1px solid var(--gold);
-      margin: 30px 0;
-    }
-    
+    .chart-container {background: var(--dark); padding: 20px; border-radius: 12px; border: 1px solid var(--gold); margin: 30px 0;}
     .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;}
-    .card {
-      background: rgba(255,255,255,0.05); padding: 35px;
-      border-radius: 12px; border: 1px solid rgba(212,175,55,0.2);
-    }
+    .card {background: rgba(255,255,255,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.2);}
     .card h3 {color: var(--gold); margin-bottom: 20px; font-size: 1.6rem;}
     .card ul {list-style: none;}
     .card li {padding: 10px 0; color: #b8c5d6; border-bottom: 1px solid rgba(212,175,55,0.1);}
     
-    .faq-item {
-      background: rgba(255,255,255,0.05); padding: 25px;
-      border-radius: 12px; margin-bottom: 15px;
-      border: 1px solid rgba(212,175,55,0.2);
-    }
+    .faq-item {background: rgba(255,255,255,0.05); padding: 25px; border-radius: 12px; margin-bottom: 15px; border: 1px solid rgba(212,175,55,0.2);}
     .faq-item h4 {color: var(--gold); margin-bottom: 10px; font-size: 1.2rem;}
     
-    .logbook-container {
-      max-width: 800px; margin: 40px auto 0;
-      border-left: 2px solid var(--gold); padding-left: 30px;
-    }
-    .log-entry {
-      background: rgba(255,255,255,0.05); padding: 25px;
-      border-radius: 10px; margin-bottom: 25px;
-      position: relative; border: 1px solid rgba(212,175,55,0.2);
-    }
-    .log-entry::before {
-      content: '⚓'; position: absolute; left: -42px; top: 20px;
-      background: var(--dark); padding: 5px; font-size: 1.2rem;
-    }
+    .logbook-container {max-width: 800px; margin: 40px auto 0; border-left: 2px solid var(--gold); padding-left: 30px;}
+    .log-entry {background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; margin-bottom: 25px; position: relative; border: 1px solid rgba(212,175,55,0.2);}
+    .log-entry::before {content: '⚓'; position: absolute; left: -42px; top: 20px; background: var(--dark); padding: 5px; font-size: 1.2rem;}
     .log-date {color: var(--gold); font-weight: bold; font-size: 0.9rem;}
     .log-entry h4 {color: var(--white); margin: 8px 0; font-size: 1.3rem;}
     .log-entry p {color: #b8c5d6; margin: 0;}
     
-    .quote-box {
-      background: var(--dark); padding: 40px;
-      border-radius: 12px; border-left: 4px solid var(--gold);
-      margin: 40px 0; text-align: center;
-    }
+    .quote-box {background: var(--dark); padding: 40px; border-radius: 12px; border-left: 4px solid var(--gold); margin: 40px 0; text-align: center;}
     
-    .crew-buttons {
-      display: flex; flex-wrap: wrap; gap: 15px;
-      justify-content: center; margin: 40px 0;
-    }
-    .crew-btn {
-      padding: 15px 30px; border-radius: 8px;
-      text-decoration: none; font-weight: bold;
-      display: flex; align-items: center; gap: 10px; transition: 0.3s;
-    }
+    .crew-buttons {display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 40px 0;}
+    .crew-btn {padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 10px; transition: 0.3s;}
     .btn-telegram {background: #0088cc; color: white;}
     .btn-discord {background: transparent; color: var(--gold); border: 2px solid var(--gold);}
     .btn-twitter {background: #1da1f2; color: white;}
     .btn-github {background: #6e7681; color: white;}
     .btn-facebook {background: #1877f2; color: white;}
     
-    .story-box {
-      background: rgba(255,255,255,0.05); padding: 40px;
-      border-radius: 12px; border: 1px solid var(--gold);
-      margin: 40px 0; text-align: left;
-    }
+    .story-box {background: rgba(255,255,255,0.05); padding: 40px; border-radius: 12px; border: 1px solid var(--gold); margin: 40px 0; text-align: left;}
     .story-box p {margin-bottom: 20px; color: #b8c5d6; font-size: 1.1rem;}
     .story-box strong {color: var(--gold);}
     
-    .disclaimer-box {
-      background: rgba(255,0,0,0.1); border: 1px solid rgba(255,0,0,0.3);
-      padding: 20px; border-radius: 8px; margin-top: 30px; text-align: center;
-    }
+    .disclaimer-box {background: rgba(255,0,0,0.1); border: 1px solid rgba(255,0,0,0.3); padding: 20px; border-radius: 8px; margin-top: 30px; text-align: center;}
     
-    footer {
-      padding: 40px 0; text-align: center;
-      border-top: 1px solid rgba(212,175,55,0.2); color: #b8c5d6;
-    }
-    .social-links {
-      display: flex; justify-content: center; gap: 20px;
-      margin-bottom: 20px; flex-wrap: wrap;
-    }
-    .social-links a {
-      color: var(--gold); text-decoration: none;
-      font-size: 1.5rem; transition: 0.3s;
-    }
+    footer {padding: 40px 0; text-align: center; border-top: 1px solid rgba(212,175,55,0.2); color: #b8c5d6;}
+    .social-links {display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;}
+    .social-links a {color: var(--gold); text-decoration: none; font-size: 1.5rem; transition: 0.3s;}
     .social-links a:hover {color: var(--white); transform: scale(1.2);}
     
-    .music-player {text-align: center; margin: 20px 0;}
-    #play-music {
-      background: #ffd700; color: #0a0f1c; border: none;
-      padding: 12px 24px; border-radius: 8px; font-weight: bold;
-      cursor: pointer; font-size: 16px; transition: 0.3s;
-    }
+    .music-player {text-align: center; margin: 20px 0; position: relative; z-index: 10;}
+    #play-music {background: #ffd700; color: #0a0f1c; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; transition: 0.3s;}
     #play-music:hover {background: #ffed4e; transform: scale(1.05);}
+    #play-music:disabled {opacity: 0.6; cursor: not-allowed;}
+    
+    .transparency-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;}
+    .transparency-card {background: var(--dark); padding: 25px; border-radius: 12px; border: 1px solid var(--gold); text-align: center;}
+    .transparency-card a {color: var(--gold); text-decoration: none; font-weight: bold;}
   </style>
-</head>
-
-<body>
+</head><body>
   <div class="content-wrapper">
     <div class="world-map"></div>
     <div class="sailing-ship">🛳️</div>
     <div class="waves"></div>
 
     <div class="music-player">
-      <audio id="bg-music" loop preload="auto">
+      <audio id="bg-music" loop preload="metadata">
         <source src="https://vgmsite.com/soundtracks/one-piece-ost/we-are/eygkgjfh/01.%20We%20Are.mp3" type="audio/mpeg">
       </audio>
       <button id="play-music">🔊 Play One Piece Theme</button>
+      <p style="font-size:0.8rem; color:#b8c5d6; margin-top:8px;">Click to play music</p>
     </div>
 
     <header>
@@ -296,6 +167,8 @@
           <span class="logo-text">⚓ $SHIPS</span>
           <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#captains-log">Log</a></li>
+            <li><a href="#why-ofw">Why OFW</a></li>
             <li><a href="#chart">Chart</a></li>
             <li><a href="#stats">Stats</a></li>
             <li><a href="#roadmap">Roadmap</a></li>
@@ -306,7 +179,9 @@
           <button class="menu-btn" id="menu-btn">☰</button>
         </nav>
       </div>
-    </header>    <section class="hero" id="home">
+    </header>
+
+    <section class="hero" id="home">
       <div class="container">
         <h1>From Galley to Bridge</h1>
         <p>Built by 20-year OFW Chief Cook for 10M OFWs worldwide. 100% Fair Launch. 0% Tax. No Team Tokens.</p>
@@ -322,6 +197,45 @@
           <span class="badge">✅ Contract Renounced</span>
           <span class="badge">✅ 0% Tax</span>
           <span class="badge">✅ No Team Tokens</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="captains-log">
+      <div class="container">
+        <h2>⚓ CAPTAIN’S LOG: WE DO NOT ABANDON SHIP</h2>
+        <div class="log-entry" style="max-width:800px; margin:0 auto;">
+          <span class="log-date">Entry 001</span>
+          <h4>Hello to everyone watching and asking questions!</h4>
+          <p>
+            I know many of you are interested in <strong>$SHIPS</strong>, but you’re hesitant or afraid to buy. 
+            I completely understand. In the crypto world, there are too many scammers who build projects just to run away with your hard-earned money. 
+            I know that pain because <strong>I have been scammed multiple times before</strong>. It hurts to lose what you sacrificed for.
+          </p>
+          <p>That is exactly why <strong>$SHIPS</strong> was born.</p>
+          
+          <h4 style="margin-top:20px;">Here is the absolute truth about this project:</h4>
+          <ul style="list-style:none; padding:0; margin-top:15px;">
+            <li><strong>1. Born at Sea:</strong> I am a 20-year OFW Chief Cook. I created this token literally on the ship, between galley shifts.</li>
+            <li><strong>2. No Exit Scam:</strong> Contract renounced. Walang dev wallet na pwedeng mag-rug. Transparency first.</li>
+            <li><strong>3. Built with OFW Pride:</strong> This isn’t just a token. It’s a mission to prove that seafarers can build in Web3 too.</li>
+          </ul>
+          
+          <p style="margin-top:20px; font-weight:bold; color:var(--gold);">
+            We do not abandon ship. We sail together.<br>
+            $SHIPS: Hail Mary Mission
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="why-ofw">
+      <div class="container">
+        <h2>🌊 Bakit Para sa OFW ang $SHIPS</h2>
+        <div class="story-box" style="max-width:800px; margin:0 auto;">
+          <p>10 milyon tayong OFW sa buong mundo. Tayo ang modern heroes, pero tayo rin ang madalas ma-scam at talo sa remittance fees.</p>
+          <p>Gumawa ako ng $SHIPS para patunayan na kaya ng isang seaman magtayo ng totoong project sa Web3. Walang pangako ng x1000. Walang magic. Tayo-tayo lang na nagtutulungan.</p>
+          <p>Ang goal: Gawing movement ang $SHIPS para sa OFW. Para sa susunod, hindi na tayo ang niloloko. Tayo na ang nagtatayo.</p>
         </div>
       </div>
     </section>
@@ -396,9 +310,7 @@
           </ul>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="logbook">
+    </section>    <section class="section" id="logbook">
       <div class="container">
         <h2>📖 CAPTAIN'S LOGBOOK</h2>
         <p class="section-subtitle">Daily updates from the bridge. No cap, all real.</p>
@@ -423,7 +335,9 @@
           </div>
         </div>
       </div>
-    </section>    <section class="section section-dark" id="faq">
+    </section>
+
+    <section class="section section-dark" id="faq">
       <div class="container">
         <h2>FREQUENTLY ASKED QUESTIONS</h2>
         <p class="section-subtitle">Real questions from real OFWs</p>
@@ -441,6 +355,50 @@
         <div class="faq-item">
           <h4>3. Ano plano mo sa $SHIPS Chief?</h4>
           <p>Movement para sa 10M OFWs. Una: Build strong community. Sunod: CEX listings. Last: Gamitin natin $SHIPS pang-remittance para hindi na tayo talo sa remittance fees.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transparency">
+      <div class="container">
+        <h2>🔍 TRANSPARENCY BOARD</h2>
+        <p class="section-subtitle">Check everything yourself. Walang itinatago.</p>
+        <div class="transparency-grid">
+          <div class="transparency-card">
+            <h3>📜 Contract</h3>
+            <p>Verify sa Solscan</p>
+            <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Contract →</a>
+          </div>
+          <div class="transparency-card">
+            <h3>✅ RugCheck</h3>
+            <p>No Risk Found</p>
+            <a href="https://rugcheck.xyz" target="_blank">View Report →</a>
+          </div>
+          <div class="transparency-card">
+            <h3>🔒 Renounced</h3>
+            <p>Contract permanently locked</p>
+            <a href="https://solscan.io/tx" target="_blank">View Transaction →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="safety">
+      <div class="container">
+        <h2>⚓ SHIP SAFETY PROTOCOL</h2>
+        <p class="section-subtitle">Paano iwasan ma-scam. Galing sa 20 years ko sa dagat.</p>
+        <div class="card" style="max-width:800px; margin:0 auto;">
+          <h3>Rule 1: Check Contract</h3>
+          <p>Kung hindi renounced, alis na agad. Sa Solscan mo makikita yan.</p>
+          
+          <h3 style="margin-top:25px;">Rule 2: No Private DM</h3>
+          <p>Hindi ako mag-DM sayo para maghingi ng SOL. Admin lang mag-aannounce sa Telegram.</p>
+          
+          <h3 style="margin-top:25px;">Rule 3: DYOR Always</h3>
+          <p>Huwag mag-invest dahil lang hype. Basahin mo muna lahat. Tanong ka sa community.</p>
+          
+          <h3 style="margin-top:25px;">Rule 4: Invest What You Can Lose</h3>
+          <p>Crypto ay risky. Gamitin mo lang yung pera na kaya mong mawala.</p>
         </div>
       </div>
     </section>
@@ -502,12 +460,17 @@
   </div>
 
   <script>
-    document.getElementById('play-music').addEventListener('click', function() {
-      const audio = document.getElementById('bg-music');
-      audio.play().catch(e => alert("Error: " + e));
-      this.innerText = "🎵 Now Playing: We Are!";
-      this.disabled = true;
-      this.style.opacity = "0.8";
+    const audio = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-music');
+    
+    playBtn.addEventListener('click', function() {
+      audio.play().then(() => {
+        playBtn.innerText = "🎵 Now Playing: We Are!";
+        playBtn.disabled = true;
+      }).catch(e => {
+        alert("Hindi nag-play ang music. Try mo i-refresh or check internet connection.");
+        console.log(e);
+      });
     });
 
     document.getElementById('menu-btn').onclick = () => {
