@@ -442,18 +442,12 @@
       </div>
     </section>
 <div class="music-player">
-  <iframe 
-    id="yt-player"
-    width="0" 
-    height="0" 
-    src="https://www.youtube-nocookie.com/embed/h5oGCpVe8iQ?enablejsapi=1&controls=0&loop=1&playlist=h5oGCpVe8iQ" 
-    frameborder="0" 
-    allow="autoplay">
-  </iframe>
-  
+  <audio id="bg-music" loop preload="none">
+    <source src="LINK_NG_MP3_MO_DITO.mp3" type="audio/mpeg">
+  </audio>
   <button id="play-music">🔊 Play We Are! Theme</button>
   <p id="music-status" style="font-size:0.8rem; color:#b8c5d6; margin-top:8px;">
-    YouTube audio lang. ~50KB lang pag pinindot mo.
+    ~50KB lang. Maglo-load lang pag pinindot mo.
   </p>
 </div>
     <footer>
@@ -479,29 +473,77 @@
   const status = document.getElementById('music-status');
   
   // Load YouTube API
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  document.head.appendChild(tag);
-  
-  window.onYouTubeIframeAPIReady = function() {
-    player = new YT.Player('yt-player');
-  }
-  
-  playBtn.addEventListener('click', function() {
-    if(player) {
-      player.playVideo();
-      player.setVolume(50);
-      playBtn.innerText = "🎵 Now Playing: We Are!";
-      playBtn.disabled = true;
-      status.innerText = "Playing. Walang malaking download.";
-    }
-  });
+  <script>
+const audio1 = document.getElementById('bg-music-1')
+const audio2 = document.getElementById('bg-music-2')
+const btn1 = document.getElementById('play-music-1')
+const btn2 = document.getElementById('play-music-2')
+const status = document.getElementById('music-status')
 
-  document.getElementById('menu-btn').onclick = () => {
-    document.getElementById('nav-links').classList.toggle('show');
-  }
+function stopAll() {
+  audio1.pause()
+  audio1.currentTime = 0
+  audio2.pause() 
+  audio2.currentTime = 0
+  btn1.disabled = false
+  btn2.disabled = false
+  btn1.innerText = "🔊 We Are!"
+  btn2.innerText = "🔊 Hikari Are"
+}
+
+btn1.addEventListener('click', function() {
+  stopAll()
+  audio1.play()
+  btn1.innerText = "🎵 Playing We Are!"
+  <script>
+const audio1 = document.getElementById('bg-music-1')
+const audio2 = document.getElementById('bg-music-2')
+const btn1 = document.getElementById('play-music-1')
+const btn2 = document.getElementById('play-music-2')
+const status = document.getElementById('music-status')
+
+function stopAll() {
+  audio1.pause()
+  audio1.currentTime = 0
+  audio2.pause() 
+  audio2.currentTime = 0
+  btn1.disabled = false
+  btn2.disabled = false
+  btn1.innerText = "🔊 We Are!"
+  <div class="music-player">
+  <audio id="bg-music-1" loop preload="none">
+    <source src="LINK_NG_MUSIC_1.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="bg-music-2" loop preload="none">
+    <source src="LINK_NG_MUSIC_2.mp3" type="audio/mpeg">
+  </audio>
+  
+  <button id="play-music-1">🔊 We Are!</button>
+  <button id="play-music-2">🔊 Hikari Are</button>
+  
+  <p id="music-status" style="font-size:0.8rem; color:#b8c5d6; margin-top:8px;">
+    Pumili ng kanta
+  </p>
+</div>
+  audio1.play()
+  btn1.innerText = "🎵 Playing We Are!"
+  btn1.disabled = true
+  status.innerText = "Now playing: We Are!"
+})
+
+btn2.addEventListener('click', function() {
+  stopAll()
+  audio2.play()
+  btn2.innerText = "🎵 Playing Hikari Are"
+  btn2.disabled = true
+  status.innerText = "Now playing: Hikari Are"
+})
+
+document.getElementById('menu-btn').onclick = () => {
+  document.getElementById('nav-links').classList.toggle('show')
+}
 </script>
-    document.getElementById('menu-btn').onclick = () => {
       document.getElementById('nav-links').classList.toggle('show');
     }
   </script>
