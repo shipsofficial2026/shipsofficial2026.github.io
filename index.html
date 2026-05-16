@@ -441,7 +441,21 @@
         </div>
       </div>
     </section>
-
+<div class="music-player">
+  <iframe 
+    id="yt-player"
+    width="0" 
+    height="0" 
+    src="https://www.youtube-nocookie.com/embed/h5oGCpVe8iQ?enablejsapi=1&controls=0&loop=1&playlist=h5oGCpVe8iQ" 
+    frameborder="0" 
+    allow="autoplay">
+  </iframe>
+  
+  <button id="play-music">🔊 Play We Are! Theme</button>
+  <p id="music-status" style="font-size:0.8rem; color:#b8c5d6; margin-top:8px;">
+    YouTube audio lang. ~50KB lang pag pinindot mo.
+  </p>
+</div>
     <footer>
       <div class="container">
         <div class="social-links">
@@ -460,19 +474,33 @@
   </div>
 
   <script>
-    const audio = document.getElementById('bg-music');
-    const playBtn = document.getElementById('play-music');
-    
-    playBtn.addEventListener('click', function() {
-      audio.play().then(() => {
-        playBtn.innerText = "🎵 Now Playing: We Are!";
-        playBtn.disabled = true;
-      }).catch(e => {
-        alert("Hindi nag-play ang music. Try mo i-refresh or check internet connection.");
-        console.log(e);
-      });
-    });
+  let player;
+  const playBtn = document.getElementById('play-music');
+  const status = document.getElementById('music-status');
+  
+  // Load YouTube API
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+  
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('yt-player');
+  }
+  
+  playBtn.addEventListener('click', function() {
+    if(player) {
+      player.playVideo();
+      player.setVolume(50);
+      playBtn.innerText = "🎵 Now Playing: We Are!";
+      playBtn.disabled = true;
+      status.innerText = "Playing. Walang malaking download.";
+    }
+  });
 
+  document.getElementById('menu-btn').onclick = () => {
+    document.getElementById('nav-links').classList.toggle('show');
+  }
+</script>
     document.getElementById('menu-btn').onclick = () => {
       document.getElementById('nav-links').classList.toggle('show');
     }
