@@ -272,8 +272,8 @@
             <p>Tax Buy / Sell</p>
           </div>
           <div class="stat-card">
-            <div class="big">9+</div>
-            <p>Holders Growing Daily</p>
+            <div class="big" id="holder-count">9</div>
+            <p>Holders</p>
             <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Live Count →</a>
           </div>
         </div>
@@ -442,7 +442,7 @@
       <div class="container">
         <div class="social-links">
           <a href="https://x.com/CarlAmahan73238" target="_blank">𝕏</a>
-          <a href="https://t.me/+R27uxkc1epI0MWZl target="_blank">TG</a>
+          <a href="https://t.me/+R27uxkc1epI0MWZl" target="_blank">TG</a>
           <a href="https://discord.gg/5cxY7FD5Y8" target="_blank">DC</a>
           <a href="https://facebook.com/profile.php?id=1EYWrcv2xL" target="_blank">FB</a>
           <a href="https://github.com/shipsofficial2026" target="_blank">GH</a>
@@ -510,6 +510,21 @@
       document.getElementById('nav-links').classList.toggle('show');
     }
   }
+  
+// Auto-update holder count
+async function updateHolderCount() {
+  try {
+    const res = await fetch('https://public-api.solscan.io/token/holders?tokenAddress=2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump&limit=1');
+    const data = await res.json();
+    if(data.total) {
+      document.getElementById('holder-count').textContent = data.total;
+    }
+  } catch(e) {}
+}
+
+updateHolderCount();
+setInterval(updateHolderCount, 60000);
+  
 </script>
 </body>
 </html>
