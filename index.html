@@ -232,7 +232,7 @@
       }
     }
 
-    /* ADDED: Bonding Curve + Live Stats */
+    /* Bonding Curve + Live Stats */
     .bonding-bar {
       max-width: 600px;
       margin: 30px auto;
@@ -388,7 +388,9 @@
           <span class="badge">✅ No Team Tokens</span>
         </div>
       </div>
-    </section>    <section class="section" id="captains-log">
+    </section>
+
+    <section class="section" id="captains-log">
       <div class="container">
         <h2>⚓ CAPTAIN'S LOG: WE DO NOT ABANDON SHIP</h2>
         <div class="log-entry" style="max-width:800px; margin:0 auto;">
@@ -541,6 +543,7 @@
           </div>
         </div>
       </div>
+    </      </div>
     </section>
 
     <section class="section" id="roadmap">
@@ -552,7 +555,13 @@
           <h3>PHASE 1 - DONE ✅ Launch</h3>
           <ul>
             <li>Token launched on pump.fun</li>
-            <li>Currently on bonding        <div class="card" style="margin-bottom:30px;">
+            <li>Currently on bonding curve</li>
+            <li>Contract renounced</li>
+            <li>Website live</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-bottom:30px;">
           <h3>PHASE 2 - EXPLORING 🔍</h3>
           <ul>
             <li>Grow community if people are interested</li>
@@ -693,7 +702,7 @@
 
           <p>I told myself: "I won't get scammed anymore. And no one else will get scammed by me. Because $SHIPS comes from my heart. A real person built this."</p>
 
-          <p><strong>No team tokens.</strong><br>
+          <p><strong>No team tokens.</strong></p>
           <p>I can't rug you even if I wanted to. Verify it on-chain.</p>
 
           <p style="text-align:center; margin-top:30px; font-size:1.3rem; color:var(--gold);">
@@ -800,7 +809,7 @@
         localStorage.setItem('ships-waitlist', JSON.stringify(emails));
       }
       document.getElementById('waitlist-msg').textContent = currentLang==='tl'
-       ? 'Salamat! Naka-subscribe ka na.'
+      ? 'Salamat! Naka-subscribe ka na.'
         : 'Thanks! You are subscribed.';
       document.getElementById('email-input').value = '';
     }
@@ -872,6 +881,14 @@
           const holders = pair.holders || 0;
           document.getElementById('holders').textContent = holders;
           document.getElementById('holder-count').textContent = holders;
+
+          // Live update sa bonding curve
+          if(pair.liquidity && pair.marketCap) {
+            let progress = (parseFloat(pair.marketCap) / parseFloat(pair.liquidity.usd + pair.marketCap)) * 100;
+            if(progress > 100) progress = 100;
+            document.getElementById('bonding-fill').style.width = progress.toFixed(1) + '%';
+            document.getElementById('bonding-percent').textContent = progress.toFixed(1) + '% Complete';
+          }
         }
       } catch(e) {
         console.log('Dexscreener fetch failed:', e);
