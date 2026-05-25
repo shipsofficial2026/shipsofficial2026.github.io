@@ -101,7 +101,51 @@
     .section-dark {background: var(--dark);}
     .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
     .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px;}
-    
+    /* Live Crew Chat Box */
+.live-chat-box {
+  margin: 30px 0;
+  padding: 24px;
+  background: #1A2332;
+  border: 1px solid #C9A961;
+  border-radius: 12px;
+  text-align: center;
+}
+.live-chat-box h3 {
+  color: #C9A961;
+  margin-bottom: 8px;
+  font-family: 'Orbitron', sans-serif;
+}
+.live-chat-box p {
+  color: #778da9;
+  margin-bottom: 18px;
+}
+.live-chat-box .btn-primary {
+  background: #C9A961;
+  color: #0d1b2a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: 0.2s;
+}
+.live-chat-box .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+}
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  margin-right: 6px;
+}
+@keyframes pulse {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.4; }
+}
     .stats-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 40px 0;}
     .stat-card {background: rgba(255,255,255,0.05); padding: 30px 20px; border-radius: 12px; border: 1px solid rgba(212,175,55,0.2); text-align: center;}
     .stat-card .big {font-size: 3rem; color: var(--gold); font-weight: bold; margin-bottom: 10px;}
@@ -419,17 +463,23 @@
     </section>
 
     <section class="section section-dark" id="why-safer">
-      <div class="container">
-        <h2>🛡️ Why You Shouldn't Be Afraid of Me</h2>
-        <div class="why-safer-box">
-          <p>Many investors are afraid of crypto because of "brilliant" developers. Why? Because tech experts are the ones who know how to code hidden backdoors, build wallet drainers, and manipulate funds using complex systems.</p>
-          
-          <p>Me? I am <strong>Carl Amahan, a 20-year OFW Chief Cook</strong>. I am NOT a tech expert. I do not know how to code scams or manipulate the blockchain. My expertise is inside the ship's galley—preparing meals, managing provisions, and working hard at sea to provide for my family.</p>
-          
-          <p>The <strong>$SHIPS</strong> token was launched on a transparent bonding curve so that the platform's smart contract handles the security, not my hands. You are safer here because your Dev has a real face, a real name, and the integrity of a lifelong seafarer. No technical tricks—just pure honesty from the ocean.</p>
-        </div>
-      </div>
-    </section>
+  <div class="container">
+    <h2>⚓ Why a Seaman Dev is Safer Than a Tech Expert</h2>
+    <div class="why-safer-box">
+      <p>"Many investors are afraid of crypto because of 'brilliant' developers.</p>
+      <p>Why? Because tech experts know how to code hidden backdoors, build wallet drainers, and manipulate funds.</p>
+      <p>Me? I am Carl Amahan. 20-year OFW Chief Cook.</p>
+      <p>I am NOT a tech expert. I do not know how to code scams or manipulate the blockchain.</p>
+      <p>My expertise is inside the ship's galley—preparing meals, managing provisions, working hard at sea to provide for my family.</p>
+      <p>$SHIPS was launched on a transparent bonding curve. The platform's smart contract handles security, not my hands.</p>
+      <p>You are safer here because:</p>
+      <p>- Your Dev has a real face</p>
+      <p>- Your Dev has a real name</p>
+      <p>- Your Dev has the integrity of a lifelong seafarer</p>
+      <p>No technical tricks. Just pure honesty from the ocean 🌊</p>
+    </div>
+  </div>
+</section>
 
     <section class="section" id="comparison">
       <div class="container">
@@ -585,10 +635,34 @@
       <div class="container">
         <h2>📖 CAPTAIN'S LOGBOOK</h2>
         <p class="section-subtitle">Daily updates from the bridge. No cap, all real.</p>
-
+       <div class="token-status-box">
+  <h3>$SHIPS Live Status</h3>
+  <div class="status-grid">
+    <div>
+      <p class="stat-label">Bonding Curve</p>
+      <p class="stat-value">7.23 / 85 SOL</p>
+    </div>
+    <div>
+      <p class="stat-label">Holders</p>
+      <p class="stat-value">9</p>
+    </div>
+    <div>
+      <p class="stat-label">Liquidity</p>
+      <p class="stat-value">Locked</p>
+    </div>
+  </div>
+  <p class="status-note">No dev tokens. Contract verified.</p>
+</div>
+       <div class="live-chat-box">
+  <h3>📡 Live Crew Chat</h3>
+  <p><span class="live-dot"></span> 25 crew members online. Join the conversation.</p>
+  <a href="https://t.me/+jsS0ViQYlLM5NmI1" target="_blank" class="btn btn-primary">
+    Join Telegram
+  </a>
+</div> 
         <div class="logbook-container">
           <div class="log-entry">
-            <span class="log-date">May 3, 2026</span>
+            <span class="log-date">May 5, 2026</span>
             <h4>Launch Day</h4>
             <p>$SHIPS launched on pump.fun. 20 years at sea, ngayon lang naka-launch ng sariling token. LFG!</p>
           </div>
