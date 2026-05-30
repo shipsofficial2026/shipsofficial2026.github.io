@@ -708,12 +708,12 @@ Just pure honesty from the ocean 🌊</p>
           <div class="transparency-card">
             <h3>✅ RugCheck</h3>
             <p>No Risk Found</p>
-            <a href="https://rugcheck.xyz" target="_blank">View Report →</a>
+            <a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target=
           </div>
           <div class="transparency-card">
             <h3>🔒 Renounced</h3>
             <p>Contract permanently locked</p>
-            <a href="https://solscan.io/tx" target="_blank">View Transaction →</a>
+        <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#transfers" target=
           </div>
         </div>
       </div>
@@ -939,47 +939,61 @@ Just pure honesty from the ocean 🌊</p>
     // Live Tracker - Dexscreener API
     const CA = "2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump";
 
-    async function updateLiveStats() {
-      try {
-        const res = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${CA}`);
-        const data = await res.json();
+async function updateLiveStats() {
+  try {
+    // DEXSCREENER - price, mcap, volume, holders
+    const dexRes = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${CA}`);
+    const dexData = await dexRes.json();
 
-        if(data.pairs && data.pairs.length > 0) {
-          const pair = data.pairs[0];
+    if(dexData.pairs && dexData.pairs.length > 0) {
+      const pair = dexData.pairs[0];
 
-          document.getElementById('price').textContent = '$' + parseFloat(pair.priceUsd).toFixed(6);
+      document.getElementById('price').textContent = '$' + parseFloat(pair.priceUsd).toFixed(6);
 
-          const mcap = parseFloat(pair.fdv);
-          document.getElementById('mcap').textContent = '$' + formatNumber(mcap);
+      const mcap = parseFloat(pair.fdv);
+      document.getElementById('mcap').textContent = '$' + formatNumber(mcap);
 
-          const vol = parseFloat(pair.volume.h24);
-          document.getElementById('volume').textContent = '$' + formatNumber(vol);
+      const vol = parseFloat(pair.volume.h24);
+      document.getElementById('volume').textContent = '$' + formatNumber(vol);
 
-          const holders = pair.holders || 0;
-          document.getElementById('holders').textContent = holders;
-          document.getElementById('holder-count').textContent = holders;
-
-          // Live update sa bonding curve
-          if(pair.liquidity && pair.marketCap) {
-            let progress = (parseFloat(pair.marketCap) / parseFloat(pair.liquidity.usd + pair.marketCap)) * 100;
-            if(progress > 100) progress = 100;
-            document.getElementById('bonding-fill').style.width = progress.toFixed(1) + '%';
-            document.getElementById('bonding-percent').textContent = progress.toFixed(1) + '% Complete';
-          }
-        }
-      } catch(e) {
-        console.log('Dexscreener fetch failed:', e);
-      }
+      const holders = pair.holders || 0;
+      document.getElementById('holders').textContent = holders;
+      document.getElementById('holder-count').textContent = holders;
     }
 
-    function formatNumber(num) {
-      if(num >= 1000000) return (num/1000000).toFixed(2) + 'M';
-      if(num >= 1000) return (num/1000).toFixed(1) + 'K';
-      return num.toFixed(0);
+    // PUMP.FUN API - TRUE bonding curve %
+    const pumpRes = await fetch(`https://frontend-api.pump.fun/coins/${CA}`);
+    const pump = await pumpRes.json();
+
+    if(pump && pump.virtual_sol_reserves) {
+      const TARGET_LAMPORTS = 85000000; // 85 SOL
+      const currentLamports = pump.virtual_sol_reserves;
+
+      let progress = (currentLamports / TARGET_LAMPORTS) * 100;
+      if(progress > 100) progress = 100;
+
+      document.getElementById('bonding-fill').style.width = progress.toFixed(2) + '%';
+      document.getElementById('bonding-percent').textContent = progress.toFixed(2) + '% Complete';
+
+      const solRaised = currentLamports / 1000000;
+      const solLeft = 85 - solRaised;
+      document.querySelector('.bonding-bar div span:last-child').textContent =
+        solLeft.toFixed(2) + ' SOL to PumpSwap';
     }
 
-    updateLiveStats();
-    setInterval(updateLiveStats, 30000);
+  } catch(e) {
+    console.log('Fetch failed:', e);
+  }
+}
+
+function formatNumber(num) {
+  if(num >= 1000000) return (num/1000000).toFixed(2) + 'M';
+  if(num >= 1000) return (num/1000).toFixed(1) + 'K';
+  return num.toFixed(0);
+}
+
+updateLiveStats();
+setInterval(updateLiveStats, 30000);
   </script>
 </body>
 </html>
