@@ -522,7 +522,60 @@ Just pure honesty from the ocean 🌊</p>
         </div>
       </div>
     </section>
+<section class="section section-dark" id="ship-time">
+  <div class="container" style="text-align:center;">
+    <h2>🌍 Ship's Time - We Sail 24/7</h2>
+    <p class="section-subtitle">Para sa mga kabaro natin sa buong mundo</p>
 
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:20px; max-width:800px; margin:30px auto;">
+
+      <div class="stat-card">
+        <p class="label">🇵🇭 Manila - Kapitan</p>
+        <p class="value" id="manila-time" style="font-size:1.5rem;">--:--</p>
+      </div>
+
+      <div class="stat-card">
+        <p class="label">⚓ Ship Time - UTC</p>
+        <p class="value" id="utc-time" style="font-size:1.5rem;">--:--</p>
+      </div>
+
+      <div class="stat-card">
+        <p class="label">🇸🇬 Singapore</p>
+        <p class="value" id="sg-time" style="font-size:1.5rem;">--:--</p>
+      </div>
+
+      <div class="stat-card">
+        <p class="label">🇸🇦 Saudi - Kabaro</p>
+        <p class="value" id="ksa-time" style="font-size:1.5rem;">--:--</p>
+      </div>
+    </div>
+
+    <p style="color:#b8c5d6; font-size:0.85rem; margin-top:15px;">
+      Walang tulugan ang barko. 24/7 kami nagbabantay ⚓
+    </p>
+  </div>
+</section>
+
+<script>
+function updateShipTime() {
+  const now = new Date();
+
+  document.getElementById('manila-time').textContent =
+    now.toLocaleTimeString('en-PH', {timeZone: 'Asia/Manila', hour12: false});
+
+  document.getElementById('utc-time').textContent =
+    now.toUTCString().split(' ')[4];
+
+  document.getElementById('sg-time').textContent =
+    now.toLocaleTimeString('en-SG', {timeZone: 'Asia/Singapore', hour12: false});
+
+  document.getElementById('ksa-time').textContent =
+    now.toLocaleTimeString('en-US', {timeZone: 'Asia/Riyadh', hour12: false});
+}
+
+updateShipTime();
+setInterval(updateShipTime, 1000);
+</script>
     <section class="section" id="comparison">
       <div class="container">
         <h2>Why $SHIPS is Different</h2>
