@@ -328,7 +328,23 @@
   </style>
 </head><body>
   <div class="content-wrapper">
-    <div class="world-map"></div>
+    <!-- ANIME MARITIME BACKGROUND - ONE PIECE VIBE -->
+    <div style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; opacity:0.04; pointer-events:none;
+      background-image: 
+        url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"80\" fill=\"%23D4AF37\">⚓</text></svg>'),
+        url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"60\" fill=\"%23D4AF37\">🛳️</text></svg>'),
+        url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\"50\" font-size=\"70\" fill=\"%23D4AF37\">🌊</text></svg>');
+      background-size: 250px 250px, 350px 350px, 200px 200px;
+      background-position: 0 0, 150px 150px, 300px 50px;
+      animation: drift 80s linear infinite;"></div>
+
+    <style>
+    @keyframes drift {
+     0% { background-position: 0 0, 150px 150px, 300px 50px; }
+     100% { background-position: 2000px 2000px, 2150px 2150px, 2300px 2050px; }
+    }
+    </style>
+    <!-- END ANIME BACKGROUND -->
     <div class="sailing-ship">🛳️</div>
     <div class="waves"></div>
 
@@ -543,8 +559,95 @@ Just pure honesty from the ocean 🌊</p>
     </div>
         </div>
       </div>
-    </section>
+    </section><!-- CAPTAIN SECTION - NO PHOTO NEEDED -->
+<section class="section" style="padding:60px 0;">
+  <div class="container" style="text-align:center;">
+    <div style="max-width:550px; margin:0 auto; padding:40px; background:rgba(255,255,255,0.05); border-radius:16px; border:2px solid var(--gold); box-shadow:0 0 30px rgba(212,175,55,0.2); animation:fadeIn 1s ease-in;">
+      
+      <div style="font-size:100px; animation:float 3s ease-in-out infinite;">👨‍✈️</div>
+      
+      <h3 style="color:var(--gold); margin-top:20px; font-size:1.8rem;">Chief Cook Carl Amahan</h3>
+      <p style="color:#b8c5d6; font-size:0.9rem; margin-bottom:15px;">20 Years OFW • Solo Captain • No Crew</p>
+      
+      <p style="color:#b8c5d6; line-height:1.8; font-size:1.05rem;">
+        "Hindi ako coder. Hindi ako scammer. <strong style="color:var(--gold);">Totoong seaman ako</strong> na nag-code ng $SHIPS sa kusina ng barko habang nag-break. 20 years ko binantayan ang galley, ngayon babantayan ko ang barko na to."
+      </p>
+      
+      <div style="display:flex; justify-content:center; gap:15px; margin-top:25px; flex-wrap:wrap;">
+        <span class="badge">⚓ Contract Renounced</span>
+        <span class="badge">🎯 38.8M Holdings</span>
+        <span class="badge">🌊 No Team Tokens</span>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@keyframes fadeIn {
+ from { opacity:0; transform:translateY(30px) scale(0.95); }
+ to { opacity:1; transform:translateY(0) scale(1); }
+}
+@keyframes float {
+ 0%, 100% { transform:translateY(0px) rotate(0deg); }
+ 50% { transform:translateY(-12px) rotate(2deg); }
+}
+@keyframes glow {
+ 0%, 100% { box-shadow:0 0 30px rgba(212,175,55,0.2); }
+ 50% { box-shadow:0 0 50px rgba(212,175,55,0.5), 0 0 80px rgba(212,175,55,0.3); }
+}
 
+/* SCROLL REVEAL - Pogi effect Chief */
+.section {
+ opacity: 0;
+ transform: translateY(50px);
+ transition: all 0.8s ease-out;
+}
+.section.visible {
+ opacity: 1;
+ transform: translateY(0);
+}
+
+/* Captain Card Glow */
+.container > div {
+ animation: fadeIn 1s ease-in, glow 3s ease-in-out infinite;
+}
+</style>
+
+<script>
+// Scroll Reveal - Lilitaw lang pag iniscroll mo
+const observer = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+   if (entry.isIntersecting) {
+     entry.target.classList.add('visible');
+   }
+ });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section').forEach(section => {
+ observer.observe(section);
+});
+</script><!-- SHIP STATISTICS - PRO LOOK -->
+<section class="section" style="padding:40px 0; background:rgba(0,0,0,0.3);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:20px; text-align:center;">
+      <div style="padding:20px; border:1px solid var(--gold); border-radius:12px;">
+        <div style="font-size:2rem; color:var(--gold); font-weight:bold;">38.8M</div>
+        <div style="color:#b8c5d6; font-size:0.9rem;">Captain Holdings</div>
+      </div>
+      <div style="padding:20px; border:1px solid var(--gold); border-radius:12px;">
+        <div style="font-size:2rem; color:var(--gold); font-weight:bold;">0%</div>
+        <div style="color:#b8c5d6; font-size:0.9rem;">Team Tax</div>
+      </div>
+      <div style="padding:20px; border:1px solid var(--gold); border-radius:12px;">
+        <div style="font-size:2rem; color:var(--gold); font-weight:bold;">RENOUNCED</div>
+        <div style="color:#b8c5d6; font-size:0.9rem;">Contract Status</div>
+      </div>
+      <div style="padding:20px; border:1px solid var(--gold); border-radius:12px;">
+        <div style="font-size:2rem; color:var(--gold); font-weight:bold;">20 Years</div>
+        <div style="color:#b8c5d6; font-size:0.9rem;">Seaman Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- ===== PRESS HEADLINE ===== -->
     <section class="section section-dark" id="press">
       <div class="container">
