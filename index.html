@@ -39,6 +39,7 @@
       overflow-x: hidden;
     }
     
+    /* ONE PIECE MAP LANG - WALA NANG ANIME EMOJIS */
     @media (min-width: 768px) {
       body {
         background-image: url('https://static.wikia.nocookie.net/onepiece/images/9/90/Rurubu_One_Piece_World_Map.png/revision/latest?width=900');
@@ -49,10 +50,6 @@
       }
     }
     
-    @keyframes drift {
-      0% { background-position: 0 0, 150px 150px, 300px 50px; }
-      100% { background-position: 2000px, 2150px, 2300px 2050px; }
-    }
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
@@ -60,15 +57,9 @@
     @keyframes sail {0% { left: -100px; transform: rotate(-5deg); } 50% { transform: rotate(5deg); } 100% { left: 110%; transform: rotate(-5deg); }}
     @keyframes wave { 0% {background-position-x: 0;} 100% {background-position-x: 1200px;} }
     
-    .content-wrapper {background: rgba(6, 16, 24, 0.85); backdrop-filter: blur(4px); min-height: 100vh; padding: 20px;}
-    .anime-bg {position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; opacity:0.04; pointer-events:none;
-      background-image: 
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="80" fill="%23D4AF37">⚓</text></svg>'),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" fill="%23D4AF37">🛳️</text></svg>'),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="70" fill="%23D4AF37">🌊</text></svg>');
-      background-size: 250px 250px, 350px 350px, 200px 200px;
-      background-position: 0 0, 150px 150px, 300px 50px;
-      animation: drift 80s linear infinite;}
+    .content-wrapper {background: rgba(6, 16, 24, 0.88); backdrop-filter: blur(4px); min-height: 100vh; padding: 20px;}
+    
+    /* TINANGGAL KO NA YUNG .anime-bg - MABIGAT YUN CHIEF */
     
     .sailing-ship {position: fixed; bottom: 15%; left: -100px; font-size: 60px; z-index: 1; animation: sail 20s linear infinite; filter: drop-shadow(0 0 10px rgba(212,175,55,0.5));}
     .waves {position: fixed; bottom: 0; left: 0; width: 100%; height: 120px; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".15" fill="%23D4AF37"/></svg>') repeat-x; animation: wave 12s linear infinite; z-index: 1;}
@@ -122,25 +113,27 @@
     .section h2 {text-align: center; font-size: 2.8rem; color: var(--gold); margin-bottom: 20px;}
     .section-subtitle {text-align: center; color: #b8c5d6; margin-bottom: 60px;}
     
-    .live-chat-box {
-      margin: 30px 0; padding: 24px; background: #1A2332;
-      border: 1px solid #C9A961; border-radius: 12px; text-align: center;
+    /* CHIEF AI - MAS LITAW NA */
+    .chief-ai-box {
+      margin: 30px 0; padding: 30px; background: #1A2332;
+      border: 2px solid #C9A961; border-radius: 16px; text-align: center;
+      box-shadow: 0 0 30px rgba(201, 169, 97, 0.2);
     }
-    .live-chat-box h3 {color: #C9A961; margin-bottom: 8px;}
-    .live-chat-box p {color: #778da9; margin-bottom: 18px;}
-    .live-chat-box .btn-primary {
-      background: #C9A961; color: #0d1b2a; padding: 12px 28px;
-      border-radius: 8px; text-decoration: none; font-weight: 700;
-      display: inline-block; transition: 0.2s;
+    .chief-ai-box h3 {color: #C9A961; margin-bottom: 12px; font-size: 1.8rem;}
+    .chief-ai-box p {color: #778da9; margin-bottom: 20px; font-size: 1.1rem;}
+    .chief-ai-box .btn-primary {
+      background: #C9A961; color: #0d1b2a; padding: 14px 35px;
+      border-radius: 10px; text-decoration: none; font-weight: 700;
+      display: inline-block; transition: 0.2s; font-size: 1.05rem;
     }
-    .live-chat-box .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+    .chief-ai-box .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
     }
     .live-dot {
-      display: inline-block; width: 8px; height: 8px;
+      display: inline-block; width: 10px; height: 10px;
       background: #4ade80; border-radius: 50%;
-      animation: pulse 2s infinite; margin-right: 6px;
+      animation: pulse 2s infinite; margin-right: 8px;
     }
     
     .token-status-box {
@@ -190,7 +183,6 @@
 </head>
 <body>
   <div class="content-wrapper">
-    <div class="anime-bg"></div>
     <div class="sailing-ship">🛳️</div>
     <div class="waves"></div>
 
@@ -200,6 +192,7 @@
           <span class="logo-text">⚓ $SHIPS</span>
           <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#chief-ai">Chief AI</a></li>
             <li><a href="#captains-log">Log</a></li>
             <li><a href="#comparison">Compare</a></li>
             <li><a href="#chart">Chart</a></li>
@@ -265,6 +258,7 @@
               <p class="label">24h Volume</p>
               <p class="value" id="volume">--</p>
             </div>
+          </div>
           <p style="text-align:center; font-size:0.75rem; color:#b8c5d6; margin-top:10px;">
             Auto-updating every 30s • Powered by Dexscreener
           </p>
@@ -301,35 +295,42 @@
       </div>
     </section>
 
+    <!-- CHIEF AI - DINAGDAG KO NA, MAS LITAW -->
+    <section class="section" id="chief-ai">
+      <div class="container">
+        <h2>🤖 CHIEF AI - LIVE CREW CHAT</h2>
+        <div class="chief-ai-box">
+          <h3><span class="live-dot"></span>LIVE NGAYON</h3>
+          <p>92 crew members online. Kausapin si Chief AI at ang community.</p>
+          <a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" class="btn-primary">SUMALI SA TELEGRAM</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-dark" id="captains-log">
       <div class="container">
         <h2>⚓ CAPTAIN'S LOG: WE DO NOT ABANDON SHIP</h2>
         
-        <div style="max-width:700px; margin:40px auto; padding:25px; background: rgba(255,255,255,0.05); border: 1px solid var(--gold); border-radius: 12px;">
-          <h3 style="color: var(--gold); text-align: center; margin-bottom: 20px;">$SHIPS Live Status</h3>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; margin-bottom: 15px;">
+        <div class="token-status-box">
+          <h3>$SHIPS Live Status</h3>
+          <div class="status-grid">
             <div>
-              <p style="color: #b8c5d6; font-size: 0.85rem; margin-bottom: 5px;">Bonding Curve</p>
-              <p style="color: var(--gold); font-size: 1.4rem; font-weight: bold;" id="bonding-status">Loading...</p>
+              <p class="stat-label">Bonding Curve</p>
+              <p class="stat-value" id="bonding-status">Loading...</p>
             </div>
             <div>
-              <p style="color: #b8c5d6; font-size: 0.85rem; margin-bottom: 5px;">Holders</p>
-              <p style="color: var(--gold); font-size: 1.4rem; font-weight: bold;" id="holders-status">--</p>
+              <p class="stat-label">Holders</p>
+              <p class="stat-value" id="holders-status">--</p>
             </div>
             <div>
-              <p style="color: #b8c5d6; font-size: 0.85rem; margin-bottom: 5px;">Liquidity</p>
-              <p style="color: var(--gold); font-size: 1.4rem; font-weight: bold;">Locked</p>
+              <p class="stat-label">Liquidity</p>
+              <p class="stat-value">Locked</p>
             </div>
           </div>
-          <p style="text-align: center; color: #b8c5d6; font-size: 0.9rem; margin: 0;">No dev tokens. Contract verified.</p>
+          <p class="status-note">No dev tokens. Contract verified.</p>
         </div>
 
-        <div style="margin: 30px 0; padding: 24px; background: #1A2332; border: 1px solid #C9A961; border-radius: 12px; text-align: center;">
-          <h3 style="color: #C9A961; margin-bottom: 8px;">📡 Chief AI Live News Feed</h3>
-          <p style="color: #778da9; margin-bottom: 18px;"><span style="display: inline-block; width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; margin-right: 6px;"></span> 92 crew members. Join the conversation.</p>
-          <a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" style="background: #C9A961; color: #0d1b2a; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block;">Join Telegram</a>
-        </div>
-                <div style="max-width:800px; margin:40px auto 0; border-left: 2px solid var(--gold); padding-left: 30px;">
+        <div style="max-width:800px; margin:40px auto 0; border-left: 2px solid var(--gold); padding-left: 30px;">
           <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 10px; margin-bottom: 25px; position: relative; border: 1px solid rgba(212,175,55,0.2);">
             <span style="color: var(--gold); font-weight: bold; font-size: 0.9rem;">Entry 001</span>
             <h4 style="color: var(--white); margin: 8px 0; font-size: 1.3rem;">Hello to everyone watching and asking questions!</h4>
@@ -365,7 +366,7 @@
       </div>
     </section>
 
-    <section class="section" id="comparison">
+    <    <section class="section" id="comparison">
       <div class="container">
         <h2>🆚 $SHIPS vs SEAT & SEAMANIA</h2>
         <div style="overflow-x: auto;">
@@ -455,7 +456,8 @@
         </div>
       </div>
     </section>
-        <section class="section section-dark" id="logbook">
+
+    <section class="section section-dark" id="logbook">
       <div class="container">
         <h2>📖 CAPTAIN'S LOGBOOK</h2>
         <p class="section-subtitle">Daily updates from the bridge. No cap, all real.</p>
@@ -678,7 +680,8 @@
     const CA = "2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump";
     async function updateLiveStats() {
       try {
-        const dexRes = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${CA}`);
+        const dexRes = await fetch(`https://api
+        .dexscreener.com/latest/dex/tokens/${CA}`);
         if (!dexRes.ok) throw new Error('DexScreener API failed');
         const dexData = await dexRes.json();
         if(dexData.pairs && dexData.pairs.length > 0) {
