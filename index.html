@@ -732,7 +732,75 @@
         </div>
       </div>
     </section>
+    <!-- HOW TO BUY + CA SECTION -->
+    <section class="section" id="how-to-buy">
+      <div class="container">
+        <h2 style="text-align: center;">🚀 HOW TO BUY $SHIPS</h2>
+        <p class="section-subtitle" style="text-align: center;">3 easy steps para sumakay sa barko</p>
+        
+        <div style="max-width: 900px; margin: 40px auto;">
+          
+          <!-- STEP BY STEP -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 40px;">
+            
+            <!-- STEP 1 -->
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 25px; text-align: center;">
+              <div style="font-size: 2.5rem; margin-bottom: 10px;">1️⃣</div>
+              <h3 style="color: var(--gold); margin-bottom: 10px;">Get Solana Wallet</h3>
+              <p style="color: #b8c5d6; font-size: 0.9rem;">Download Phantom or Solflare. Fund mo ng SOL para sa gas fee.</p>
+            </div>
+            
+            <!-- STEP 2 -->
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 25px; text-align: center;">
+              <div style="font-size: 2.5rem; margin-bottom: 10px;">2️⃣</div>
+              <h3 style="color: var(--gold); margin-bottom: 10px;">Go to Pump.fun</h3>
+              <p style="color: #b8c5d6; font-size: 0.9rem;">Click "Buy $SHIPS" button sa baba o search CA namin.</p>
+            </div>
+            
+            <!-- STEP 3 -->
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(212,175,55,0.3); border-radius: 12px; padding: 25px; text-align: center;">
+              <div style="font-size: 2.5rem; margin-bottom: 10px;">3️⃣</div>
+              <h3 style="color: var(--gold); margin-bottom: 10px;">Swap SOL → $SHIPS</h3>
+              <p style="color: #b8c5d6; font-size: 0.9rem;">Enter amount, confirm transaction. Welcome aboard, sailor!</p>
+            </div>
+            
+          </div>
 
+          <!-- CA BOX WITH QR CODE -->
+          <div style="background: rgba(212,175,55,0.1); border: 2px solid var(--gold); border-radius: 12px; padding: 30px; text-align: center;">
+            <h3 style="color: var(--gold); margin-bottom: 20px; font-family: 'Orbitron', sans-serif;">📋 CONTRACT ADDRESS</h3>
+            
+            <!-- QR CODE -->
+            <div style="margin: 0 auto 20px; width: 200px; height: 200px; background: white; padding: 10px; border-radius: 8px;">
+              <img id="qr-code" src="" alt="QR Code" style="width: 100%; height: 100%;">
+            </div>
+            
+            <!-- CA TEXT -->
+            <div style="background: rgba(0,0,0,0.5); padding: 15px; border-radius: 8px; margin-bottom: 15px; word-break: break-all; font-family: 'Courier New', monospace; font-size: 0.9rem; color: #00ff41;" id="ca-text">
+              2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump
+            </div>
+            
+            <!-- COPY BUTTON -->
+            <button onclick="copyCA()" class="btn" style="margin-bottom: 15px;">
+              📋 Copy Contract Address
+            </button>
+            
+            <!-- BUY BUTTONS -->
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+              <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn">
+                🚀 Buy on Pump.fun
+              </a>
+              <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn">
+                ⚡ Buy on Jupiter
+              </a>
+            </div>
+            
+            <p style="color: #ff4444; font-size: 0.8rem; margin-top: 15px;">⚠️ Always verify the CA. Beware of fake tokens!</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
     <!-- PRESS COVERAGE SECTION -->
     <section class="section section-dark" id="press">
       <div class="container">
@@ -1155,6 +1223,38 @@
         }
       });
     });
+        // ===== QR CODE GENERATOR FOR CA =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${CA}`;
+      const qrElement = document.getElementById('qr-code');
+      if(qrElement) {
+        qrElement.src = qrUrl;
+      }
+    });
+    // ===== QR CODE GENERATOR =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${CA}`;
+      const qrElement = document.getElementById('qr-code');
+      if(qrElement) {
+        qrElement.src = qrUrl;
+      }
+    });
+
+    // ===== COPY CA FUNCTION =====
+    function copyCA() {
+    // ===== COPY CA FUNCTION =====
+    function copyCA() {
+      navigator.clipboard.writeText(CA).then(() => {
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        btn.style.background = '#00ff41';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = '';
+        }, 2000);
+      });
+    }
   </script>
 </body>
 </html>
