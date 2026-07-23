@@ -1,294 +1,1083 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CXMC462LH8"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-CXMC462LH8');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$SHIPS - A Seaman Token | Graduated • Road to Raydium & Meteora</title>
-<meta name="description" content="Official $SHIPS - Built by OFW Chief Cook. Graduated from pump.fun. Now on the road to Raydium and Meteora. 0% Tax. Renounced. We do not abandon ship.">
+<title>$SHIPS - A Seaman Token | Day 70 Still Sailing - From Galley to Blockchain</title>
+<meta name="description" content="Official $SHIPS - A Seaman Token on Solana. Built by 20-year OFW Chief Cook. Day 70 still sailing. 0% Tax. Renounced.">
+  <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0A1A2F">
+<link rel="apple-touch-icon" href="/icon-512.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+
 :root{--navy:#0A1A2F;--gold:#D4AF37;--white:#FFFFFF;--dark:#061018;--muted:#b8c5d6}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:#061018;color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
-.content-wrapper{background:rgba(6,16,24,0.92);min-height:100vh}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.press-ticker{background:linear-gradient(90deg,#D4AF37,#ffed4e,#D4AF37);color:#0A1A2F;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:800;font-size:0.85rem}
-.ticker-track{display:inline-block;animation:ticker 28s linear infinite}
+body{background:#061018 url('compass-bg.jpg') center/cover fixed;color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+.content-wrapper{background:rgba(6,16,24,0.88);backdrop-filter:blur(4px);min-height:100vh}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
+.sailing-ship{position:fixed;bottom:15%;left:-100px;font-size:60px;z-index:1;animation:sail 20s linear infinite;filter:drop-shadow(0 0 10px rgba(212,175,55,0.5))}
+@keyframes sail{0%{left:-100px;transform:rotate(-5deg)}50%{transform:rotate(5deg)}100%{left:110%;transform:rotate(-5deg)}}
+.waves{position:fixed;bottom:0;left:0;width:100%;height:120px;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".15" fill="%23D4AF37"/></svg>') repeat-x;animation:wave 12s linear infinite;z-index:1}
+@keyframes wave{0%{background-position-x:0}100%{background-position-x:1200px}}
+
+/* TICKER */
+.press-ticker{background:linear-gradient(90deg,#D4AF37,#ffed4e,#D4AF37);color:#0A1A2F;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:800;font-size:0.85rem;position:relative;z-index:102;border-bottom:2px solid #0A1A2F}
+.ticker-track{display:inline-block;animation:ticker 30s linear infinite}
+.ticker-track span{margin:0 15px}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.main-header{padding:14px 0;border-bottom:1px solid rgba(212,175,55,0.25);position:sticky;top:0;background:rgba(10,26,47,0.97);z-index:100}
+
+/* HEADER */
+.main-header{padding:16px 0;border-bottom:1px solid rgba(212,175,55,0.2);position:sticky;top:0;background:rgba(10,26,47,0.95);backdrop-filter:blur(10px);z-index:100}
 .nav{display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:10px}
-.logo-text{font-size:1.5rem;font-weight:800;color:var(--gold);font-family:'Orbitron',sans-serif}
-.day-badge{background:#22c55e;color:#fff;padding:3px 10px;border-radius:4px;font-size:0.7rem;font-weight:700}
-.nav-links{display:flex;gap:18px;list-style:none;align-items:center}
-.nav-links a{color:var(--white);text-decoration:none;font-size:0.9rem}
+.logo img{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold)}
+.logo-text{font-size:1.6rem;font-weight:800;color:var(--gold);font-family:'Orbitron',sans-serif}
+.day-badge{background:#ff3b3b;color:#fff;padding:3px 8px;border-radius:4px;font-size:0.7rem;margin-left:8px}
+.nav-links{display:flex;gap:20px;list-style:none;align-items:center}
+.nav-links a{color:var(--white);text-decoration:none;transition:0.3s;font-size:0.9rem}
 .nav-links a:hover{color:var(--gold)}
-.btn-small{background:var(--gold);color:var(--navy);padding:7px 14px;border-radius:6px;font-weight:700;text-decoration:none}
-.trust-strip{background:linear-gradient(90deg,#0A1A2F,rgba(212,175,55,0.12),#0A1A2F);border-bottom:2px solid #D4AF37;padding:9px 0;text-align:center;font-size:0.85rem}
-.hero{padding:70px 0 40px;text-align:center}
-.hero h1{font-size:3.2rem;margin-bottom:14px;font-family:'Orbitron',sans-serif;background:linear-gradient(45deg,var(--gold),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.15}
+.menu-btn{display:none;background:none;border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:6px;cursor:pointer}
+.btn-small{background:var(--gold);color:var(--navy);padding:8px 14px;border-radius:6px;font-weight:700;text-decoration:none}
+
+.trust-strip{background:linear-gradient(90deg,#0A1A2F,rgba(212,175,55,0.15),#0A1A2F);border-bottom:2px solid #D4AF37;padding:10px 0;text-align:center;font-size:0.85rem}
+.trust-inner{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.dot{opacity:0.4}
+
+.hero{padding:80px 0 40px;text-align:center}
+.hero h1{font-size:3.5rem;margin-bottom:16px;font-family:'Orbitron',sans-serif;background:linear-gradient(45deg,var(--gold),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.1}
 .gold{color:var(--gold);-webkit-text-fill-color:var(--gold)}
-.hero-sub{font-size:1.15rem;color:#b8c5d6;margin-bottom:28px;max-width:680px;margin-left:auto;margin-right:auto}
-.btn{display:inline-block;padding:12px 26px;background:var(--gold);color:var(--navy);text-decoration:none;border-radius:8px;font-weight:bold;margin:6px;border:2px solid var(--gold);transition:0.3s}
+.hero-sub{font-size:1.2rem;color:#b8c5d6;margin-bottom:30px;max-width:700px;margin-left:auto;margin-right:auto}
+
+.btn{display:inline-block;padding:12px 26px;background:var(--gold);color:var(--navy);text-decoration:none;border-radius:8px;font-weight:bold;margin:6px;border:2px solid var(--gold);transition:0.3s;cursor:pointer}
 .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(212,175,55,0.4)}
 .btn-outline{background:transparent;color:var(--gold)}
-.ca-box{background:var(--dark);padding:22px;border-radius:12px;border:1px solid var(--gold);margin:25px auto;max-width:720px;text-align:center}
-.ca-box code{color:#fff;font-size:0.9rem;word-break:break-all;background:rgba(212,175,55,0.1);padding:10px;border-radius:5px;display:block;margin-bottom:12px}
-.section{padding:60px 0}
-.section-dark{background:rgba(0,0,0,0.25)}
-.section h2{text-align:center;font-size:2.3rem;color:var(--gold);margin-bottom:10px;font-family:'Orbitron',sans-serif}
-.section-subtitle{text-align:center;color:#b8c5d6;margin-bottom:35px}
-.log-entry{background:rgba(255,255,255,0.05);padding:22px;border-radius:12px;margin-bottom:18px;border:1px solid rgba(212,175,55,0.2);max-width:800px;margin-left:auto;margin-right:auto}
-.featured-log{border:2px solid var(--gold)!important;background:rgba(212,175,55,0.08)!important}
+
+.ca-box{background:var(--dark);padding:24px;border-radius:12px;border:1px solid var(--gold);margin:30px auto;max-width:750px;text-align:center}
+.ca-box code{color:var(--white);font-size:0.9rem;word-break:break-all;background:rgba(212,175,55,0.1);padding:10px;border-radius:5px;display:block;margin-bottom:14px}
+
+.live-pump-box{max-width:750px;margin:0 auto 18px;background:#000;border:1px solid var(--gold);border-radius:12px;overflow:hidden}
+.live-pump-header{background:linear-gradient(90deg,var(--gold),#ffed4e);color:var(--navy);padding:10px;text-align:center;font-weight:800;font-size:0.9rem}
+.live-dot{display:inline-block;width:8px;height:8px;background:red;border-radius:50%;animation:pulse 1.5s infinite;margin-right:6px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+
+.bonding-bar{max-width:750px;margin:18px auto;padding:18px;background:rgba(255,255,255,0.05);border-radius:12px;border:1px solid rgba(212,175,55,0.3)}
+.live-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;text-align:center}
+.live-grid .label{color:#b8c5d6;font-size:0.8rem}.live-grid .value{font-size:1.2rem;font-weight:bold;color:var(--gold);font-family:'Orbitron',sans-serif}
+
+.ship-tracker-box{max-width:750px;margin:18px auto;background:linear-gradient(135deg,rgba(10,26,47,0.9),rgba(212,175,55,0.1));border:2px solid var(--gold);border-radius:14px;padding:20px;text-align:center;box-shadow:0 0 20px rgba(212,175,55,0.2)}
+.ship-tracker-box h3{color:var(--gold);font-family:'Orbitron',sans-serif;font-size:1.1rem;margin-bottom:14px}
+.tracker-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;text-align:left}
+.t-item{background:rgba(255,255,255,0.04);padding:12px;border-radius:8px;border:1px solid rgba(212,175,55,0.15)}
+.t-label{font-size:0.7rem;color:var(--muted)}.t-val{font-size:0.95rem;font-weight:700;color:#fff;margin-top:2px}
+.tracker-map{background:rgba(0,0,0,0.4);padding:10px;border-radius:8px;margin-top:12px;color:#4ade80;font-size:0.85rem;border:1px dashed rgba(212,175,55,0.3)}
+.tracker-note{font-size:0.7rem;color:var(--muted);margin-top:10px}
+
+.ai-box{max-width:650px;margin:30px auto;padding:30px;background:rgba(255,255,255,0.05);border:2px solid var(--gold);border-radius:12px;text-align:center;cursor:pointer;transition:0.3s}
+.ai-box:hover{border-color:#ffed4e;box-shadow:0 0 25px rgba(212,175,55,0.4);transform:translateY(-2px)}
+.ai-box h3{color:var(--gold);margin:10px 0 6px;font-size:1.5rem}.ai-box p{color:#b8c5d6;margin-bottom:14px}
+.launch-btn{display:inline-block;padding:10px 24px;background:var(--gold);color:var(--navy);border-radius:6px;font-weight:bold}
+
+.security-badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}
+.badge{background:rgba(212,175,55,0.1);border:1px solid var(--gold);padding:6px 14px;border-radius:20px;font-size:0.8rem;color:var(--gold)}
+
+.section{padding:70px 0}.section-dark{background:rgba(0,0,0,0.3)}
+.section h2{text-align:center;font-size:2.5rem;color:var(--gold);margin-bottom:12px;font-family:'Orbitron',sans-serif}
+.section-subtitle{text-align:center;color:#b8c5d6;margin-bottom:40px}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:30px 0}
+.stat-card{background:rgba(255,255,255,0.05);padding:24px 18px;border-radius:12px;border:1px solid rgba(212,175,55,0.2);text-align:center}
+.stat-card .big{font-size:2.5rem;color:var(--gold);font-weight:bold;margin-bottom:8px;font-family:'Orbitron',sans-serif}
+.stat-card .value{font-size:1.3rem;color:var(--gold);font-weight:700;font-family:'Orbitron',sans-serif}
+.stat-card .label{font-size:0.8rem;color:var(--muted)}
+.chart-container{background:var(--dark);padding:18px;border-radius:12px;border:1px solid var(--gold);margin:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:rgba(255,255,255,0.05);padding:28px;border-radius:12px;border:1px solid rgba(212,175,55,0.2)}
+.card h3{color:var(--gold);margin-bottom:14px;font-size:1.3rem}
+.card ul{list-style:none}.card li{padding:8px 0;color:#b8c5d6;border-bottom:1px solid rgba(212,175,55,0.1);font-size:0.9rem}
+.faq-item{background:rgba(255,255,255,0.05);padding:20px;border-radius:12px;margin-bottom:12px;border:1px solid rgba(212,175,55,0.2)}
+.faq-item h4{color:var(--gold);margin-bottom:8px}
+.log-entry{background:rgba(255,255,255,0.05);padding:22px;border-radius:10px;margin-bottom:18px;position:relative;border:1px solid rgba(212,175,55,0.2);max-width:800px;margin-left:auto;margin-right:auto}
+.featured-log{border:2px solid var(--gold)!important;background:rgba(212,175,55,0.08)!important;box-shadow:0 0 20px rgba(212,175,55,0.2)}
 .log-date{color:var(--gold);font-weight:bold;font-size:0.8rem}
-.log-entry h4{color:#fff;margin:8px 0;font-size:1.2rem}
-.log-entry p{color:#b8c5d6;margin-bottom:10px;font-size:0.93rem}
-.story-box{background:rgba(255,255,255,0.05);padding:28px;border-radius:12px;border:1px solid var(--gold);margin:25px 0}
-.story-box p{margin-bottom:14px;color:#b8c5d6}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.card{background:rgba(255,255,255,0.05);padding:24px;border-radius:12px;border:1px solid rgba(212,175,55,0.2)}
-.card h3{color:var(--gold);margin-bottom:12px}
-.faq-item{background:rgba(255,255,255,0.05);padding:18px;border-radius:10px;margin-bottom:12px;border:1px solid rgba(212,175,55,0.2)}
-.faq-item h4{color:var(--gold);margin-bottom:6px}
-.quote-box{background:var(--dark);padding:28px;border-radius:12px;border-left:4px solid var(--gold);margin:30px 0;text-align:center}
-footer{padding:28px 0;text-align:center;border-top:1px solid rgba(212,175,55,0.2);color:#b8c5d6;font-size:0.85rem}
-.social-links{display:flex;justify-content:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
-.social-links a{color:var(--gold);text-decoration:none}
-@media(max-width:768px){.hero h1{font-size:2.1rem}.nav-links{display:none}}
+.log-entry h4{color:var(--white);margin:8px 0;font-size:1.2rem}.log-entry p{color:#b8c5d6;margin-bottom:10px;font-size:0.92rem}
+.press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:1100px;margin:0 auto}
+.transparency-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.transparency-card{background:var(--dark);padding:20px;border-radius:12px;border:1px solid var(--gold);text-align:center}
+.transparency-card a{color:var(--gold);text-decoration:none;font-weight:bold}
+.quote-box{background:var(--dark);padding:30px;border-radius:12px;border-left:4px solid var(--gold);margin:30px 0;text-align:center}
+.crew-buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:30px 0}
+.crew-btn{padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;display:flex;align-items:center;gap:6px;transition:0.3s;font-size:0.9rem}
+.btn-telegram{background:#0088cc;color:#fff}.btn-discord{background:transparent;color:var(--gold);border:2px solid var(--gold)}.btn-x{background:#000;color:#fff}.btn-github{background:#6e7681;color:#fff}.btn-facebook{background:#1877f2;color:#fff}.btn-tiktok{background:#000;color:#fff}
+.story-box{background:rgba(255,255,255,0.05);padding:30px;border-radius:12px;border:1px solid var(--gold);margin:30px 0;text-align:left}
+.story-box p{margin-bottom:16px;color:#b8c5d6;font-size:1rem}
+.disclaimer-box{background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);padding:16px;border-radius:8px;margin-top:24px;text-align:center;font-size:0.85rem}
+footer{padding:30px 0;text-align:center;border-top:1px solid rgba(212,175,55,0.2);color:#b8c5d6;font-size:0.85rem}
+.social-links{display:flex;justify-content:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.social-links a{color:var(--gold);text-decoration:none;transition:0.2s}
+.sticky-buy{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:999;display:none;box-shadow:0 5px 20px rgba(212,175,55,0.5)}
+@media(max-width:768px){.sticky-buy{display:block}.nav-links{display:none;position:absolute;top:70px;right:20px;background:var(--navy);padding:20px;border:1px solid var(--gold);border-radius:8px;flex-direction:column}.nav-links.show{display:flex}.menu-btn{display:block}.hero h1{font-size:2.2rem}.tracker-grid{grid-template-columns:1fr}}
+.music-player{text-align:center;margin:16px 0;position:relative;z-index:10}
+.music-controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.music-btn,#stop-music{background:transparent;color:var(--gold);border:1px solid var(--gold);padding:8px 14px;border-radius:6px;font-weight:700;cursor:pointer;font-size:0.85rem}
+.music-btn.active{background:#ffd700;color:#0a0f1c}
+.live-chat-box{margin:20px 0;padding:18px;background:#1A2332;border:1px solid #C9A961;border-radius:12px;text-align:center;max-width:700px;margin-left:auto;margin-right:auto}
+.live-chat-box h3{color:#C9A961;margin-bottom:6px}.live-chat-box .btn-primary{background:#C9A961;color:#0d1b2a;padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:700;display:inline-block}
+.live-dot{display:inline-block;width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite;margin-right:5px}
+.token-status-box{max-width:700px;margin:0 auto 18px;background:rgba(255,255,255,0.05);padding:16px;border-radius:12px;border:1px solid rgba(212,175,55,0.3);text-align:center}
+.status-grid{display:flex;justify-content:space-around;gap:12px;flex-wrap:wrap}.stat-label{font-size:0.7rem;color:var(--muted)}.stat-value{font-size:1rem;font-weight:700;color:var(--gold)}
+.comparison-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.05);border-radius:12px;overflow:hidden}
+.comparison-table th,.comparison-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.1);font-size:0.85rem}
+.comparison-table th{background:rgba(212,175,55,0.2);color:var(--gold)}
+.comparison-table .highlight{background:rgba(212,175,55,0.1)}
+.table-wrapper{overflow-x:auto;margin-top:20px}
+.waitlist-form{display:flex;gap:8px;max-width:450px;margin:18px auto 0;flex-wrap:wrap}
+.waitlist-form input{flex:1;padding:12px;border-radius:6px;border:1px solid var(--gold);background:rgba(255,255,255,0.05);color:var(--white);min-width:180px}
+
 </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
+<div class="press-ticker" style="background:linear-gradient(90deg,#D4AF37,#ffed4e,#D4AF37);color:#0A1A2F;overflow:hidden;white-space:nowrap;padding:10px 0;font-weight:800;font-size:0.85rem;position:relative;z-index:102;border-bottom:2px solid #0A1A2F">
+  <div class="ticker-track" style="display:inline-block;animation:ticker 30s linear infinite">
+    <span>📰 Featured on OpenPR •</span><span>📄 PRFree Press Release •</span><span>📋 Official Press Profile •</span><span>⚓ Day 70 Still Sailing - No Abandon Ship •</span>
+    <span>📰 Featured on OpenPR •</span><span>📄 PRFree Press Release •</span><span>📋 Official Press Profile •</span><span>⚓ Day 70 Still Sailing - No Abandon Ship •</span>
+  </div>
+</div>
+<style>@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+
+
+<!-- PRESS TICKER #5 -->
 <div class="press-ticker">
- <div class="ticker-track">
- <span>⚓ $SHIPS GRADUATED • Road to Raydium & Meteora •</span>
- <span>From Galley to Blockchain • We Do Not Abandon Ship •</span>
- <span>0% Tax • Renounced • Fair Launch •</span>
- <span>⚓ $SHIPS GRADUATED • Road to Raydium & Meteora •</span>
- </div>
+  <div class="ticker-track">
+    <span>📰 Featured on OpenPR - Honest OFW Chief Cook Builds Long Term Meme Coin</span>
+    <span class="dot">•</span>
+    <span>📄 Published on PRFree - $SHIPS Launches Crypto for Maritime</span>
+    <span class="dot">•</span>
+    <span>📋 Official Press Profile on PressReleasePoint</span>
+    <span class="dot">•</span>
+    <span>⚓ DAY 70 - WE DO NOT ABANDON SHIP</span>
+    <span class="dot">•</span>
+    <span>🌊 From Galley to Blockchain - Built by OFW for OFW</span>
+    <span class="dot">•</span>
+    <span>📰 Featured on OpenPR - Honest OFW Chief Cook Builds Long Term Meme Coin</span>
+    <span class="dot">•</span>
+    <span>📄 Published on PRFree - $SHIPS Launches Crypto for Maritime</span>
+  </div>
 </div>
 
 <header class="main-header">
- <div class="container nav">
- <div class="logo">
- <span class="logo-text">⚓ $SHIPS</span>
- <span class="day-badge">GRADUATED</span>
- </div>
- <ul class="nav-links">
- <li><a href="#home">Home</a></li>
- <li><a href="#captains-log">Captain Log</a></li>
- <li><a href="#story">Story</a></li>
- <li><a href="#how-to-buy">How to Buy</a></li>
- <li><a href="#roadmap">Roadmap</a></li>
- <li><a href="#faq">FAQ</a></li>
- <li><a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" class="btn-small">Join Crew</a></li>
- </ul>
- </div>
+  <div class="container nav">
+    <div class="logo">
+      <img src="logo.jpg" alt="$SHIPS Logo">
+      <span class="logo-text">⚓ $SHIPS</span>
+      <span class="day-badge">DAY 70</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#captains-log">Captain Log</a></li>
+      <li><a href="#ship-tracker">Tracker</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#comparison">Why Different</a></li>
+      <li><a href="#why-ofw">For OFW</a></li>
+      <li><a href="#how-to-buy">How to Buy</a></li>
+      <li><a href="#chart">Chart</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#logbook">Logbook</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" class="btn-small">Join Crew</a></li>
+    </ul>
+    <button class="menu-btn" id="menu-btn">☰</button>
+  </div>
 </header>
 
 <div class="trust-strip">
- <div class="container">
- ✅ Contract Renounced • ✅ 0% Tax • ✅ No Team Tokens • ✅ Graduated from pump.fun • ⚓ Road to Raydium & Meteora
- </div>
+  <div class="container trust-inner">
+    <span>✅ Contract Renounced</span>
+    <span class="dot">•</span>
+    <span>✅ 0% Tax</span>
+    <span class="dot">•</span>
+    <span>✅ No Team Tokens</span>
+    <span class="dot">•</span>
+    <span>✅ Built at Sea - 20yr OFW</span>
+    <span class="dot">•</span>
+    <span>⚓ 70 Days Sailing - No Abandon</span>
+  </div>
 </div>
 
 <div class="content-wrapper">
- <section class="hero" id="home">
- <div class="container">
- <h1>From Galley<br><span class="gold">to Blockchain</span></h1>
- <p class="hero-sub">
- Built by an OFW Chief Cook.<br>
- Graduated from pump.fun.<br>
- Now sailing toward Raydium & Meteora.<br>
- We do not abandon ship.
- </p>
+  <div class="sailing-ship">🛳️</div>
+  <div class="waves"></div>
 
- <div class="ca-box">
- <p style="margin-bottom:8px;color:var(--gold);font-weight:700">Contract Address (Solana)</p>
- <code id="ca-text">2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</code>
- <button class="btn" onclick="navigator.clipboard.writeText('2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump')">📋 Copy CA</button>
- </div>
+  <div class="music-player">
+    <audio id="bg-music" loop preload="metadata">
+      <source id="music-source" src="" type="audio/mpeg">
+    </audio>
+    <div class="music-controls">
+      <button class="music-btn" data-track="0">🔊 We Are! - One Piece</button>
+      <button class="music-btn" data-track="1">🎵 Binks Sake - One Piece</button>
+      <button id="stop-music">⏹️ Stop Music</button>
+    </div>
+    <p id="now-playing">Select a track to play - For the crew at sea</p>
+  </div>
 
- <div style="margin:25px 0">
- <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank">⚡ Buy on Jupiter</a>
- <a href="https://raydium.io/swap/?inputMint=sol&outputMint=2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn btn-outline" target="_blank">🌊 Buy on Raydium</a>
- <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn btn-outline" target="_blank">🚀 View on pump.fun</a>
- </div>
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>
+        From Galley<br>
+        <span class="gold">to Blockchain</span>
+      </h1>
+      <p class="hero-sub">
+        Built by 20-year OFW Chief Cook for 10M OFWs worldwide.
+        100% Fair Launch. 0% Tax. No Team Tokens.
+        70 Days and Still Sailing.
+        We do not abandon ship.
+      </p>
 
- <div style="max-width:750px;margin:0 auto;background:#000;border:1px solid var(--gold);border-radius:12px;overflow:hidden">
- <div style="background:linear-gradient(90deg,var(--gold),#ffed4e);color:var(--navy);padding:10px;text-align:center;font-weight:800">
- 🔴 LIVE CHART – GRADUATED
- </div>
- <iframe src="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump?embed=1&info=0&swaps=0" height="480" width="100%" frameborder="0"></iframe>
- </div>
- </div>
- </section>
+      <!-- LIVE PUMP.FUN - REPLACEMENT FOR BONDING BAR -->
+      <div class="live-pump-box">
+        <div class="live-pump-header">
+          <span class="live-dot"></span> 🔴 LIVE ON PUMP.FUN - REAL TIME PUMP
+        </div>
+        <iframe 
+          src="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" 
+          height="500" 
+          width="100%" 
+          frameborder="0" 
+          style="border-radius:0 0 12px 12px;">
+        </iframe>
+      </div>
 
- <!-- CAPTAIN'S LOG - KEPT FULL -->
- <section class="section section-dark" id="captains-log">
- <div class="container">
- <h2>⚓ CAPTAIN'S LOG</h2>
- <p class="section-subtitle">Real logs from the sea – We do not abandon ship</p>
+      <div class="bonding-bar" id="live-tracker">
+        <p class="tracker-title">📊 Live Stats - Auto Update Every 30 Seconds</p>
+        <div class="live-grid">
+          <div class="live-item">
+            <p class="label">Price USD</p>
+            <p class="value" id="price">$0.000000</p>
+          </div>
+          <div class="live-item">
+            <p class="label">Market Cap</p>
+            <p class="value" id="mcap">$0</p>
+          </div>
+          <div class="live-item">
+            <p class="label">Total Holders</p>
+            <p class="value" id="holders">--</p>
+          </div>
+          <div class="live-item">
+            <p class="label">24h Volume</p>
+            <p class="value" id="volume">$0</p>
+          </div>
+        </div>
+        <p class="live-note">Powered by Dexscreener + Pump.fun API - Real Time</p>
+      </div>
 
- <div class="log-entry featured-log">
- <span class="log-date">Entry – Graduation Day</span>
- <h4>We Graduated. Still Sailing.</h4>
- <p>From a small cabin in the middle of the ocean to graduating the bonding curve. Many said we would not last. We are still here. Road to Raydium and Meteora starts now. The captain and the crew remain on board.</p>
- <p class="log-sign" style="color:var(--gold);margin-top:12px">— Carl Amahan, Chief Cook</p>
- </div>
+      <!-- SHIP TRACKER #3 - MAGANDA -->
+      <div class="ship-tracker-box" id="ship-tracker">
+        <h3>🗺️ LIVE SHIP TRACKER - WHERE IS THE CAPTAIN NOW?</h3>
+        <div class="tracker-grid">
+          <div class="t-item">
+            <p class="t-label">🚢 Current Location</p>
+            <p class="t-val">Hakone-machi, Kanagawa, Japan</p>
+            <p class="t-sub">Pacific Ocean - Japan Waters</p>
+          </div>
+          <div class="t-item">
+            <p class="t-label">📡 Ship Status</p>
+            <p class="t-val status-green">⚓ At Sea - Galley Duty Active</p>
+            <p class="t-sub">Cooking for crew - 20 years experience</p>
+          </div>
+          <div class="t-item">
+            <p class="t-label">📅 Sailing Days - $SHIPS</p>
+            <p class="t-val gold-big">70 DAYS - Still Sailing!</p>
+            <p class="t-sub">No Abandon Ship - Day 70</p>
+          </div>
+          <div class="t-item">
+            <p class="t-label">🧭 Next Port of Call</p>
+            <p class="t-val">TBA - Update by Captain Carl</p>
+            <p class="t-sub">Depends on company route</p>
+          </div>
+        </div>
+        <div class="tracker-map-box">
+          <p>🌊 Pacific Ocean • Japan Waters • Still Cooking & Coding 🍳</p>
+          <p style="font-size:0.75rem; margin-top:5px;">20 Years at Sea • From Galley to Blockchain • Built with OFW Pride</p>
+        </div>
+        <p class="tracker-note">
+          Updated manually by Captain Carl Amahan from ship.
+          Internet depends on Starlink / ship WiFi.
+          Sometimes delayed due to galley duty.
+        </p>
+      </div>
 
- <div class="log-entry">
- <span class="log-date">Entry 007 – Day 70</span>
- <h4>70 Days and Still Sailing</h4>
- <p>Day 70. Hindi ako makapaniwala. 70 days ago, nag-launch lang ako ng token sa maliit na cabin habang maalon ang dagat. Sabi ng iba, 5 minutes lang patay na yan. Pero andito pa tayo. 70 days and still sailing. Maraming salamat sa mga kabaro na sumama.</p>
- <p>Ang barko ay hindi lumulubog hangga't buhay ang kapitan at ang crew. Nasa dagat pa rin ako, nagluluto pa rin sa galley. From Galley to Blockchain.</p>
- </div>
+      <div class="bonding-bar" id="top-holders">
+        <p class="tracker-title">👥 Top 10 Crew Members (Holders) - Live</p>
+        <div id="holders-list" class="holders-list">
+          Loading crew list from Solscan...
+        </div>
+        <p style="text-align:center; margin-top:10px;">
+          <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#holders" target="_blank" style="color:var(--gold); font-size:0.8rem;">
+            View Full List on Solscan →
+          </a>
+        </p>
+      </div>
 
- <div class="log-entry">
- <span class="log-date">Entry 005</span>
- <h4>Why I Built This at Sea</h4>
- <p>I built this right here on the ship. In my cabin, in the middle of the ocean, while working my shift as Chief Cook. No office. No team. No investors. My office is the ship.</p>
- <p>Bakit ko ginawa? Kasi sa 20 years ko sa barko, nakita ko maraming OFW na-scam. Kasama na ako dun. Sabi ko: Hindi na ako magpapa-scam. At hindi ako mang-scam. Gumawa ako ng token na kahit gusto ko i-rug, hindi ko magagawa. Kasi renounced. Kasi 0% tax. Kasi no team tokens.</p>
- </div>
+      <div class="warning-box">
+        <strong>⚠️ BABALA PARA SA CREW:</strong>
+        Hindi mag-DM ang admin para manghingi ng SOL.
+        Lahat ng announcement sa Telegram group lang.
+        Report fake accounts agad. DYOR.
+      </div>
 
- <div class="log-entry">
- <span class="log-date">Entry 001 – Launch Day</span>
- <h4>From Galley to Blockchain</h4>
- <p>$SHIPS launched on pump.fun. Born at sea. No exit scam. Built with OFW Pride. Location: Middle of the Pacific Ocean. Time: 2 AM after galley shift. Equipment: Old laptop, ship WiFi, coffee.</p>
- <p>Goal: Prove that a seaman can build in Web3. Not to get rich quick . But to build long-term.</p>
- </div>
- </div>
- </section>
+      <div class="ca-box">
+        <p class="ca-label">Contract Address - Solana - Copy and Paste in Jupiter</p>
+        <code id="ca-text">2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</code>
+        <button class="btn" onclick="copyCA()">📋 Copy Contract Address</button>
+        <div class="qr-box">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" alt="QR Code">
+          <p>Scan to buy on Phantom Wallet</p>
+        </div>
+      </div>
 
- <!-- STORY - KEPT -->
- <section class="section" id="story">
- <div class="container">
- <h2>📖 The Real Story Behind $SHIPS</h2>
- <p class="section-subtitle">Hindi AI story. Totoong buhay ng seaman.</p>
- <div class="story-box">
- <p>I first boarded a ship years ago. Mahirap buhay ng seaman. 8 months sa dagat, 2 months sa bahay. Miss mo pamilya.</p>
- <p>I heard about Bitcoin back in 2010. Nasa balita. Pero nasa barko ako, walang signal. I couldn't get in. Sayang.</p>
- <p>Fast forward. A fellow seaman introduced me to crypto again. I tried. I lost money many times. I joined presales because they promised x1000. I got scammed over and over. My hard-earned money from cooking at sea... gone.</p>
- <p>Making a token was just a joke at first. Sabi ko sa kabaro, "Paano kaya kung gumawa ako ng token? $SHIPS?" Tawanan lang kami sa galley. I didn't even know how to code. I only know how to cook adobo, sinigang, and fried rice for 25 people.</p>
- <p>Then I learned step by step. From zero. Boom. $SHIPS was born in my cabin, 2 AM, after galley shift, with ship WiFi.</p>
- <p>I told myself: "I won't get scammed anymore. And no one else will get scammed by me. Because $SHIPS comes from my heart. A real person built this."</p>
- <p><strong>No team tokens. No tax. Renounced.</strong></p>
- <p style="text-align:center;margin-top:25px;font-size:1.3rem;color:var(--gold);font-weight:bold">
- This is not just a meme coin. This is my heart and soul. From Galley to Blockchain.
- </p>
- </div>
- </div>
- </section>
+      <div class="hero-buttons">
+        <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn btn-main" target="_blank">
+          🚀 Buy $SHIPS on Pump.fun
+        </a>
+        <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn btn-outline" target="_blank">
+          ⚡ Buy on Jupiter - Best Price
+        </a>
+      </div>
 
- <!-- HOW TO BUY -->
- <section class="section section-dark" id="how-to-buy">
- <div class="container">
- <h2>🛠️ How to Buy $SHIPS</h2>
- <p class="section-subtitle">Graduated na – Buy on Jupiter or Raydium</p>
- <div class="grid">
- <div class="card">
- <h3>1. Download Phantom</h3>
- <p>Download Phantom app. Save your 12-word seed phrase safely. Never share it.</p>
- </div>
- <div class="card">
- <h3>2. Buy SOL</h3>
- <p>Buy SOL via GCash, Maya, or Binance P2P. Send to your Phantom wallet.</p>
- </div>
- <div class="card">
- <h3>3. Swap to $SHIPS</h3>
- <p>Open Jupiter or Raydium. Paste the CA. Swap SOL to $SHIPS. Welcome aboard!</p>
- <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank" style="margin-top:12px">Open Jupiter</a>
- </div>
- </div>
- </div>
- </section>
+      <div class="ai-box" onclick="window.open('https://ai.shipsofficial.com','_blank')">
+        <div class="ai-icon">🤖</div>
+        <h3>CHIEF AI V2.0 - Maritime Assistant</h3>
+        <p>AI Assistant Built for OFWs - Ask about maritime, cooking at sea, crypto basics</p>
+        <span class="launch-btn">Launch Terminal →</span>
+      </div>
+      <div class="security-badges">
+        <span class="badge">✅ Contract Renounced</span>
+        <span class="badge">✅ 0% Tax - No Tax on Buy/Sell</span>
+        <span class="badge">✅ No Team Wallet</span>
+        <span class="badge">✅ Fair Launch 100%</span>
+        <span class="badge">⚓ 70 Days Sailing</span>
+      </div>
+    </div>
+  </section>
 
- <!-- ROADMAP UPDATED -->
- <section class="section" id="roadmap">
- <div class="container">
- <h2>🗺️ ROADMAP</h2>
- <p class="section-subtitle">No fake promises. Real steps.</p>
- <div class="card" style="border-color:var(--gold)">
- <h3>✅ PHASE 1 – DONE</h3>
- <ul style="list-style:none;color:#b8c5d6">
- <li>✅ Token launched on pump.fun</li>
- <li>✅ Contract renounced</li>
- <li>✅ 0% tax / No team tokens</li>
- <li>✅ Website + community live</li>
- <li>✅ Graduated from bonding curve</li>
- </ul>
- </div>
- <div class="card" style="margin-top:16px;border-color:#22c55e">
- <h3>🚀 PHASE 2 – CURRENT</h3>
- <ul style="list-style:none;color:#b8c5d6">
- <li>🔍 Add liquidity on Raydium</li>
- <li>🔍 Explore Meteora pools</li>
- <li>🔍 Grow organic community</li>
- <li>🔍 Daily Captain’s Log updates</li>
- </ul>
- </div>
- <div class="card" style="margin-top:16px">
- <h3>💭 PHASE 3 – FUTURE</h3>
- <ul style="list-style:none;color:#b8c5d6">
- <li>💭 Community-driven ideas only</li>
- <li>💭 Possible CEX if volume supports</li>
- <li>💭 Continue building at sea</li>
- <li>💭 We do not abandon ship</li>
- </ul>
- </div>
- </div>
- </section>
+  <section class="section section-dark" id="captains-log">
+    <div class="container">
+      <h2>⚓ CAPTAIN'S LOG - DAY 70 - STILL SAILING</h2>
+      <p class="section-subtitle">We do not abandon ship - Real logs from sea</p>
 
- <!-- FAQ -->
- <section class="section section-dark" id="faq">
- <div class="container">
- <h2>FAQ</h2>
- <div class="faq-item">
- <h4>1. Scam ba ito?</h4>
- <p>Hindi. Contract renounced. 0% tax. No team tokens. Verify on Solscan + RugCheck.</p>
- </div>
- <div class="faq-item">
- <h4>2. May team tokens ba?</h4>
- <p>Zero. 100% fair launch.</p>
- </div>
- <div class="faq-item">
- <h4>3. Saan pwede bumili ngayon?</h4>
- <p>Jupiter at Raydium. Graduated na tayo.</p>
- </div>
- <div class="faq-item">
- <h4>4. Sino ang builder?</h4>
- <p>Carl Amahan – real OFW Chief Cook. Real name, real face, real galley.</p>
- </div>
- </div>
- </section>
+      <div class="log-entry featured-log">
+        <span class="log-date">Entry 007 - Day 70 TODAY - HAKONE-MACHI, JAPAN</span>
+        <h4>70 Days and Still Sailing - Maraming Salamat Crew!</h4>
+        <p>
+          Day 70. Hindi ako makapaniwala. 70 days ago, nag-launch lang ako ng token
+          sa maliit na cabin habang maalon ang dagat.
+          Sabi ng iba, 5 minutes lang patay na yan. Scam yan.
+        </p>
+        <p>
+          Pero andito pa tayo. 70 days and still sailing.
+          Maraming salamat sa mga kabaro na sumama, sa mga nag-hold,
+          sa mga nagdasal, sa mga naniwala.
+        </p>
+        <p>
+          Hindi pa tayo graduate sa PumpSwap pero hindi pa rin tayo lumulubog.
+          Ang barko ay hindi lumulubog hangga't buhay ang kapitan at ang crew.
+          Ang sikreto? Hindi pera. Kundi tiwala.
+        </p>
+        <p>
+          Nasa Hakone, Japan pa rin ako ngayon, nagluluto pa rin sa galley.
+          Mahina ang signal pero tuloy pa rin ang laban.
+          From Galley to Blockchain, 70 days na!
+        </p>
+        <p class="log-sign">
+          We do not abandon ship. - Carl Amahan, Chief Cook, 20 Years at Sea
+        </p>
+      </div>
 
- <section class="section">
- <div class="container">
- <div class="quote-box">
- <h3>👨‍🍳 Mensahe ng Chief Cook</h3>
- <p>"20 years akong nagluto para sa iba. Ngayon, magluluto na tayo para sa kinabukasan natin. Hindi na tayo ma-scam. Hindi na tayo ma-rug.</p>
- <p>$SHIPS is by OFWs, for OFWs. We do not abandon ship."</p>
- <p style="color:var(--gold);margin-top:15px">— Carl Amahan</p>
- </div>
- </div>
- </section>
+      <div class="log-entry">
+        <span class="log-date">Entry 006 - Day 59 - Still at Sea</span>
+        <h4>59 Days and Still Sailing Strong - We Are Still Here</h4>
+        <p>
+          Day 59. We have been sailing in Solana for 59 days now.
+          Many pump.fun tokens have sunk in hours. Rug. Gone. 5 minutes lifespan.
+          But $SHIPS is still here — steady and afloat.
+        </p>
+        <p>
+          I am Carl Amahan, 20+ year OFW Chief Cook. No fancy office, just an old laptop
+          in my cabin and determination of a seaman.
+          I cook for 25 crew members daily. Then I code at night.
+        </p>
+        <p>
+          Why still sailing? Because seaman does not abandon ship even if storm.
+          Same principle in crypto.
+        </p>
+      </div>
 
- <footer>
- <div class="container">
- <div class="social-links">
- <a href="https://t.me/+XLhJLr-_JnpjMDI9">📱 Telegram</a>
- <a href="https://x.com/carlamahan73238">𝕏 X</a>
- <a href="https://github.com/shipsofficial">🐙 GitHub</a>
- </div>
- <p>© 2026 $SHIPS Token – Graduated – Road to Raydium & Meteora</p>
- <p>From Galley to Blockchain • We Do Not Abandon Ship</p>
- <p style="margin-top:8px;font-size:0.8rem">CA: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</p>
- </div>
- </footer>
+      <div class="log-entry">
+        <span class="log-date">Entry 005 - Day 45</span>
+        <h4>Why $SHIPS? Why I Built This at Sea</h4>
+        <p>
+          I built this right here on the ship. In my cabin, in the middle of the ocean,
+          while working my shift as Chief Cook.
+          No office. No team. No investors.
+          My office is the ship. My computer is my old laptop by the bed.
+        </p>
+        <p>
+          Bakit ko ginawa? Kasi sa 20 years ko sa barko, nakita ko maraming OFW na-scam.
+          Kasama na ako dun. Na-scam din ako sa presale na x1000 daw. Naubos ipon.
+        </p>
+        <p>
+          Sabi ko: Hindi na ako magpapa-scam. At hindi ako mang-scam.
+          Gumawa ako ng token na kahit gusto ko i-rug, hindi ko magagawa.
+          Kasi renounced. Kasi 0% tax. Kasi no team tokens.
+        </p>
+      </div>
+
+      <div class="log-entry">
+        <span class="log-date">Entry 004 - Day 35</span>
+        <h4>$SHIPS is not for chart flippers - This is for OFW</h4>
+        <p>
+          $SHIPS is not for chart flippers who want x100 in 5 minutes.
+          $SHIPS is for the guy who's been 8 months at sea.
+          For the girl who hasn't seen her kids in 1 year.
+          For the seaman who's tired of being called dumb for getting scammed.
+        </p>
+        <p>
+          This token is our story. 10 million OFWs. We send $30 billion yearly to Philippines.
+          But we are always last to know about new technology.
+          Web3 is new ocean. Dapat kasama tayo.
+        </p>
+        <p>
+          I am not promising riches. I am promising honesty.
+          I am here. Visible. Real name. Real face. Real galley photo.
+          Hindi tulad ng anon devs.
+        </p>
+      </div>
+
+      <div class="log-entry">
+        <span class="log-date">Entry 003 - Day 30 - One Month Sailing</span>
+        <h4>30 Days In: We Still Sail - One Month Anniversary</h4>
+        <p>
+          30 days ago, I launched $SHIPS into the crazy waters of Solana.
+          For 30 days, thousands of standard pump.fun tokens have rug-pulled, died,
+          and vanished in 5 minutes.
+        </p>
+        <p>
+          But $SHIPS is still here, sailing strong.
+          Why? Because the captain does not abandon ship.
+          Even if waves are high. Even if no volume. Even if FUD.
+        </p>
+        <p>
+          Day 30 report: Still at sea. Still cooking. Still coding.
+          Still believing in OFW community.
+        </p>
+      </div>
+
+      <div class="log-entry">
+        <span class="log-date">Entry 002 - Day 15</span>
+        <h4>Why a Seaman Dev is Safer Than Tech Expert - Real Talk</h4>
+        <p>
+          Many investors are afraid of crypto because of brilliant developers.
+          Why? Because tech experts know how to code hidden backdoors,
+          build wallet drainers, and manipulate funds.
+        </p>
+        <p>
+          Me? I am Carl Amahan. 20-year OFW Chief Cook.
+          I am NOT a tech expert. My expertise is inside the ship's galley.
+          I cook adobo, sinigang, and fried rice for 25 hungry seamen.
+        </p>
+        <p>
+          I learned coding from Meta AI. Step by step.
+          No hidden code. What you see is what you get.
+          Kaya mas safe ako kesa sa tech genius na magaling magtago ng scam code.
+        </p>
+        <p>
+          Simple logic: Seaman dev = No ability to make complex scam code.
+          Tech expert dev = Can make super hidden scam.
+        </p>
+      </div>
+
+      <div class="log-entry">
+        <span class="log-date">Entry 001 - Launch Day - Day 1 - May 5, 2026</span>
+        <h4>From Galley to Blockchain - Launch Day</h4>
+        <p>
+          $SHIPS launched on pump.fun today.
+          20 years at sea, ngayon lang naka-launch ng sariling token.
+          Born at sea. No exit scam. Built with OFW Pride.
+        </p>
+        <p>
+          Location: Middle of Pacific Ocean.
+          Time: 2 AM after galley shift.
+          Equipment: Old laptop, ship WiFi, coffee.
+        </p>
+        <p>
+          Goal: Prove that seaman can build in Web3.
+          Not to get rich quick. But to build long-term.
+        </p>
+        <p>
+          First holder: Me. Then my wife. Then 2 kabaro.
+          Small start. But all real.
+        </p>
+      </div>
+
+    </div>
+  
+      <div class="log-entry" style="max-width:800px; margin:0 auto; margin-top:30px; background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(255,255,255,0.05)); padding: 35px; border-radius: 12px; border: 2px solid var(--gold);">
+        <span class="log-date" style="color: #D4AF37; font-weight: bold;">Entry 007 - Day 70 at Sea - HAKONE, JAPAN 🇯🇵</span>
+        <h4 style="color: #FFFFFF; margin: 15px 0; font-size: 1.5rem;">Day 70: Still Sailing. Still Cooking. Still Building.</h4>
+        <p style="color: #b8c5d6; line-height: 1.8;">
+          70 days ago I launched $SHIPS from my cabin. Today I'm writing this from Hakone, Japan. Still at sea. Still cooking for 25 crew. Still building.<br><br>
+          70 days in crypto is like 7 years. Most pump.fun tokens die in 5 minutes. We are still here. Why? Because this is not just a chart. This is my life. 20 years at sea, now Day 70 of $SHIPS. Same discipline. Same duty. I do not abandon ship.<br><br>
+          To my crew who stayed: Maraming salamat. To those watching: The water is rough but the ship is strong. We sail together.
+        </p>
+        <div style="margin-top: 30px; text-align: right; color: #D4AF37; font-weight: bold;">— Carl Amahan<br>Chief Cook & Captain of $SHIPS<br>Day 70 - Hakone, Japan</div>
+      </div>
+
+</section>
+
+  <section class="section" id="press">
+    <div class="container">
+      <h2>📰 PRESS COVERAGE - We Made Headlines</h2>
+      <p class="section-subtitle">From Galley to Headlines — $SHIPS is making waves in press</p>
+      <div class="press-grid">
+        <div class="card press-card">
+          <div class="press-icon">📰</div>
+          <h3>Featured on OpenPR</h3>
+          <p>Honest OFW Chief Cook Builds Long Term Meme Coin Project on Solana - Real Story</p>
+          <a href="https://www.openpr.com/news/4552177/honest-ofw-chief-cook-builds-long-term-meme-coin-project-on-solana" target="_blank" class="btn">Read Full Article →</a>
+        </div>
+        <div class="card press-card">
+          <div class="press-icon">📄</div>
+          <h3>Published on PRFree</h3>
+          <p>$SHIPS Token Launches Crypto for Shipping and Maritime Industry - OFW Innovation</p>
+          <a href="https://news.prfree.org/@carlamahan/sships-token-ships-launches-crypto-for-shipping-and-maritime-industry-ee1otzvriqss" target="_blank" class="btn">View Press Release →</a>
+        </div>
+        <div class="card press-card featured-press">
+          <div class="press-icon">📋</div>
+          <h3>Official Press Profile</h3>
+          <p>View all verified press releases about $SHIPS Token - Official Publisher Profile</p>
+          <a href="https://www.pressreleasepoint.com/node/1395165" target="_blank" class="btn">View Official Profile →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="ship-time">
+    <div class="container" style="text-align:center;">
+      <h2>🌍 Ship's Time - We Sail 24/7 - No Sleep at Sea</h2>
+      <p class="section-subtitle">Para sa mga kabaro sa buong mundo - Iba iba time zone pero iisa ang barko</p>
+      <div class="time-grid">
+        <div class="stat-card">
+          <p class="label">🇵🇭 Manila - Kapitan Time</p>
+          <p class="value" id="manila-time">--:--:--</p>
+          <p class="time-sub">Home of OFW</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">⚓ Ship Time - UTC - Bridge Time</p>
+          <p class="value" id="utc-time">--:--:--</p>
+          <p class="time-sub">Where captain is now</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">🇸🇬 Singapore - Kabaro</p>
+          <p class="value" id="sg-time">--:--:--</p>
+          <p class="time-sub">Many OFWs there</p>
+        </div>
+        <div class="stat-card">
+          <p class="label">🇸🇦 Saudi - Kabaro Time</p>
+          <p class="value" id="ksa-time">--:--:--</p>
+          <p class="time-sub">Many seamen there</p>
+        </div>
+      </div>
+      <p class="time-footer">Walang tulugan ang barko. 24/7 kami nagbabantay sa kusina at sa bridge ⚓</p>
+    </div>
+  </section>
+
+  <section class="section" id="comparison">
+    <div class="container">
+      <h2>Why $SHIPS is Different - Comparison</h2>
+      <p class="section-subtitle">Not all maritime tokens are same - We are real OFW</p>
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Token Name</th>
+              <th>Dev Background</th>
+              <th>Story / Proof</th>
+              <th>Network</th>
+              <th>Focus / Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>⚓ $SHIPS</strong></td>
+              <td>Carl Amahan - 20yr OFW Chief Cook - Real Name</td>
+              <td>Real seaman story. From galley to blockchain. With galley photo proof.</td>
+              <td>Solana - Fast & Cheap</td>
+              <td>OFW Community, Honesty, Seafarer Trust, Long Term</td>
+            </tr>
+            <tr>
+              <td>SEAT Token</td>
+              <td>Anonymous Team - No Face</td>
+              <td>Yacht rental, maritime B2B - No real seaman</td>
+              <td>Polygon</td>
+              <td>Marine leisure for rich</td>
+            </tr>
+            <tr>
+              <td>SEAMANIA</td>
+              <td>Anonymous - Meme Only</td>
+              <td>No real story. Pure meme, no utility talk</td>
+              <td>Solana</td>
+              <td>Meme only - Quick pump</td>
+            </tr>
+            <tr>
+              <td>Other Meme Coins</td>
+              <td>Often Anon, Tech Background</td>
+              <td>Fake story, AI generated</td>
+              <td>Various</td>
+              <td>Quick rug / flip</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="comparison-footer">$SHIPS = First and Only token made by an actual OFW seaman with 20 years proof at sea</p>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="why-ofw">
+    <div class="container">
+      <h2>🌊 Bakit Para sa OFW ang $SHIPS - Our Mission</h2>
+      <div class="story-box ofw-box">
+        <p>
+          10 milyon tayong OFW sa buong mundo.
+          Tayo ang modern heroes, pero tayo rin ang madalas ma-scam at talo sa remittance fees.
+        </p>
+        <p>
+          Alam mo ba? $30 Billion kada taon ang pinapadala ng OFW sa Pinas.
+          Pero $1 Billion dun napupunta sa fees lang ng remittance.
+          Lugi tayo.
+        </p>
+        <p>
+          Gumawa ako ng $SHIPS para patunayan na kaya ng isang seaman magtayo ng totoong project sa Web3.
+          Walang pangako ng x1000. Walang magic. Tayo-tayo lang na nagtutulungan.
+        </p>
+        <p>
+          Ang goal: Gawing movement ang $SHIPS para sa OFW.
+          Para sa susunod, hindi na tayo ang niloloko. Tayo na ang nagtatayo.
+          From being scammed to being builders.
+        </p>
+        <p class="highlight-text">
+          This is not just a token. This is OFW pride.
+        </p>
+      </div>
+      <div class="chart-container">
+        <h3 class="chart-title">📊 Tokenomics - 100% Fair - No Team Tokens</h3>
+        <canvas id="tokenomics" style="max-height:320px;"></canvas>
+        <div class="tokenomics-legend">
+          <p><strong>1,000,000,000 Total Supply</strong></p>
+          <p>✅ 100% to Public via Pump.fun</p>
+          <p>✅ 0% Team / Dev Tokens</p>
+          <p>✅ 0% Tax on Buy and Sell</p>
+          <p>✅ Contract Renounced - Cannot be changed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how-to-buy">
+    <div class="container">
+      <h2>🛠️ How to Buy $SHIPS in 3 Easy Steps - For First Time</h2>
+      <p class="section-subtitle">Para sa mga first time sa crypto - Tagalog guide para sa kabaro</p>
+      <div class="grid">
+        <div class="card">
+          <div class="step-num">1</div>
+          <h3>Download Phantom Wallet</h3>
+          <p>Download Phantom app sa phone mo sa Play Store o App Store. I-save mo yung 12-word seed phrase sa papel. Wag mo i-share kahit kanino. Yun ang susi ng pera mo.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">2</div>
+          <h3>Buy SOL - Pang-gas</h3>
+          <p>Buy SOL gamit GCash, Maya, o Binance P2P. Send mo sa Phantom wallet address mo. Kailangan mo SOL para makabili ng $SHIPS. Parang pang-gas ng barko.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">3</div>
+          <h3>Swap to $SHIPS - Sakay na!</h3>
+          <p>Open Jupiter sa browser ng Phantom. Paste CA ng $SHIPS, swap SOL to $SHIPS. Done! Member ka na ng crew. Welcome aboard!</p>
+          <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank" style="margin-top:15px;">Open Jupiter - Swap Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="chart">
+    <div class="container">
+      <h2>📈 LIVE CHART - GeckoTerminal - Real Time Price</h2>
+      <p class="section-subtitle">Real-time price ng $SHIPS sa Solana blockchain - No fake chart</p>
+      <div class="chart-container">
+        <iframe 
+          height="600" 
+          width="100%" 
+          src="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump?embed=1&info=0&swaps=0&grayscale=0&light_chart=0" 
+          frameborder="0" 
+          allowfullscreen 
+          style="border-radius:16px; border:2px solid var(--gold);">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stats">
+    <div class="container">
+      <h2>📊 LIVE STATS - On Chain Data</h2>
+      <p class="section-subtitle">All data is on-chain, verifiable, no hiding</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="big">1,000,000,000</div>
+          <p>Total Supply</p>
+          <p class="small">Fixed - No mint</p>
+        </div>
+        <div class="stat-card">
+          <div class="big">0% / 0%</div>
+          <p>Tax Buy / Sell</p>
+          <p class="small">No tax ever</p>
+        </div>
+        <div class="stat-card">
+          <div class="big" id="holder-count">--</div>
+          <p>Total Holders</p>
+          <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#holders" target="_blank" class="sol-link">View Live Count on Solscan →</a>
+        </div>
+        <div class="stat-card">
+          <div class="big">Renounced</div>
+          <p>Contract Status</p>
+          <p class="small">Cannot be changed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="roadmap">
+    <div class="container">
+      <h2>🗺️ ROADMAP - No Fake Promises - Real Steps</h2>
+      <p class="section-subtitle">No promises of x1000. Just what we're doing and exploring step by step.</p>
+      
+      <div class="card roadmap-card done">
+        <h3>PHASE 1 - DONE ✅ - Launch - Day 1 to Day 30</h3>
+        <ul>
+          <li>✅ Token launched on pump.fun - May 5, 2026</li>
+          <li>✅ Currently on bonding curve - 70 days sailing and counting</li>
+          <li>✅ Contract renounced - Verified on Solscan</li>
+          <li>✅ Website live - Built at sea by Chief Cook</li>
+          <li>✅ Press coverage - OpenPR, PRFree, PressReleasePoint</li>
+          <li>✅ Community - Telegram, Discord, X, TikTok, Facebook</li>
+        </ul>
+      </div>
+
+      <div class="card roadmap-card current">
+        <h3>PHASE 2 - EXPLORING NOW 🔍 - Day 30 to Day 70 - Current Phase</h3>
+        <ul>
+          <li>🔍 Grow community if people are interested - Organic growth</li>
+          <li>🔍 Share daily updates on Telegram/X - Captain's Log</li>
+          <li>🔍 Migration to Pumpswap / Raydium depends on bonding curve - 85 SOL needed</li>
+          <li>🔍 Live Ship Tracker activated - Show where captain is</li>
+          <li>🔍 Press Ticker - Show we are legit in press</li>
+          <li>🔍 AI Assistant - Chief AI V2 for OFWs</li>
+        </ul>
+      </div>
+
+      <div class="card roadmap-card future">
+        <h3>PHASE 3 - POSSIBLE IDEAS 💭 - Future - Depends on Community</h3>
+        <ul>
+          <li>💭 Explore OFW-related use cases if feasible - Remittance discount idea</li>
+          <li>💭 Consider CEX listing only if volume and community support it - No guarantee</li>
+          <li>💭 Partnership with training center for $SHIPS holders discount</li>
+          <li>💭 Nothing guaranteed. Everything depends on time, budget, and community</li>
+          <li>💭 We do not abandon ship - Continue building at sea</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="logbook">
+    <div class="container">
+      <h2>📖 CAPTAIN'S LOGBOOK - Daily Updates</h2>
+      <p class="section-subtitle">Daily updates from the bridge. No cap, all real logs.</p>
+      
+      <div class="token-status-box">
+        <h3>$SHIPS Live Status - On Chain</h3>
+        <div class="status-grid">
+          <div>
+            <p class="stat-label">Bonding Curve Progress</p>
+            <p class="stat-value">-- / 85 SOL to Raydium</p>
+          </div>
+          <div>
+            <p class="stat-label">Total Holders</p>
+            <p class="stat-value" id="status-holders">-- holders</p>
+          </div>
+          <div>
+            <p class="stat-label">Liquidity Status</p>
+            <p class="stat-value">Locked by Pump.fun</p>
+          </div>
+          <div>
+            <p class="stat-label">Dev Tokens</p>
+            <p class="stat-value">0% - No Team Tokens</p>
+          </div>
+        </div>
+        <p class="status-note">No dev tokens. Contract verified. Fair launch 100%.</p>
+      </div>
+
+      <div class="live-chat-box">
+        <h3>📡 Live Crew Chat - Join the Crew</h3>
+        <p><span class="live-dot"></span> Crew members online now. Join conversation in Telegram.</p>
+        <a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" class="btn btn-primary">Join Telegram - Free</a>
+      </div>
+
+      <div class="logbook-container">
+        <div class="log-entry">
+          <span class="log-date">May 5, 2026 - Launch Day</span>
+          <h4>Launch Day - $SHIPS is Born at Sea</h4>
+          <p>$SHIPS launched on pump.fun. 20 years at sea, ngayon lang naka-launch ng sariling token. LFG! Born at sea. No exit scam. Built with OFW Pride and tears.</p>
+        </div>
+        <div class="log-entry">
+          <span class="log-date">May 15, 2026 - Day 10</span>
+          <h4>Day 10 - First Week Survival</h4>
+          <p>First 10 days survived. Many tokens die in first hour. We are still here. Small community but real. Thank you to first 20 holders.</p>
+        </div>
+        <div class="log-entry">
+          <span class="log-date">June 5, 2026 - Day 30</span>
+          <h4>Day 30 - One Month - We Did Not Sink</h4>
+          <p>One month anniversary. We did not sink. We are still sailing. Many said we will not last a week. We lasted a month. Proof that honesty floats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="faq">
+    <div class="container">
+      <h2>FREQUENTLY ASKED QUESTIONS - Real Questions from OFWs</h2>
+      <p class="section-subtitle">Real questions from real OFWs - Honest answers</p>
+      
+      <div class="faq-item">
+        <h4>1. Scam ba to Chief? Na-scam na ako dati sa ibang token.</h4>
+        <p><strong>HINDI SCAM.</strong> Contract renounced = hindi ko na ma-edit token kahit gusto ko. 0% tax = wala akong kita sa buy/sell mo. No team tokens = wala akong hawak na free tokens para i-dump. Verify mo lahat sa Solscan + RugCheck. Real builder ako, 20 years sa barko, may mukha, may galley photo.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>2. May team tokens ba? Baka mag-dump kayo pag tumaas?</h4>
+        <p><strong>ZERO team tokens. ZERO.</strong> 100% fair launch sa pump.fun. Lahat ng supply nasa public na from Day 1. Wala akong hawak na free tokens. Check mo sa Solscan holders list. Kung may team tokens ako, makikita mo agad dun.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>3. Ano plano mo sa $SHIPS Chief? Ano future?</h4>
+        <p>Movement para sa 10M OFWs. Una: Build strong community ng OFWs na marunong sa crypto. Pangalawa: Gamitin natin $SHIPS para bigyan discount sa training center ang mga holder ng $SHIPS. Pangatlo: Explore remittance use case if possible. Pero no fake promises. Step by step.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>4. Bakit ang tagal ng 70 days wala pa rin sa Raydium?</h4>
+        <p>Kasi need ng 85 SOL sa bonding curve para ma-graduate sa Raydium. Nasa pump.fun pa tayo. Normal yan. Maraming tokens 1 year bago mag-graduate. Ang importante: hindi tayo nag-rug. Still sailing. Hindi tulad ng iba na 5 minutes lang patay na.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>5. Paano ka pagkakatiwalaan? Sino ka ba talaga?</h4>
+        <p>Ako si Carl Amahan, 20+ years OFW Chief Cook. May Facebook, may TikTok, may galley photo ako sa barko. Hindi ako anon. Real name, real face. Yung ibang devs anon kasi mag-sc-scam. Ako hindi anon kasi hindi ako scammer. Simple.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" id="transparency">
+    <div class="container">
+      <h2>🔍 TRANSPARENCY BOARD - Check Everything Yourself</h2>
+      <p class="section-subtitle">Check everything yourself. Walang itinatago. All on-chain.</p>
+      <div class="transparency-grid">
+        <div class="transparency-card">
+          <div class="t-icon">📜</div>
+          <h3>Contract Verified</h3>
+          <p>Verify sa Solscan - Real contract</p>
+          <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Contract →</a>
+        </div>
+        <div class="transparency-card">
+          <div class="t-icon">✅</div>
+          <h3>RugCheck Passed</h3>
+          <p>No Risk Found - No honeypot</p>
+          <a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View RugCheck →</a>
+        </div>
+        <div class="transparency-card">
+          <div class="t-icon">🔒</div>
+          <h3>Renounced Forever</h3>
+          <p>Contract permanently locked - Cannot edit</p>
+          <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#transfers" target="_blank">View Renounced →</a>
+        </div>
+        <div class="transparency-card">
+          <div class="t-icon">👥</div>
+          <h3>Holders List Public</h3>
+          <p>All holders visible - No hidden team wallet</p>
+          <a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump#holders" target="_blank">View Holders →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="safety">
+    <div class="container">
+      <h2>⚓ SHIP SAFETY PROTOCOL - Paano Iwasan Ma-Scam</h2>
+      <p class="section-subtitle">Paano iwasan ma-scam sa crypto. Galing sa 20 years ko sa dagat - Safety first.</p>
+      <div class="card safety-card">
+        <h3>Rule 1: Check Contract - Parang Check ng Barko</h3>
+        <p>Before sumakay sa barko, chine-check muna kung safe. Same sa token. Kung hindi renounced, alis na agad. Sa Solscan mo makikita yan. Dapat renounced at 0% tax.</p>
+        
+        <h3>Rule 2: No Private DM - Walang Kapitan na Manghihingi ng SOL sa DM</h3>
+        <p>Hindi ako mag-DM sayo para maghingi ng SOL o seed phrase. Kahit kailan. Admin lang mag-aannounce sa Telegram group. Pag may nag-DM sayo na ako daw, scam yan. Block agad.</p>
+        
+        <h3>Rule 3: DYOR Always - Do Your Own Research</h3>
+        <p>Huwag mag-invest dahil lang hype o FOMO. Basahin mo muna lahat. Tanong ka sa community. Check mo chart. Check mo holders. Parang bago bumili ng isda, amuyin muna.</p>
+        
+        <h3>Rule 4: Invest What You Can Lose - Wag Isangla Bahay</h3>
+        <p>Crypto ay risky. Parang dagat - minsan kalmado, minsan maalon. Gamitin mo lang yung pera na kaya mong mawala. Wag utang. Wag isangla. Pang-extra lang.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="quote-box">
+        <h3>👨‍🍳 Mensahe ng Chief Cook - From Heart</h3>
+        <p>"20 years akong nagluto para sa iba. Nagluto ako para sa 25 crew araw-araw. 3 meals a day. 7 days a week. Walang day off sa gitna ng dagat.</p>
+        <p>Ngayon, magluluto na tayo para sa kinabukasan natin. Hindi na tayo ma-scam. Hindi na tayo ma-rug.</p>
+        <p>$SHIPS is by OFWs, for OFWs. Hindi ako tech expert. Seaman lang ako. Pero may puso.</p>
+        <p>We do not abandon ship."</p>
+        <p class="quote-author">- Carl Amahan, Chief Cook, 20 Years at Sea, Day 70</p>
+      </div>
+
+      <div class="crew-buttons">
+        <a href="https://t.me/+XLhJLr-_JnpjMDI9" class="crew-btn btn-telegram">📱 Telegram - Main Crew</a>
+        <a href="https://discord.gg/Kq22f7hSn" class="crew-btn btn-discord">💬 DISCORD</a>
+        <a href="https://x.com/carlamahan73238" class="crew-btn btn-x">𝕏 X / Twitter</a>
+        <a href="https://github.com/shipsofficial" class="crew-btn btn-github">🐙 GitHub - Code</a>
+        <a href="https://www.tiktok.com/@shipstoken" class="crew-btn btn-tiktok">🎵 TikTok - Videos</a>
+        <a href="https://www.facebook.com/share/1GMbxYGGa7/" class="crew-btn btn-facebook">📘 Facebook Page</a>
+        <a href="https://www.binance.com/en/square/profile/carlamahan" target="_blank" class="crew-btn" style="background:#F0B90B; color:#0A1A2F;">🟡 Binance Square</a>
+      </div>
+
+      <div class="disclaimer-box">
+        <strong>⚠️ DISCLAIMER - Please Read:</strong> $SHIPS is a meme token with no intrinsic value or financial return expectation. This is not financial advice. Crypto is high risk and volatile. Only invest what you can afford to lose completely. DYOR. We do not abandon ship but market can be risky.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="story">
+    <div class="container">
+      <h2>📖 The Real Story Behind $SHIPS - Buong Kwento</h2>
+      <p class="section-subtitle">Hindi AI story. Totoong buhay ng seaman.</p>
+      <div class="story-box full-story">
+        <p>I first boarded a ship in 2003. 20+ years at sea. Mahirap buhay ng seaman. 8 months sa dagat, 2 months sa bahay. Miss mo pamilya.</p>
+        <p>I heard about Bitcoin back in 2010 here in the Philippines. Nasa balita. $0.10 pa lang. But internet was limited then. Nasa barko ako, walang signal. I couldn't get in. Sayang.</p>
+        <p>Fast forward to 2021. A fellow seaman introduced me to crypto again. Sabi niya, "Chief, maganda crypto." I liked it. I tried. Nag-try ako mag-invest.</p>
+        <p>I lost money many times. I joined presales because they promised x1000, x500. Sabi nila, "To the moon!" Naniwala ako. I got scammed over and over. My hard-earned money from cooking at sea... gone. $500, $1000, ubos. Sakit.</p>
+        <p>Making a token was just a joke at first. Sabi ko sa kabaro, "Paano kaya kung gumawa ako ng token? $SHIPS? Parang barko?" Tawanan lang kami sa galley.</p>
+        <p>I didn't even know how to code. I only know how to cook adobo, sinigang, fried rice for 25 people.</p>
+        <p>Then I talked to Meta AI. Sabi ko, "Turuan mo ako gumawa ng token." It taught me how to create a token. How to code a website. Step by step. From zero. Boom. $SHIPS was born in my cabin, 2 AM, after galley shift, with ship WiFi.</p>
+        <p>I told myself: "I won't get scammed anymore. And no one else will get scammed by me. Because $SHIPS comes from my heart. A real person built this. With real name. Real face."</p>
+        <p><strong>No team tokens. No tax. Renounced.</strong></p>
+        <p>I can't rug you even if I wanted to. Verify it on-chain. Kahit gusto ko i-scam, hindi ko magagawa. Kasi wala akong hawak na tokens. Kasi renounced na. Yun ang safety.</p>
+        <p style="text-align:center; margin-top:30px; font-size:1.4rem; color:var(--gold); font-weight:bold;">
+          This is not just a meme coin. This is my heart and soul. This is 20 years at sea.
+        </p>
+        <p style="text-align:center; margin-top:10px; font-size:1rem; color:#b8c5d6;">
+          From Galley to Blockchain. From being scammed to being a builder. For 10M OFWs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="waitlist">
+    <div class="container" style="text-align:center;">
+      <h2>📬 Get Notified - Join Waitlist</h2>
+      <p class="section-subtitle">Subscribe for updates on Raydium migration & CEX listings - No spam, only important updates</p>
+      <form class="waitlist-form" onsubmit="submitWaitlist(event)">
+        <input type="email" id="email-input" placeholder="Enter your email for updates" required>
+        <button type="submit" class="btn">Join Waitlist - Free</button>
+      </form>
+      <p id="waitlist-msg" style="margin-top:15px; color:var(--gold);"></p>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="proof">
+    <div class="container">
+      <h2>👨‍🍳 PROOF OF GALLEY - Hindi Lang Kwento - Totoong Chief Cook</h2>
+      <p class="section-subtitle">Hindi lang kwento. Totoong chief cook ako. May proof.</p>
+      <div class="card proof-card">
+        <img src="galley-photo.jpg" alt="Chief Cook Carl Amahan in Galley - Real Photo" style="width:100%; border-radius:12px; border:3px solid var(--gold);">
+        <p class="proof-caption">Ako yan sa kusina ng barko, 2023. Dyan ko unang na-code ang $SHIPS habang nag-break time. After magluto ng lunch para sa 25 crew. Totoong seaman, hindi AI.</p>
+        <p style="margin-top:10px; color:var(--gold); font-weight:bold;">Carl Amahan - Chief Cook - 20 Years at Sea - Real Person</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://t.me/+XLhJLr-_JnpjMDI9">📱 Telegram</a>
+        <a href="https://discord.gg/Kq22f7hSn">💬 Discord</a>
+        <a href="https://x.com/carlamahan73238">𝕏 X / Twitter</a>
+        <a href="https://github.com/shipsofficial">🐙 GitHub</a>
+        <a href="https://www.tiktok.com/@shipstoken">🎵 TikTok</a>
+        <a href="https://www.facebook.com/share/1GMbxYGGa7/">📘 Facebook</a>
+      </div>
+      <p class="footer-main">© 2026 $SHIPS Token - Day 70 - Still Sailing - Built at sea, by a seaman, for seafarers. ⚓</p>
+      <p class="footer-sub">From Galley to Blockchain - 20 Years at Sea - We Do Not Abandon Ship - Carl Amahan</p>
+      <p class="footer-sub">CA: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump - Solana - Renounced - 0% Tax</p>
+    </div>
+  </footer>
+
 </div>
 
+<a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn sticky-buy" target="_blank">🚀 Buy $SHIPS - Day 70</a>
+
 <script>
-function copyCA(){navigator.clipboard.writeText('2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump').then(()=>alert('CA copied! ⚓'))}
+
+function copyCA(){const t=document.getElementById('ca-text').innerText;navigator.clipboard.writeText(t).then(()=>showToast('CA copied! ⚓')).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();showToast('CA copied!');});}
+function showToast(m){const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#D4AF37;color:#0A1A2F;padding:10px 16px;border-radius:6px;font-weight:700;z-index:9999';document.body.appendChild(d);setTimeout(()=>d.remove(),2500);}
+document.getElementById('menu-btn').addEventListener('click',()=>{document.getElementById('nav-links').classList.toggle('show');});
+const music=document.getElementById('bg-music');const musicSource=document.getElementById('music-source');const nowPlaying=document.getElementById('now-playing');const stopBtn=document.getElementById('stop-music');const musicBtns=document.querySelectorAll('.music-btn');
+const tracks=[{url:"https://files.catbox.moe/9k9q9s.mp3",name:"One Piece - We Are!"},{url:"https://files.catbox.moe/5f8v3q.mp3",name:"One Piece - Binks Sake"}];
+let currentTrack=null;
+musicBtns.forEach((btn,idx)=>{btn.addEventListener('click',function(){musicBtns.forEach(b=>b.classList.remove('active'));if(currentTrack===idx&&!music.paused){music.pause();nowPlaying.textContent='Paused';currentTrack=null;return;}currentTrack=idx;btn.classList.add('active');musicSource.src=tracks[idx].url;music.load();music.play().then(()=>{nowPlaying.textContent='Now Playing: '+tracks[idx].name;}).catch(()=>{showToast('Click ulit');});});});
+if(stopBtn)stopBtn.addEventListener('click',()=>{music.pause();music.currentTime=0;musicBtns.forEach(b=>b.classList.remove('active'));currentTrack=null;nowPlaying.textContent='Stopped';});
+
+function updateShipTime(){const now=new Date();const ids=['manila-time','utc-time','sg-time','ksa-time'];const zones=['Asia/Manila','UTC','Asia/Singapore','Asia/Riyadh'];ids.forEach((id,i)=>{const el=document.getElementById(id);if(!el)return;try{if(zones[i]==='UTC')el.textContent=now.toUTCString().split(' ')[4];else el.textContent=now.toLocaleTimeString('en-GB',{timeZone:zones[i],hour12:false});}catch{}});}
+updateShipTime();setInterval(updateShipTime,1000);
+
+const CA='2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump';
+async function updateLive(){try{
+const r=await fetch('https://api.dexscreener.com/latest/dex/tokens/'+CA);const j=await r.json();
+if(j.pairs&&j.pairs[0]){const p=j.pairs[0];
+const price=document.getElementById('price');if(price)price.textContent='$'+parseFloat(p.priceUsd||0).toFixed(6);
+const mcap=document.getElementById('mcap');if(mcap){const fdv=parseFloat(p.fdv||0);mcap.textContent=fdv>=1e6?'$'+(fdv/1e6).toFixed(2)+'M':'$'+fdv.toFixed(0);}
+const vol=document.getElementById('volume');if(vol){const v=p.volume?parseFloat(p.volume.h24||0):0;vol.textContent=v>=1000?'$'+(v/1000).toFixed(1)+'K':'$'+v;}
+if(p.holders){const h=document.getElementById('holders');if(h)h.textContent=p.holders;const hc=document.getElementById('holder-count');if(hc)hc.textContent=p.holders;const sh=document.getElementById('status-holders');if(sh)sh.textContent=p.holders;}
+}
+let pump=null;try{const a=await fetch('https://frontend-api-v2.pump.fun/coins/'+CA);if(a.ok)pump=await a.json();}catch{}if(!pump){try{const b=await fetch('https://frontend-api.pump.fun/coins/'+CA);if(b.ok)pump=await b.json();}catch{}}
+if(pump){const h=document.getElementById('holders');if(h&&pump.holder_count)h.textContent=pump.holder_count;const hc=document.getElementById('holder-count');if(hc&&pump.holder_count)hc.textContent=pump.holder_count;}
+}catch(e){console.log(e);}}
+updateLive();setInterval(updateLive,30000);
+
+async function loadTopHolders(){try{const res=await fetch('https://public-api.solscan.io/token/holders?tokenAddress='+CA+'&limit=10');const data=await res.json();if(!data.data)return;let html='';data.data.forEach((h,i)=>{const short=h.owner.slice(0,4)+'...'+h.owner.slice(-4);const percent=(h.amount/1000000000*100).toFixed(2);html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(212,175,55,0.1);"><span>${i+1}. ${short}</span><span>${percent}%</span></div>`;});const el=document.getElementById('holders-list');if(el)el.innerHTML=html;}catch(e){const el=document.getElementById('holders-list');if(el)el.innerHTML='Check on Solscan for full list';}}
+loadTopHolders();
+
+try{const ctx=document.getElementById('tokenomics');if(ctx){new Chart(ctx,{type:'doughnut',data:{labels:['Public Fair Launch','Team Tokens','Tax'],datasets:[{data:[100,0,0],backgroundColor:['#D4AF37','#061018','#061018'],borderColor:'#0A1A2F'}]},options:{plugins:{legend:{labels:{color:'#fff'}}}}});}}catch{}
+
+function submitWaitlist(e){e.preventDefault();const email=document.getElementById('email-input').value;let emails=JSON.parse(localStorage.getItem('ships-waitlist')||'[]');if(!emails.includes(email)){emails.push(email);localStorage.setItem('ships-waitlist',JSON.stringify(emails));}document.getElementById('waitlist-msg').textContent='Thanks! You are subscribed. ⚓';document.getElementById('email-input').value='';}
+
 </script>
 </body>
 </html>
