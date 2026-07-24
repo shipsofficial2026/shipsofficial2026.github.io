@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- PLAYABLE_TOUCH_PATCH_V1 --><script>
-(function() {
-  if (window.__playableTouchPatchInstalled) return;
-  window.__playableTouchPatchInstalled = true;
-  var origAdd = EventTarget.prototype.addEventListener;
-  var blockedTypes = { touchstart: 1, touchmove: 1, wheel: 1 };
-  EventTarget.prototype.addEventListener = function(type, listener, options) {
-    if (blockedTypes[type]) {
-      if (options === undefined || options === null) {
-        options = { passive: true };
-      } else if (typeof options === 'boolean') {
-        options = { capture: options, passive: true };
-      } else {
-        options = Object.assign({}, options, { passive: true });
-      }
-    }
-    return origAdd.call(this, type, listener, options);
-  };
-})();
-</script><script>window.Intl=window.Intl||{};Intl.t=function(s){return(Intl._locale&&Intl._locale[s])||s;};</script>
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>$SHIPS - GRADUATED 100% | Day 79 Still Sailing - From Galley to Blockchain</title>
-<meta name="description" content="$SHIPS - OFW Chief Cook token on Solana. GRADUATED 100% on Pump.fun! $31K MC +107%, Renounced, 0% Tax, No Team Tokens. Built at sea.">
-<meta property="og:title" content="$SHIPS - GRADUATED 100% - We Did It Crew!">
-<meta property="og:description" content="70 Days Still Sailing - Now 100% Graduated on PumpSwap. Built by 20-year OFW Chief Cook Carl Amahan.">
+<title>$SHIPS - GRADUATED | Day 80 Still Sailing - From Galley to Blockchain</title>
+<meta name="description" content="$SHIPS - OFW Chief Cook token on Solana. GRADUATED on Pump.fun. Renounced, 0% Tax, No Team Tokens. Built at sea by a real seaman.">
+<meta property="og:title" content="$SHIPS - GRADUATED - We Did It Crew!">
+<meta property="og:description" content="80 Days Still Sailing - Graduated on PumpSwap. Built by 20-year OFW Chief Cook Carl Amahan.">
 <meta property="og:image" content="https://shipsofficial.com/logo.jpg">
 <meta name="theme-color" content="#0A1A2F">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXMC462LH8"></script>
@@ -86,8 +67,11 @@ body{background:#061018 url('compass-bg.jpg') center/cover fixed;color:var(--whi
 .t-item{background:rgba(255,255,255,0.04);padding:12px;border-radius:8px;border:1px solid rgba(212,175,55,0.15)}
 .t-label{font-size:0.7rem;color:var(--muted)}.t-val{font-size:0.95rem;font-weight:700;color:#fff;margin-top:2px}
 .tracker-map-box{background:rgba(0,0,0,0.4);padding:10px;border-radius:8px;margin-top:12px;color:#4ade80;font-size:0.85rem;border:1px dashed rgba(212,175,55,0.3)}
-.ai-box{max-width:650px;margin:30px auto;padding:30px;background:rgba(255,255,255,0.05);border:2px solid var(--gold);border-radius:12px;text-align:center;cursor:pointer;transition:0.3s}
-.ai-box:hover{border-color:#ffed4e;box-shadow:0 0 25px rgba(212,175,55,0.4)}
+.ai-box{max-width:700px;margin:40px auto;padding:36px 30px;background:linear-gradient(135deg,rgba(10,26,47,0.95),rgba(212,175,55,0.12));border:2px solid var(--gold);border-radius:16px;text-align:center;cursor:pointer;transition:0.3s;box-shadow:0 0 30px rgba(212,175,55,0.15)}
+.ai-box:hover{border-color:#ffed4e;box-shadow:0 0 40px rgba(212,175,55,0.35);transform:translateY(-3px)}
+.ai-box .ai-icon{font-size:3rem;margin-bottom:12px}
+.ai-box h3{color:var(--gold);font-family:'Orbitron',sans-serif;font-size:1.5rem;margin-bottom:10px}
+.ai-box p{color:#b8c5d6;margin-bottom:20px;font-size:1.05rem}
 .security-badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0}
 .badge{background:rgba(212,175,55,0.1);border:1px solid var(--gold);padding:6px 14px;border-radius:20px;font-size:0.8rem;color:var(--gold)}
 .badge-green{background:rgba(74,222,128,0.1);border-color:var(--green);color:var(--green)}
@@ -125,8 +109,6 @@ footer{padding:30px 0;text-align:center;border-top:1px solid rgba(212,175,55,0.2
 .social-links a{color:var(--gold);text-decoration:none}
 .sticky-buy{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:999;display:none;box-shadow:0 5px 20px rgba(74,222,128,0.5);background:var(--green);color:#000;border-color:var(--green)}
 @media(max-width:768px){.sticky-buy{display:block}.nav-links{display:none;position:absolute;top:70px;right:20px;background:var(--navy);padding:20px;border:1px solid var(--gold);border-radius:8px;flex-direction:column}.nav-links.show{display:flex}.menu-btn{display:block}.hero h1{font-size:2.2rem}.tracker-grid{grid-template-columns:1fr}}
-.token-status-box{max-width:700px;margin:0 auto 18px;background:rgba(255,255,255,0.05);padding:16px;border-radius:12px;border:1px solid rgba(212,175,55,0.3);text-align:center}
-.status-grid{display:flex;justify-content:space-around;gap:12px;flex-wrap:wrap}
 .comparison-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,0.05);border-radius:12px;overflow:hidden}
 .comparison-table th,.comparison-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.1);font-size:0.85rem}
 .comparison-table th{background:rgba(212,175,55,0.2);color:var(--gold)}
@@ -137,77 +119,89 @@ footer{padding:30px 0;text-align:center;border-top:1px solid rgba(212,175,55,0.2
 </head>
 <body>
 <div class="press-ticker"><div class="ticker-track">
-<span>✅ GRADUATED 100% - $SHIPS LIVE ON PUMPSWAP - $31K MC</span><span class="dot">•</span>
+<span>✅ GRADUATED 100% - $SHIPS LIVE ON PUMPSWAP</span><span class="dot">•</span>
 <span>📰 Featured on OpenPR</span><span class="dot">•</span>
 <span>📄 PRFree Press Release</span><span class="dot">•</span>
-<span>⚓ <span class="auto-days">70</span> Days - WE GRADUATED - No Abandon Ship</span><span class="dot">•</span>
+<span>⚓ <span class="auto-days">80</span> Days - WE GRADUATED - No Abandon Ship</span><span class="dot">•</span>
 <span>🌊 From Galley to Blockchain - Built by OFW for OFW</span><span class="dot">•</span>
-<span>✅ GRADUATED 100% - $SHIPS LIVE ON PUMPSWAP</span><span class="dot">•</span>
+<span>✅ Coming to Raydium - More Visibility</span><span class="dot">•</span>
 </div></div>
 
 <header class="main-header"><div class="container nav">
-<div class="logo"><img src="logo.jpg" alt="$SHIPS Logo" onerror="this.style.display='none'"><span class="logo-text">⚓ $SHIPS</span><span class="day-badge auto-days-badge">DAY 70</span><span class="grad-badge">GRADUATED</span></div>
+<div class="logo"><img src="logo.jpg" alt="$SHIPS Logo" onerror="this.style.display='none'"><span class="logo-text">⚓ $SHIPS</span><span class="day-badge auto-days-badge">DAY 80</span><span class="grad-badge">GRADUATED</span></div>
 <ul class="nav-links" id="nav-links">
-<li><a href="#home">Home</a></li><li><a href="#captains-log">Captain Log</a></li><li><a href="#ship-tracker">Tracker</a></li><li><a href="#press">Press</a></li><li><a href="#comparison">Why Different</a></li><li><a href="#why-ofw">For OFW</a></li><li><a href="#how-to-buy">How to Buy</a></li><li><a href="#chart">Chart</a></li><li><a href="#stats">Stats</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#faq">FAQ</a></li><li><a href="#story">Story</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#captains-log">Captain Log</a></li>
+<li><a href="#ship-tracker">Tracker</a></li>
+<li><a href="#press">Press</a></li>
+<li><a href="#comparison">Why Different</a></li>
+<li><a href="#why-ofw">For OFW</a></li>
+<li><a href="#how-to-buy">How to Buy</a></li>
+<li><a href="#chart">Chart</a></li>
+<li><a href="#stats">Stats</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#story">Story</a></li>
 <li><a href="https://t.me/+XLhJLr-_JnpjMDI9" target="_blank" class="btn-small">Join Crew</a></li>
-</ul><button class="menu-btn" id="menu-btn">☰</button>
+</ul>
+<button class="menu-btn" id="menu-btn">☰</button>
 </div></header>
 
 <div class="trust-strip"><div class="container trust-inner">
 <span>✅ GRADUATED 100%</span><span class="dot">•</span>
-<span>✅ On PumpSwap / Raydium</span><span class="dot">•</span>
+<span>✅ On PumpSwap</span><span class="dot">•</span>
+<span>✅ Coming to Raydium</span><span class="dot">•</span>
 <span>✅ Contract Renounced</span><span class="dot">•</span>
 <span>✅ 0% Tax</span><span class="dot">•</span>
 <span>✅ No Team Tokens</span><span class="dot">•</span>
-<span>⚓ <span class="auto-days">70</span> Days Graduated</span>
+<span>⚓ <span class="auto-days">80</span> Days Sailing</span>
 </div></div>
 
-<div class="content-wrapper"><div class="sailing-ship">🛳️</div><div class="waves"></div>
+<div class="content-wrapper">
+<div class="sailing-ship">🛳️</div>
+<div class="waves"></div>
 
 <section class="hero" id="home"><div class="container">
 <h1>From Galley<br><span class="gold">to Blockchain</span></h1>
 <p class="hero-sub">
-GRADUATED 100%! Built by 20-year OFW Chief Cook for 10M OFWs worldwide.
-Price $0.00003183 | MC $31K | +107% 24h | Vol $4K | 19 Txns. <span class="auto-days">70</span> Days and Still Sailing - We Graduated!
+GRADUATED 100%! Built by 20-year OFW Chief Cook for 10M OFWs worldwide.<br>
+<span class="auto-days">80</span> Days and Still Sailing - We Graduated!
 </p>
 
 <div class="grad-box">
-<div class="grad-header"><span class="live-dot"></span> ✅ GRADUATED 100% - LIVE ON PUMPSWAP / RAYDIUM - OFFICIAL</div>
+<div class="grad-header"><span class="live-dot"></span> ✅ GRADUATED 100% - LIVE ON PUMPSWAP • RAYDIUM COMING</div>
 <div style="padding:20px">
 <div class="live-grid">
 <div><p class="label">PROGRESS</p><p class="value value-green">100.0% ✓</p></div>
-<div><p class="label">PRICE USD</p><p class="value" id="price">$0.00003183</p></div>
-<div><p class="label">MARKET CAP</p><p class="value" id="mcap">$31K</p></div>
-<div><p class="label">24H CHANGE</p><p class="value value-green" id="change24">+107%</p></div>
-</div>
-<div style="margin-top:12px;background:rgba(0,0,0,0.3);padding:12px;border-radius:8px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;font-size:0.85rem">
-<div><span style="color:var(--muted)">TXNS</span><br><strong>19</strong> (14 Buys / 5 Sells)</div>
-<div><span style="color:var(--muted)">VOLUME</span><br><strong>$4.0K</strong> Buy $3.5K / Sell $536</div>
-<div><span style="color:var(--muted)">TRADERS</span><br><strong>11</strong> Buyers / 5 Sellers</div>
+<div><p class="label">PRICE USD</p><p class="value" id="price">Loading...</p></div>
+<div><p class="label">MARKET CAP</p><p class="value" id="mcap">Loading...</p></div>
+<div><p class="label">24H CHANGE</p><p class="value" id="change24">—</p></div>
 </div>
 <div style="margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
 <a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn btn-green">🚀 View on Pump.fun</a>
 <a href="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn btn-outline">📈 GeckoTerminal</a>
 <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank" class="btn btn-green">⚡ Buy on Jupiter</a>
 </div>
-<p style="font-size:0.7rem;color:var(--muted);margin-top:10px;text-align:center">From graduation screenshot + live Dexscreener API - Auto updates every 30s</p>
+<p style="font-size:0.7rem;color:var(--muted);margin-top:10px;text-align:center">Live data from Dexscreener • Auto updates every 30s</p>
 </div>
 </div>
 
-<div class="bonding-bar"><p style="font-weight:700;color:var(--gold);margin-bottom:10px;text-align:center">📊 Live On-Chain - Graduated Pool</p>
+<div class="bonding-bar">
+<p style="font-weight:700;color:var(--gold);margin-bottom:10px;text-align:center">📊 Live On-Chain - Graduated Pool</p>
 <div class="live-grid">
-<div><p class="label">Price USD</p><p class="value" id="price2">$0.00003183</p></div>
-<div><p class="label">Market Cap</p><p class="value" id="mcap2">$31K</p></div>
-<div><p class="label">24h Volume</p><p class="value" id="volume">$4.0K</p></div>
+<div><p class="label">Price USD</p><p class="value" id="price2">Loading...</p></div>
+<div><p class="label">Market Cap</p><p class="value" id="mcap2">Loading...</p></div>
+<div><p class="label">24h Volume</p><p class="value" id="volume">Loading...</p></div>
 <div><p class="label">Status</p><p class="value value-green">GRADUATED</p></div>
-</div></div>
+</div>
+</div>
 
 <div class="ship-tracker-box" id="ship-tracker">
 <h3>🗺️ LIVE SHIP TRACKER - WHERE IS THE CAPTAIN NOW?</h3>
 <div class="tracker-grid">
 <div class="t-item"><p class="t-label">🚢 Current Location</p><p class="t-val">Hakone-machi, Kanagawa, Japan</p><p class="t-label">Pacific Ocean - Japan Waters</p></div>
-<div class="t-item"><p class="t-label">📡 Ship Status</p><p class="t-val" style="color:var(--green)">⚓ At Sea - GRADUATED!</p><p class="t-label">Cooking + Celebrating</p></div>
-<div class="t-item"><p class="t-label">📅 Sailing Days - $SHIPS</p><p class="t-val" style="color:var(--gold)"><span class="auto-days">70</span> DAYS - Graduated!</p><p class="t-label">No Abandon Ship</p></div>
+<div class="t-item"><p class="t-label">📡 Ship Status</p><p class="t-val" style="color:var(--green)">⚓ At Sea - GRADUATED!</p><p class="t-label">Cooking + Building</p></div>
+<div class="t-item"><p class="t-label">📅 Sailing Days - $SHIPS</p><p class="t-val" style="color:var(--gold)"><span class="auto-days">80</span> DAYS - Graduated!</p><p class="t-label">No Abandon Ship</p></div>
 <div class="t-item"><p class="t-label">🧭 Next Port of Call</p><p class="t-val">TBA - Update by Captain Carl</p><p class="t-label">Depends on company route</p></div>
 </div>
 <div class="tracker-map-box">🌊 Pacific Ocean • Japan Waters • From Galley to PumpSwap • OFW Pride 🍳</div>
@@ -217,38 +211,48 @@ Price $0.00003183 | MC $31K | +107% 24h | Vol $4K | 19 Txns. <span class="auto-d
 <p style="font-size:0.8rem;color:var(--muted);margin-bottom:8px">Contract Address - Solana - Copy and Paste in Jupiter</p>
 <code id="ca-text">2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump</code>
 <button class="btn" onclick="copyCA()">📋 Copy Contract Address</button>
-<div style="margin-top:12px"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" style="border-radius:8px;border:2px solid var(--gold)"><p style="font-size:0.75rem;color:var(--muted);margin-top:6px">Scan to buy on Phantom</p></div>
+<div style="margin-top:12px">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" style="border-radius:8px;border:2px solid var(--gold)">
+<p style="font-size:0.75rem;color:var(--muted);margin-top:6px">Scan to buy on Phantom</p>
+</div>
 </div>
 
+<!-- Improved Chief AI -->
 <div class="ai-box" onclick="window.open('https://ai.shipsofficial.com','_blank')">
-<div style="font-size:2rem">🤖</div><h3>CHIEF AI V2.0 - Maritime Assistant</h3><p>AI Assistant Built for OFWs - Ask about maritime, cooking at sea, crypto basics</p><span style="display:inline-block;padding:10px 24px;background:var(--gold);color:var(--navy);border-radius:6px;font-weight:bold">Launch Terminal →</span>
+<div class="ai-icon">🤖</div>
+<h3>CHIEF AI V2.0</h3>
+<p>Your Maritime & Crypto Assistant<br>
+Ask about life at sea, cooking in the galley, or basic crypto questions.<br>
+Built for OFWs by an OFW.</p>
+<span style="display:inline-block;padding:12px 28px;background:var(--gold);color:var(--navy);border-radius:8px;font-weight:bold;font-size:1rem">Launch Chief AI →</span>
 </div>
+
 <div class="security-badges">
 <span class="badge badge-green">✅ Graduated 100%</span>
 <span class="badge badge-green">✅ On PumpSwap</span>
+<span class="badge">✅ Coming to Raydium</span>
 <span class="badge">✅ Contract Renounced</span>
 <span class="badge">✅ 0% Tax</span>
 <span class="badge">✅ No Team Wallet</span>
-<span class="badge">⚓ <span class="auto-days">70</span> Days Graduated</span>
+<span class="badge">⚓ <span class="auto-days">80</span> Days</span>
 </div>
 </div></section>
 
-<!-- CAPTAIN'S LOG - FULL ORIGINAL - RESTORED -->
+<!-- CAPTAIN'S LOG - ORIGINAL CONTENT KEPT -->
 <section class="section section-dark" id="captains-log"><div class="container">
 <h2>⚓ CAPTAIN'S LOG - GRADUATED!</h2>
 <p class="section-subtitle">We do not abandon ship - Real logs from sea - Buhay ng $SHIPS</p>
 
 <div class="log-entry grad-log">
-<span class="log-date" style="color:var(--green)">Entry 008 - GRADUATION DAY - 100% - TODAY! 🎉</span>
+<span class="log-date" style="color:var(--green)">Entry 008 - GRADUATION DAY - 100%</span>
 <h4>WE GRADUATED! 100% - From Galley to PumpSwap!</h4>
-<p><strong>GRADUATED!</strong> 100% bonding curve complete! After <span class="auto-days">70</span> days of being told we will die in 5 minutes, $SHIPS is now live on PumpSwap!</p>
-<p>From your screenshot: Price $0.00003183 | MC $31K | Volume $4.0K | 19 Txns - 14 Buys | 11 Traders | 24h +107%!</p>
-<p>Most pump.fun tokens die in 5 minutes. We survived <span class="auto-days">70</span> days and GRADUATED. This is proof: honesty floats. OFW can build. Seaman can code. Maraming salamat crew!</p>
-<p class="log-sign" style="color:var(--green)">— Carl Amahan, Chief Cook, Day <span class="auto-days">70</span> - GRADUATED!</p>
+<p><strong>GRADUATED!</strong> 100% bonding curve complete! After <span class="auto-days">80</span> days of being told we will die in 5 minutes, $SHIPS is now live on PumpSwap!</p>
+<p>Most pump.fun tokens die in 5 minutes. We survived <span class="auto-days">80</span> days and GRADUATED. This is proof: honesty floats. OFW can build. Seaman can code. Maraming salamat crew!</p>
+<p class="log-sign" style="color:var(--green)">— Carl Amahan, Chief Cook, Day <span class="auto-days">80</span> - GRADUATED!</p>
 </div>
 
 <div class="log-entry featured-log">
-<span class="log-date">Entry 007 - Day 70 TODAY - HAKONE-MACHI, JAPAN</span>
+<span class="log-date">Entry 007 - Day 70 - HAKONE-MACHI, JAPAN</span>
 <h4>70 Days and Still Sailing - Maraming Salamat Crew!</h4>
 <p>Day 70. Hindi ako makapaniwala. 70 days ago, nag-launch lang ako ng token sa maliit na cabin habang maalon ang dagat. Sabi ng iba, 5 minutes lang patay na yan. Scam yan.</p>
 <p>Pero andito pa tayo. 70 days and still sailing. Maraming salamat sa mga kabaro na sumama, sa mga nag-hold, sa mga nagdasal, sa mga naniwala.</p>
@@ -306,100 +310,257 @@ Price $0.00003183 | MC $31K | +107% 24h | Vol $4K | 19 Txns. <span class="auto-d
 <p>Goal: Prove that seaman can build in Web3. Not to get rich quick. But to build long-term.</p>
 <p>First holder: Me. Then my wife. Then 2 kabaro. Small start. But all real.</p>
 </div>
-
+</div></section>
+<!-- PRESS SECTION -->
+<section class="section" id="press"><div class="container">
+<h2>📰 PRESS COVERAGE</h2>
+<p class="section-subtitle">From Galley to Headlines — $SHIPS is making waves</p>
+<div class="press-grid">
+<div class="card">
+<div style="font-size:2rem">📰</div>
+<h3>Featured on OpenPR</h3>
+<p>Honest OFW Chief Cook Builds Long Term Meme Coin Project on Solana - Real Story</p>
+<a href="https://www.openpr.com/news/4552177/honest-ofw-chief-cook-builds-long-term-meme-coin-project-on-solana" target="_blank" class="btn">Read Full Article →</a>
+</div>
+<div class="card">
+<div style="font-size:2rem">📄</div>
+<h3>Published on PRFree</h3>
+<p>$SHIPS Token Launches Crypto for Shipping and Maritime Industry - OFW Innovation</p>
+<a href="https://news.prfree.org/@carlamahan/sships-token-ships-launches-crypto-for-shipping-and-maritime-industry-ee1otzvriqss" target="_blank" class="btn">View Press Release →</a>
+</div>
+<div class="card">
+<div style="font-size:2rem">📋</div>
+<h3>Official Press Profile</h3>
+<p>View all verified press releases about $SHIPS Token</p>
+<a href="https://www.pressreleasepoint.com/node/1395165" target="_blank" class="btn">View Official Profile →</a>
+</div>
+</div>
 </div></section>
 
-<section class="section" id="press"><div class="container"><h2>📰 PRESS COVERAGE</h2><p class="section-subtitle">From Galley to Headlines — $SHIPS is making waves</p><div class="press-grid">
-<div class="card"><div style="font-size:2rem">📰</div><h3>Featured on OpenPR</h3><p>Honest OFW Chief Cook Builds Long Term Meme Coin Project on Solana - Real Story</p><a href="https://www.openpr.com/news/4552177/honest-ofw-chief-cook-builds-long-term-meme-coin-project-on-solana" target="_blank" class="btn">Read Full Article →</a></div>
-<div class="card"><div style="font-size:2rem">📄</div><h3>Published on PRFree</h3><p>$SHIPS Token Launches Crypto for Shipping and Maritime Industry - OFW Innovation</p><a href="https://news.prfree.org/@carlamahan/sships-token-ships-launches-crypto-for-shipping-and-maritime-industry-ee1otzvriqss" target="_blank" class="btn">View Press Release →</a></div>
-<div class="card"><div style="font-size:2rem">📋</div><h3>Official Press Profile</h3><p>View all verified press releases about $SHIPS Token</p><a href="https://www.pressreleasepoint.com/node/1395165" target="_blank" class="btn">View Official Profile →</a></div>
-</div></div></section>
-
-<section class="section section-dark" id="comparison"><div class="container"><h2>Why $SHIPS is Different - Comparison</h2><p class="section-subtitle">Not all maritime tokens are same - We are real OFW - Now Graduated!</p>
-<div class="table-wrapper"><table class="comparison-table"><thead><tr><th>Token Name</th><th>Dev Background</th><th>Story / Proof</th><th>Network</th><th>Focus / Goal</th></tr></thead><tbody>
-<tr style="background:rgba(74,222,128,0.1)"><td><strong>⚓ $SHIPS - GRADUATED</strong></td><td>Carl Amahan - 20yr OFW Chief Cook - Real Name</td><td>Real seaman story. From galley to blockchain. With galley photo proof. Graduated 100%</td><td>Solana - Fast & Cheap</td><td>OFW Community, Honesty, Seafarer Trust, Long Term - Graduated</td></tr>
-<tr><td>SEAT Token</td><td>Anonymous Team - No Face</td><td>Yacht rental, maritime B2B - No real seaman</td><td>Polygon</td><td>Marine leisure for rich</td></tr>
-<tr><td>SEAMANIA</td><td>Anonymous - Meme Only</td><td>No real story. Pure meme, no utility talk</td><td>Solana</td><td>Meme only - Quick pump</td></tr>
-<tr><td>Other Meme Coins</td><td>Often Anon, Tech Background</td><td>Fake story, AI generated</td><td>Various</td><td>Quick rug / flip</td></tr>
-</tbody></table></div>
+<!-- COMPARISON -->
+<section class="section section-dark" id="comparison"><div class="container">
+<h2>Why $SHIPS is Different</h2>
+<p class="section-subtitle">Not all maritime tokens are the same - We are real OFW - Now Graduated!</p>
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Token Name</th>
+<th>Dev Background</th>
+<th>Story / Proof</th>
+<th>Network</th>
+<th>Focus / Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:rgba(74,222,128,0.1)">
+<td><strong>⚓ $SHIPS - GRADUATED</strong></td>
+<td>Carl Amahan - 20yr OFW Chief Cook - Real Name</td>
+<td>Real seaman story. From galley to blockchain. With galley photo proof. Graduated 100%</td>
+<td>Solana</td>
+<td>OFW Community, Honesty, Long Term</td>
+</tr>
+<tr>
+<td>SEAT Token</td>
+<td>Anonymous Team - No Face</td>
+<td>Yacht rental, maritime B2B - No real seaman</td>
+<td>Polygon</td>
+<td>Marine leisure for rich</td>
+</tr>
+<tr>
+<td>SEAMANIA</td>
+<td>Anonymous - Meme Only</td>
+<td>No real story. Pure meme</td>
+<td>Solana</td>
+<td>Meme only - Quick pump</td>
+</tr>
+<tr>
+<td>Other Meme Coins</td>
+<td>Often Anon, Tech Background</td>
+<td>Fake story, AI generated</td>
+<td>Various</td>
+<td>Quick rug / flip</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p style="text-align:center;margin-top:16px;color:var(--green);font-weight:bold">$SHIPS = First and Only token made by an actual OFW seaman with 20 years proof at sea - Now GRADUATED!</p>
 </div></section>
 
-<section class="section" id="why-ofw"><div class="container"><h2>🌊 Bakit Para sa OFW ang $SHIPS - Our Mission</h2><div class="story-box">
+<!-- WHY OFW -->
+<section class="section" id="why-ofw"><div class="container">
+<h2>🌊 Bakit Para sa OFW ang $SHIPS</h2>
+<div class="story-box">
 <p>10 milyon tayong OFW sa buong mundo. Tayo ang modern heroes, pero tayo rin ang madalas ma-scam at talo sa remittance fees.</p>
 <p>Alam mo ba? $30 Billion kada taon ang pinapadala ng OFW sa Pinas. Pero $1 Billion dun napupunta sa fees lang ng remittance. Lugi tayo.</p>
 <p>Gumawa ako ng $SHIPS para patunayan na kaya ng isang seaman magtayo ng totoong project sa Web3. Walang pangako ng x1000. Walang magic. Tayo-tayo lang na nagtutulungan.</p>
 <p>Ang goal: Gawing movement ang $SHIPS para sa OFW. Para sa susunod, hindi na tayo ang niloloko. Tayo na ang nagtatayo. From being scammed to being builders.</p>
 <p style="text-align:center;color:var(--gold);font-weight:bold;font-size:1.2rem">This is not just a token. This is OFW pride. And we graduated!</p>
 </div>
-<div class="chart-container"><h3 style="text-align:center;color:var(--gold);margin-bottom:12px">📊 Tokenomics - 100% Fair - No Team Tokens - Graduated</h3><canvas id="tokenomics" style="max-height:320px;"></canvas><div style="text-align:center;margin-top:12px"><p><strong>1,000,000,000 Total Supply</strong></p><p>✅ 100% to Public via Pump.fun - Graduated 100%</p><p>✅ 0% Team / Dev Tokens</p><p>✅ 0% Tax on Buy and Sell</p><p>✅ Contract Renounced</p></div></div>
 </div></section>
 
-<section class="section" id="how-to-buy"><div class="container"><h2>🛠️ How to Buy $SHIPS - Graduated Pool</h2><p class="section-subtitle">Para sa mga first time sa crypto - Tagalog guide para sa kabaro</p><div class="grid">
-<div class="card"><div style="background:var(--gold);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">1</div><h3>Download Phantom Wallet</h3><p>Download Phantom app sa phone mo sa Play Store o App Store. I-save mo yung 12-word seed phrase sa papel. Wag mo i-share kahit kanino. Yun ang susi ng pera mo.</p></div>
-<div class="card"><div style="background:var(--gold);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">2</div><h3>Buy SOL - Pang-gas</h3><p>Buy SOL gamit GCash, Maya, o Binance P2P. Send mo sa Phantom wallet address mo. Kailangan mo SOL para makabili ng $SHIPS. Parang pang-gas ng barko.</p></div>
-<div class="card"><div style="background:var(--green);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">3</div><h3>Swap to $SHIPS - Graduated! Sakay na!</h3><p>Open Jupiter sa browser ng Phantom. Paste CA ng $SHIPS, swap SOL to $SHIPS. Graduated na tayo - may liquidity na sa PumpSwap! Welcome aboard!</p><a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank" style="margin-top:10px">Open Jupiter - Swap Now</a></div>
-</div></div></section>
+<!-- HOW TO BUY -->
+<section class="section section-dark" id="how-to-buy"><div class="container">
+<h2>🛠️ How to Buy $SHIPS</h2>
+<p class="section-subtitle">Para sa mga first time sa crypto - Simple guide</p>
+<div class="grid">
+<div class="card">
+<div style="background:var(--gold);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">1</div>
+<h3>Download Phantom Wallet</h3>
+<p>Download Phantom app sa phone mo. I-save ang 12-word seed phrase sa papel. Huwag i-share kahit kanino.</p>
+</div>
+<div class="card">
+<div style="background:var(--gold);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">2</div>
+<h3>Buy SOL</h3>
+<p>Buy SOL gamit GCash, Maya, o Binance P2P. Send mo sa Phantom wallet address mo.</p>
+</div>
+<div class="card">
+<div style="background:var(--green);color:#000;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;margin-bottom:10px">3</div>
+<h3>Swap to $SHIPS</h3>
+<p>Open Jupiter sa browser ng Phantom. Paste CA ng $SHIPS, swap SOL to $SHIPS. Graduated na tayo!</p>
+<a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn" target="_blank" style="margin-top:10px">Open Jupiter - Swap Now</a>
+</div>
+</div>
+</div></section>
 
-<section class="section section-dark" id="chart"><div class="container"><h2>📈 LIVE CHART - Graduated Pool</h2><p class="section-subtitle">Real-time price ng $SHIPS - Now graduated to PumpSwap</p><div class="chart-container"><iframe height="600" width="100%" src="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump?embed=1&info=0&swaps=0&grayscale=0&light_chart=0" frameborder="0" allowfullscreen style="border-radius:16px;border:2px solid var(--green);"></iframe></div></div></section>
+<!-- CHART -->
+<section class="section" id="chart"><div class="container">
+<h2>📈 LIVE CHART</h2>
+<p class="section-subtitle">Real-time price ng $SHIPS - Graduated Pool</p>
+<div class="chart-container">
+<iframe height="600" width="100%" src="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump?embed=1&info=0&swaps=0&grayscale=0&light_chart=0" frameborder="0" allowfullscreen style="border-radius:16px;border:2px solid var(--green);"></iframe>
+</div>
+</div></section>
 
-<section class="section" id="stats"><div class="container"><h2>📊 LIVE STATS - Graduated</h2><p class="section-subtitle">All data is on-chain, verifiable - Now graduated</p><div class="stats-grid">
+<!-- STATS -->
+<section class="section section-dark" id="stats"><div class="container">
+<h2>📊 LIVE STATS</h2>
+<p class="section-subtitle">All data is on-chain and verifiable</p>
+<div class="stats-grid">
 <div class="stat-card"><div class="big">1B</div><p>Total Supply</p><p style="font-size:0.7rem;color:var(--muted)">Fixed - No mint</p></div>
 <div class="stat-card"><div class="big">0% / 0%</div><p>Tax Buy / Sell</p><p style="font-size:0.7rem;color:var(--muted)">No tax ever</p></div>
-<div class="stat-card"><div class="big" style="color:var(--green)">100%</div><p>Graduated</p><p style="font-size:0.7rem;color:var(--muted)">On PumpSwap - $31K MC</p></div>
+<div class="stat-card"><div class="big" style="color:var(--green)">100%</div><p>Graduated</p><p style="font-size:0.7rem;color:var(--muted)">On PumpSwap</p></div>
 <div class="stat-card"><div class="big">Renounced</div><p>Contract Status</p><p style="font-size:0.7rem;color:var(--muted)">Cannot be changed</p></div>
-</div></div></section>
-
-<section class="section section-dark" id="roadmap"><div class="container"><h2>🗺️ ROADMAP - GRADUATED!</h2><p class="section-subtitle">No promises of x1000. Just what we're doing - Now graduated!</p>
-<div class="grid">
-<div class="card" style="border-color:var(--green)"><h3 style="color:var(--green)">PHASE 1 - DONE ✅ - Launch - Day 1 to Day 30</h3><ul><li>✅ Token launched on pump.fun - May 5, 2026</li><li>✅ Contract renounced - Verified</li><li>✅ Website live - Built at sea by Chief Cook</li><li>✅ Press coverage - OpenPR, PRFree, PressReleasePoint</li><li>✅ Community - Telegram, Discord, X, TikTok, Facebook</li></ul></div>
-<div class="card" style="border-color:var(--green);background:rgba(74,222,128,0.05)"><h3 style="color:var(--green)">PHASE 2 - DONE ✅ - Graduated! - Day 30 to Day 70</h3><ul><li>✅ 100% Bonding Curve Complete - 85 SOL</li><li>✅ Migrated to PumpSwap / Raydium - $31K MC</li><li>✅ 11+ traders, $4K volume, +107% 24h</li><li>✅ Live Ship Tracker active - Hakone, Japan</li><li>✅ Graduated Proof - Screenshot verified</li></ul></div>
-<div class="card"><h3>PHASE 3 - NOW 🔥 - Growth - Future</h3><ul><li>🔥 Grow community - Telegram / X</li><li>🔍 CEX listing exploration if volume supports</li><li>💭 OFW use cases - Remittance discount idea</li><li>💭 Training center partnerships for holders</li><li>⚓ Continue building at sea - We do not abandon ship</li></ul></div>
-</div></div></section>
-
-<section class="section" id="faq"><div class="container"><h2>FREQUENTLY ASKED QUESTIONS - Real Questions from OFWs</h2><p class="section-subtitle">Real questions from real OFWs - Honest answers</p>
-<div class="faq-item"><h4>1. Scam ba to Chief? Graduated na ba talaga?</h4><p><strong>HINDI SCAM - GRADUATED NA!</strong> 100% graduated sa Pump.fun - $31K MC. Contract renounced = hindi ko na ma-edit token kahit gusto ko. 0% tax = wala akong kita sa buy/sell mo. No team tokens = wala akong hawak na free tokens para i-dump. Verify mo lahat sa Solscan + RugCheck + graduation screenshot.</p></div>
-<div class="faq-item"><h4>2. May team tokens ba? Baka mag-dump kayo pag tumaas?</h4><p><strong>ZERO team tokens. ZERO.</strong> 100% fair launch sa pump.fun, graduated na. Lahat ng supply nasa public na from Day 1. Wala akong hawak na free tokens. Check mo sa Solscan holders list.</p></div>
-<div class="faq-item"><h4>3. Ano ibig sabihin ng graduated 100%?</h4><p>Ibig sabihin natapos na bonding curve ng 85 SOL. Na-migrate na liquidity sa PumpSwap / Raydium. May permanent liquidity na. Hindi na tayo nasa pump.fun bonding curve lang - may DEX pool na tayo. Mas stable na. Proof na hindi tayo nag-rug for 70 days.</p></div>
-<div class="faq-item"><h4>4. Bakit ang tagal ng 70 days? Ano plano mo sa $SHIPS Chief?</h4><p>Movement para sa 10M OFWs. Kasi need ng 85 SOL sa bonding curve para ma-graduate - natapos na natin! Ngayon nasa PumpSwap na tayo. Next: Build strong community ng OFWs na marunong sa crypto. Pangalawa: Discount sa training center para sa holders. Pangatlo: Explore remittance use case if possible. Pero no fake promises. Step by step. We graduated!</p></div>
-<div class="faq-item"><h4>5. Paano ka pagkakatiwalaan? Sino ka ba talaga?</h4><p>Ako si Carl Amahan, 20+ years OFW Chief Cook. May Facebook, may TikTok, may galley photo ako sa barko. Hindi ako anon. Real name, real face. Yung ibang devs anon kasi mag-sc-scam. Ako hindi anon kasi hindi ako scammer. Simple. And we graduated 100% - proof yan.</p></div>
-</div></section>
-
-<section class="section section-dark" id="transparency"><div class="container"><h2>🔍 TRANSPARENCY BOARD - Graduated</h2><p class="section-subtitle">Check everything yourself. Walang itinatago. All on-chain - Graduated proof</p><div class="transparency-grid">
-<div class="transparency-card"><div style="font-size:2rem">📜</div><h3>Contract Verified</h3><p>Verify sa Solscan - Real contract</p><a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Contract →</a></div>
-<div class="transparency-card" style="border-color:var(--green)"><div style="font-size:2rem">🎓</div><h3>Graduated Proof</h3><p>100% on Pump.fun - $31K MC</p><a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Graduated →</a></div>
-<div class="transparency-card"><div style="font-size:2rem">✅</div><h3>RugCheck Passed</h3><p>No Risk Found - No honeypot</p><a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View RugCheck →</a></div>
-<div class="transparency-card"><div style="font-size:2rem">📈</div><h3>Live Chart</h3><p>GeckoTerminal Graduated Pool</p><a href="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Chart →</a></div>
-</div></div></section>
-
-<section class="section" id="safety"><div class="container"><h2>⚓ SHIP SAFETY PROTOCOL - Paano Iwasan Ma-Scam</h2><p class="section-subtitle">Paano iwasan ma-scam sa crypto. Galing sa 20 years ko sa dagat - Safety first.</p><div class="card">
-<h3>Rule 1: Check Contract - Graduated na! Parang Check ng Barko</h3><p>Before sumakay sa barko, chine-check muna kung safe. Same sa token. $SHIPS is graduated 100% + renounced + 0% tax. Sa Solscan mo makikita yan. Dapat renounced at graduated.</p>
-<h3>Rule 2: No Private DM - Walang Kapitan na Manghihingi ng SOL sa DM</h3><p>Hindi ako mag-DM sayo para maghingi ng SOL o seed phrase. Kahit kailan. Admin lang mag-aannounce sa Telegram group. Pag may nag-DM sayo na ako daw, scam yan. Block agad.</p>
-<h3>Rule 3: DYOR Always - Do Your Own Research</h3><p>Huwag mag-invest dahil lang hype o FOMO. Basahin mo muna lahat. Tanong ka sa community. Check mo chart. Check mo holders. Parang bago bumili ng isda, amuyin muna.</p>
-<h3>Rule 4: Invest What You Can Lose - Wag Isangla Bahay</h3><p>Crypto ay risky. Parang dagat - minsan kalmado, minsan maalon. Gamitin mo lang yung pera na kaya mong mawala. Wag utang. Wag isangla. Pang-extra lang.</p>
-</div></div></section>
-
-<section class="section"><div class="container">
-<div class="quote-box"><h3>👨‍🍳 Mensahe ng Chief Cook - GRADUATED!</h3>
-<p>"20 years akong nagluto para sa iba. Nagluto ako para sa 25 crew araw-araw. 3 meals a day. 7 days a week. Walang day off sa gitna ng dagat.</p>
-<p>Ngayon, nag-graduate na tayo! 100%! From bonding curve to PumpSwap! 70 days tayong sinabihan na mamamatay in 5 minutes, pero eto tayo - GRADUATED!</p>
-<p>$SHIPS is by OFWs, for OFWs. Hindi ako tech expert. Seaman lang ako. Pero may puso at hindi sumusuko.</p>
-<p>We do not abandon ship - WE GRADUATE!"</p>
-<p style="color:var(--gold);font-weight:bold;margin-top:10px">- Carl Amahan, Chief Cook, 20 Years at Sea, Day <span class="auto-days">70</span> - GRADUATED!</p></div>
-
-<div class="crew-buttons">
-<a href="https://t.me/+XLhJLr-_JnpjMDI9" class="crew-btn btn-telegram">📱 Telegram - Main Crew</a>
-<a href="https://discord.gg/Kq22f7hSn" class="crew-btn btn-discord">💬 DISCORD</a>
-<a href="https://x.com/SHIPS_SOL" class="crew-btn btn-x">𝕏 X / Twitter</a>
-<a href="https://github.com/shipsofficial" class="crew-btn btn-github">🐙 GitHub - Code</a>
-<a href="https://www.tiktok.com/@shipstoken" class="crew-btn btn-tiktok">🎵 TikTok - Videos</a>
-<a href="https://www.facebook.com/share/1GMbxYGGa7/" class="crew-btn btn-facebook">📘 Facebook Page</a>
-<a href="https://www.binance.com/en/square/profile/carlamahan" target="_blank" class="crew-btn" style="background:#F0B90B;color:#0A1A2F;">🟡 Binance Square</a>
 </div>
-<div class="disclaimer-box">⚠️ DISCLAIMER - Please Read: $SHIPS is a meme token with no intrinsic value or financial return expectation. This is not financial advice. Crypto is high risk and volatile. Only invest what you can afford to lose completely. DYOR. We graduated but market can be risky.</div>
 </div></section>
 
-<section class="section section-dark" id="story"><div class="container"><h2>📖 The Real Story Behind $SHIPS - Buong Kwento</h2><p class="section-subtitle">Hindi AI story. Totoong buhay ng seaman - Now Graduated!</p><div class="story-box">
+<!-- ROADMAP -->
+<section class="section" id="roadmap"><div class="container">
+<h2>🗺️ ROADMAP</h2>
+<p class="section-subtitle">No promises of x1000. Just what we're doing</p>
+<div class="grid">
+<div class="card" style="border-color:var(--green)">
+<h3 style="color:var(--green)">PHASE 1 - DONE ✅</h3>
+<ul>
+<li>✅ Token launched on pump.fun - May 5, 2026</li>
+<li>✅ Contract renounced</li>
+<li>✅ Website live - Built at sea</li>
+<li>✅ Press coverage</li>
+<li>✅ Community started</li>
+</ul>
+</div>
+<div class="card" style="border-color:var(--green);background:rgba(74,222,128,0.05)">
+<h3 style="color:var(--green)">PHASE 2 - DONE ✅</h3>
+<ul>
+<li>✅ 100% Bonding Curve Complete</li>
+<li>✅ Migrated to PumpSwap</li>
+<li>✅ Graduated after <span class="auto-days">80</span> days</li>
+<li>✅ Live Ship Tracker</li>
+</ul>
+</div>
+<div class="card">
+<h3>PHASE 3 - NOW 🔥</h3>
+<ul>
+<li>🔥 Grow community</li>
+<li>🔥 Add Raydium liquidity pool</li>
+<li>🔍 CEX listing if volume supports</li>
+<li>💭 OFW use cases</li>
+<li>⚓ Continue building at sea</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section section-dark" id="faq"><div class="container">
+<h2>FREQUENTLY ASKED QUESTIONS</h2>
+<p class="section-subtitle">Real questions from real OFWs</p>
+
+<div class="faq-item">
+<h4>1. Scam ba to? Graduated na ba talaga?</h4>
+<p><strong>HINDI SCAM - GRADUATED NA!</strong> Contract renounced = hindi ko na ma-edit. 0% tax. No team tokens. Verify mo sa Solscan + RugCheck.</p>
+</div>
+<div class="faq-item">
+<h4>2. May team tokens ba?</h4>
+<p><strong>ZERO team tokens.</strong> 100% fair launch. Lahat ng supply nasa public na from Day 1.</p>
+</div>
+<div class="faq-item">
+<h4>3. Ano ibig sabihin ng graduated?</h4>
+<p>Natapos na ang bonding curve. Na-migrate na ang liquidity sa PumpSwap. May permanent liquidity na.</p>
+</div>
+<div class="faq-item">
+<h4>4. Bakit ang tagal bago mag-graduate?</h4>
+<p>Because we built it the honest way. Most coins die in 5 minutes. We sailed <span class="auto-days">80</span> days.</p>
+</div>
+<div class="faq-item">
+<h4>5. Sino ka ba talaga?</h4>
+<p>Ako si Carl Amahan, 20+ years OFW Chief Cook. Real name, real face, real galley photo. Hindi ako anon.</p>
+</div>
+</div></section>
+
+<!-- TRANSPARENCY -->
+<section class="section" id="transparency"><div class="container">
+<h2>🔍 TRANSPARENCY BOARD</h2>
+<p class="section-subtitle">Check everything yourself. Walang itinatago.</p>
+<div class="transparency-grid">
+<div class="transparency-card">
+<div style="font-size:2rem">📜</div>
+<h3>Contract</h3>
+<p>Verify sa Solscan</p>
+<a href="https://solscan.io/token/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Contract →</a>
+</div>
+<div class="transparency-card" style="border-color:var(--green)">
+<div style="font-size:2rem">🎓</div>
+<h3>Graduated Proof</h3>
+<p>100% on Pump.fun</p>
+<a href="https://pump.fun/coin/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Graduated →</a>
+</div>
+<div class="transparency-card">
+<div style="font-size:2rem">✅</div>
+<h3>RugCheck</h3>
+<p>No Risk Found</p>
+<a href="https://rugcheck.xyz/tokens/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View RugCheck →</a>
+</div>
+<div class="transparency-card">
+<div style="font-size:2rem">📈</div>
+<h3>Live Chart</h3>
+<p>GeckoTerminal</p>
+<a href="https://www.geckoterminal.com/solana/pools/2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" target="_blank">View Chart →</a>
+</div>
+</div>
+</div></section>
+
+<!-- SAFETY -->
+<section class="section section-dark" id="safety"><div class="container">
+<h2>⚓ SHIP SAFETY PROTOCOL</h2>
+<p class="section-subtitle">Paano iwasan ma-scam sa crypto</p>
+<div class="card">
+<h3>Rule 1: Check Contract</h3>
+<p>$SHIPS is graduated + renounced + 0% tax. Check sa Solscan.</p>
+<h3>Rule 2: No Private DM</h3>
+<p>Hindi ako mag-DM sayo para humingi ng SOL o seed phrase. Kahit kailan.</p>
+<h3>Rule 3: DYOR Always</h3>
+<p>Huwag mag-invest dahil lang sa hype. Basahin mo muna lahat.</p>
+<h3>Rule 4: Invest What You Can Lose</h3>
+<p>Crypto is risky. Gamitin mo lang yung pera na kaya mong mawala.</p>
+</div>
+</div></section>
+
+<!-- STORY (ORIGINAL) -->
+<section class="section" id="story"><div class="container">
+<h2>📖 The Real Story Behind $SHIPS</h2>
+<p class="section-subtitle">Hindi AI story. Totoong buhay ng seaman</p>
+<div class="story-box">
 <p>I first boarded a ship in 2003. 20+ years at sea. Mahirap buhay ng seaman. 8 months sa dagat, 2 months sa bahay. Miss mo pamilya.</p>
 <p>I heard about Bitcoin back in 2010 here in the Philippines. Nasa balita. $0.10 pa lang. But internet was limited then. Nasa barko ako, walang signal. I couldn't get in. Sayang.</p>
 <p>Fast forward to 2021. A fellow seaman introduced me to crypto again. Sabi niya, "Chief, maganda crypto." I liked it. I tried. Nag-try ako mag-invest.</p>
@@ -409,41 +570,127 @@ Price $0.00003183 | MC $31K | +107% 24h | Vol $4K | 19 Txns. <span class="auto-d
 <p>Then I talked to Meta AI. Sabi ko, "Turuan mo ako gumawa ng token." It taught me how to create a token. How to code a website. Step by step. From zero. Boom. $SHIPS was born in my cabin, 2 AM, after galley shift, with ship WiFi.</p>
 <p>I told myself: "I won't get scammed anymore. And no one else will get scammed by me. Because $SHIPS comes from my heart. A real person built this. With real name. Real face."</p>
 <p><strong>No team tokens. No tax. Renounced. And now GRADUATED 100%!</strong></p>
-<p>70 days we sailed the bonding curve. Most die in 5 minutes. We graduated. This is proof that a seaman can build in Web3. I can't rug you even if I wanted to. Verify it on-chain.</p>
+<p><span class="auto-days">80</span> days we sailed the bonding curve. Most die in 5 minutes. We graduated. This is proof that a seaman can build in Web3.</p>
 <p style="text-align:center;margin-top:30px;font-size:1.4rem;color:var(--gold);font-weight:bold">This is not just a meme coin. This is my heart and soul. This is 20 years at sea. And we graduated.</p>
-<p style="text-align:center;margin-top:10px;color:#b8c5d6">From Galley to Blockchain. From being scammed to being a builder. For 10M OFWs. We do not abandon ship - We graduate!</p>
-</div></div></section>
+</div>
+</div></section>
 
-<section class="section" id="waitlist"><div class="container" style="text-align:center"><h2>📬 Get Notified - Join Waitlist</h2><p class="section-subtitle">Subscribe for updates on CEX listings & OFW utility - No spam, only important updates</p><form class="waitlist-form" onsubmit="submitWaitlist(event)"><input type="email" id="email-input" placeholder="Enter your email for updates" required><button type="submit" class="btn">Join Waitlist - Free</button></form><p id="waitlist-msg" style="margin-top:15px;color:var(--green)"></p></div></section>
+<!-- QUOTE + CREW BUTTONS -->
+<section class="section section-dark"><div class="container">
+<div class="quote-box">
+<h3>👨‍🍳 Message from the Chief Cook</h3>
+<p>"20 years akong nagluto para sa iba. Nagluto ako para sa 25 crew araw-araw. 3 meals a day. 7 days a week.</p>
+<p>Ngayon, nag-graduate na tayo! 100%! From bonding curve to PumpSwap! <span class="auto-days">80</span> days tayong sinabihan na mamamatay in 5 minutes, pero eto tayo - GRADUATED!</p>
+<p>$SHIPS is by OFWs, for OFWs. Hindi ako tech expert. Seaman lang ako. Pero may puso at hindi sumusuko.</p>
+<p>We do not abandon ship - WE GRADUATE!"</p>
+<p style="color:var(--gold);font-weight:bold;margin-top:10px">- Carl Amahan, Chief Cook, 20 Years at Sea, Day <span class="auto-days">80</span></p>
+</div>
 
-<section class="section section-dark" id="proof"><div class="container"><h2>👨‍🍳 PROOF OF GALLEY - Hindi Lang Kwento - Totoong Chief Cook</h2><p class="section-subtitle">Hindi lang kwento. Totoong chief cook ako. May proof. Now graduated!</p><div class="card" style="text-align:center"><img src="galley-photo.jpg" alt="Chief Cook Carl Amahan in Galley - Real Photo" style="width:100%;border-radius:12px;border:3px solid var(--gold);background:#0A1A2F" onerror="this.src='https://via.placeholder.com/600x400/0A1A2F/D4AF37?text=Chief+Cook+Carl+Amahan+-+20+Years+at+Sea'"><p style="margin-top:10px;color:var(--muted)">Ako yan sa kusina ng barko, 2023. Dyan ko unang na-code ang $SHIPS habang nag-break time. After magluto ng lunch para sa 25 crew. Totoong seaman, hindi AI.</p><p style="margin-top:10px;color:var(--gold);font-weight:bold">Carl Amahan - Chief Cook - 20 Years at Sea - Graduated Builder - Real Person</p></div></div></section>
+<div class="crew-buttons">
+<a href="https://t.me/+XLhJLr-_JnpjMDI9" class="crew-btn btn-telegram">📱 Telegram</a>
+<a href="https://discord.gg/Kq22f7hSn" class="crew-btn btn-discord">💬 Discord</a>
+<a href="https://x.com/SHIPS_SOL" class="crew-btn btn-x">𝕏 @SHIPS_SOL</a>
+<a href="https://github.com/shipsofficial" class="crew-btn btn-github">🐙 GitHub</a>
+<a href="https://www.tiktok.com/@shipstoken" class="crew-btn btn-tiktok">🎵 TikTok</a>
+<a href="https://www.facebook.com/share/1GMbxYGGa7/" class="crew-btn btn-facebook">📘 Facebook</a>
+<a href="https://www.binance.com/en/square/profile/carlamahan" target="_blank" class="crew-btn" style="background:#F0B90B;color:#0A1A2F;">🟡 Binance Square</a>
+</div>
 
-<footer><div class="container"><div class="social-links"><a href="https://t.me/+XLhJLr-_JnpjMDI9">📱 Telegram</a><a href="https://discord.gg/Kq22f7hSn">💬 Discord</a><a href="https://x.com/SHIPS_SOL">𝕏 X / Twitter</a><a href="https://github.com/shipsofficial">🐙 GitHub</a><a href="https://www.tiktok.com/@shipstoken">🎵 TikTok</a><a href="https://www.facebook.com/share/1GMbxYGGa7/">📘 Facebook</a></div><p>© 2026 $SHIPS Token - GRADUATED 100% - Built at sea, by a seaman, for seafarers. ⚓</p><p style="font-size:0.75rem;margin-top:4px">From Galley to Blockchain - 20 Years at Sea - We Graduated - Carl Amahan - Day <span class="auto-days">70</span></p><p style="font-size:0.75rem">CA: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump - Solana - Renounced - 0% Tax - Graduated 100%</p></div></footer>
+<div class="disclaimer-box">
+⚠️ DISCLAIMER: $SHIPS is a meme token with no intrinsic value or financial return expectation. This is not financial advice. Crypto is high risk and volatile. Only invest what you can afford to lose completely. DYOR.
+</div>
+</div></section>
+
+<!-- FOOTER -->
+<footer><div class="container">
+<div class="social-links">
+<a href="https://t.me/+XLhJLr-_JnpjMDI9">📱 Telegram</a>
+<a href="https://discord.gg/Kq22f7hSn">💬 Discord</a>
+<a href="https://x.com/SHIPS_SOL">𝕏 @SHIPS_SOL</a>
+<a href="https://github.com/shipsofficial">🐙 GitHub</a>
+<a href="https://www.tiktok.com/@shipstoken">🎵 TikTok</a>
+<a href="https://www.facebook.com/share/1GMbxYGGa7/">📘 Facebook</a>
+</div>
+<p>© 2026 $SHIPS Token - GRADUATED 100% - Built at sea, by a seaman, for seafarers. ⚓</p>
+<p style="font-size:0.75rem;margin-top:4px">From Galley to Blockchain - 20 Years at Sea - We Graduated - Carl Amahan - Day <span class="auto-days">80</span></p>
+<p style="font-size:0.75rem">CA: 2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump - Solana - Renounced - 0% Tax - Graduated</p>
+</div></footer>
 </div>
 
 <a href="https://jup.ag/swap/SOL-2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump" class="btn sticky-buy" target="_blank">🚀 Buy $SHIPS - GRADUATED</a>
 
 <script>
-function copyCA(){const t=document.getElementById('ca-text').innerText;navigator.clipboard.writeText(t).then(()=>showToast('CA copied! ⚓ Graduated!')).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();showToast('CA copied!');});}
-function showToast(m){const d=document.createElement('div');d.textContent=m;d.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4ade80;color:#000;padding:10px 16px;border-radius:6px;font-weight:700;z-index:9999';document.body.appendChild(d);setTimeout(()=>d.remove(),2500);}
-document.getElementById('menu-btn').addEventListener('click',()=>{document.getElementById('nav-links').classList.toggle('show');});
-function updateDays(){const launch=new Date('2026-05-05T00:00:00Z');const days=Math.floor((Date.now()-launch)/86400000);document.querySelectorAll('.auto-days').forEach(e=>e.textContent=days);document.querySelectorAll('.auto-days-badge').forEach(e=>e.textContent='DAY '+days);}
-updateDays();
-const CA='2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump';
-async function updateLive(){try{
-const r=await fetch('https://api.dexscreener.com/latest/dex/tokens/'+CA);const j=await r.json();
-if(j.pairs&&j.pairs[0]){const p=j.pairs[0];
-const priceEl=document.getElementById('price');if(priceEl&&p.priceUsd){const price=parseFloat(p.priceUsd);if(price>0)priceEl.textContent=price<0.001?'$'+price.toFixed(8):'$'+price.toFixed(6);}
-const price2=document.getElementById('price2');if(price2&&p.priceUsd){const price=parseFloat(p.priceUsd);if(price>0)price2.textContent=price<0.001?'$'+price.toFixed(8):'$'+price.toFixed(6);}
-const mcap=document.getElementById('mcap');if(mcap){const fdv=parseFloat(p.fdv||p.marketCap||0);if(fdv>0)mcap.textContent=fdv>=1e6?'$'+(fdv/1e6).toFixed(2)+'M':fdv>=1000?'$'+(fdv/1000).toFixed(1)+'K':'$'+fdv.toFixed(0);}
-const mcap2=document.getElementById('mcap2');if(mcap2){const fdv=parseFloat(p.fdv||p.marketCap||0);if(fdv>0)mcap2.textContent=fdv>=1e6?'$'+(fdv/1e6).toFixed(2)+'M':fdv>=1000?'$'+(fdv/1000).toFixed(1)+'K':'$'+fdv.toFixed(0);}
-const vol=document.getElementById('volume');if(vol&&p.volume){const v=parseFloat(p.volume.h24||0);if(v>0)vol.textContent=v>=1000?'$'+(v/1000).toFixed(1)+'K':'$'+v.toFixed(0);}
-const ch=document.getElementById('change24');if(ch&&p.priceChange&&p.priceChange.h24!=null){const c=parseFloat(p.priceChange.h24);ch.textContent=(c>0?'+':'')+c.toFixed(0)+'%';}
+function copyCA(){
+  const t = document.getElementById('ca-text').innerText;
+  navigator.clipboard.writeText(t).then(() => showToast('CA copied! ⚓')).catch(() => {
+    const a = document.createElement('textarea');
+    a.value = t;
+    document.body.appendChild(a);
+    a.select();
+    document.execCommand('copy');
+    a.remove();
+    showToast('CA copied!');
+  });
 }
-}catch(e){console.log(e);}}
-updateLive();setInterval(updateLive,30000);
-try{const ctx=document.getElementById('tokenomics');if(ctx){new Chart(ctx,{type:'doughnut',data:{labels:['Public - Graduated','Team Tokens','Tax'],datasets:[{data:[100,0,0],backgroundColor:['#4ade80','#061018','#061018'],borderColor:'#0A1A2F',borderWidth:2}]},options:{responsive:true,plugins:{legend:{labels:{color:'#fff'}}}}});}}catch{}
-function submitWaitlist(e){e.preventDefault();const email=document.getElementById('email-input').value;let emails=JSON.parse(localStorage.getItem('ships-waitlist')||'[]');if(!emails.includes(email)){emails.push(email);localStorage.setItem('ships-waitlist',JSON.stringify(emails));}document.getElementById('waitlist-msg').textContent='Thanks! You are subscribed. ⚓ Graduated crew!';document.getElementById('email-input').value='';}
+function showToast(m){
+  const d = document.createElement('div');
+  d.textContent = m;
+  d.style.cssText = 'position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#4ade80;color:#000;padding:10px 16px;border-radius:6px;font-weight:700;z-index:9999';
+  document.body.appendChild(d);
+  setTimeout(() => d.remove(), 2500);
+}
+document.getElementById('menu-btn').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('show');
+});
+function updateDays(){
+  const launch = new Date('2026-05-05T00:00:00Z');
+  const days = Math.floor((Date.now() - launch) / 86400000);
+  document.querySelectorAll('.auto-days').forEach(e => e.textContent = days);
+  document.querySelectorAll('.auto-days-badge').forEach(e => e.textContent = 'DAY ' + days);
+}
+updateDays();
+const CA = '2WsH3NFFjs57jyczvbVMBSuVgdci5JMbxkHJdZTbpump';
+async function updateLive(){
+  try {
+    const r = await fetch('https://api.dexscreener.com/latest/dex/tokens/' + CA);
+    const j = await r.json();
+    if (j.pairs && j.pairs[0]) {
+      const p = j.pairs[0];
+      const priceEl = document.getElementById('price');
+      if (priceEl && p.priceUsd) {
+        const price = parseFloat(p.priceUsd);
+        if (price > 0) priceEl.textContent = price < 0.001 ? '\( ' + price.toFixed(8) : ' \)' + price.toFixed(6);
+      }
+      const price2 = document.getElementById('price2');
+      if (price2 && p.priceUsd) {
+        const price = parseFloat(p.priceUsd);
+        if (price > 0) price2.textContent = price < 0.001 ? '\( ' + price.toFixed(8) : ' \)' + price.toFixed(6);
+      }
+      const mcap = document.getElementById('mcap');
+      if (mcap) {
+        const fdv = parseFloat(p.fdv || p.marketCap || 0);
+        if (fdv > 0) mcap.textContent = fdv >= 1e6 ? '\( ' + (fdv/1e6).toFixed(2) + 'M' : fdv >= 1000 ? ' \)' + (fdv/1000).toFixed(1) + 'K' : '$' + fdv.toFixed(0);
+      }
+      const mcap2 = document.getElementById('mcap2');
+      if (mcap2) {
+        const fdv = parseFloat(p.fdv || p.marketCap || 0);
+        if (fdv > 0) mcap2.textContent = fdv >= 1e6 ? '\( ' + (fdv/1e6).toFixed(2) + 'M' : fdv >= 1000 ? ' \)' + (fdv/1000).toFixed(1) + 'K' : '$' + fdv.toFixed(0);
+      }
+      const vol = document.getElementById('volume');
+      if (vol && p.volume) {
+        const v = parseFloat(p.volume.h24 || 0);
+        if (v > 0) vol.textContent = v >= 1000 ? '\( ' + (v/1000).toFixed(1) + 'K' : ' \)' + v.toFixed(0);
+      }
+      const ch = document.getElementById('change24');
+      if (ch && p.priceChange && p.priceChange.h24 != null) {
+        const c = parseFloat(p.priceChange.h24);
+        ch.textContent = (c > 0 ? '+' : '') + c.toFixed(0) + '%';
+      }
+    }
+  } catch(e) { console.log(e); }
+}
+updateLive();
+setInterval(updateLive, 30000);
 </script>
 </body>
 </html>
